@@ -1,6 +1,8 @@
 @import "../less/elements.css.less";
 
 html {
+  height: 100%;
+  
   * {
     box-sizing: border-box;
   }
@@ -10,7 +12,7 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   color: #737373;
   text-align: center;
-  padding-top: 200px;
+  height: 100%;
 }
 
 p {
@@ -23,37 +25,62 @@ form {
   max-width: 630px;
   margin: 0px auto;
   position: relative;
+  top: 50%;
+  margin-top: -150px;
+  
+  .field-wrapper {
+    position: relative;
 
-  input {
-    height: 62px;
-    width: 100%;
+    input {
+      height: 62px;
+      width: 100%;
+    }
+
+    input[type=email] {
+      border: 1px solid #BBC0C3;
+      .box-shadow(inset 7px 7px 12px rgba(0, 0, 0, .04));
+      font-size: 20px;
+      font-weight: lighter;
+      color: #737373;
+      .rounded(6px);
+      padding: 17px;
+      font-family: "Roboto";
+    }
+
+    input[type=submit] {
+      background: #2874B6;
+      color: #fff;
+      font-size: 20px;
+      border: none;
+      .border-radius(6px, 6px, 0, 0);
+      padding: 17px 22px;
+      position: absolute;
+      top: 0;
+      right: 0;
+      width: 200px;
+      -webkit-appearance: none;
+
+      &:hover {
+        background: darken(#2874B6, 5%);
+      }
+    }
   }
+}
 
-  input[type=email] {
-    border: 1px solid #BBC0C3;
-    .box-shadow(inset 7px 7px 12px rgba(0, 0, 0, .04));
-    font-size: 20px;
-    font-weight: lighter;
-    color: #737373;
-    .rounded(6px);
-    padding: 17px;
-    font-family: "Roboto";
-  }
+@media (max-width: 600px) {
+  form {
+    margin-top: -200px;
+    
+    .field-wrapper {
+      input[type=email], input[type=submit] {
+        width: 100%;
+        position: static;
+        margin-bottom: 20px;
+      }
 
-  input[type=submit] {
-    background: #2874B6;
-    color: #fff;
-    font-size: 20px;
-    border: none;
-    .border-radius(6px, 6px, 0, 0);
-    padding: 17px 22px;
-    position: absolute;
-    top: 0;
-    right: 0;
-    width: 200px;
-
-    &:hover {
-      background: darken(#2874B6, 5%);
+      input[type=submit] {
+        .rounded(6px);
+      }
     }
   }
 }
