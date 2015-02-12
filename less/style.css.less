@@ -2,7 +2,7 @@
 
 html {
   height: 100%;
-  
+
   * {
     box-sizing: border-box;
   }
@@ -13,6 +13,10 @@ body {
   color: #737373;
   text-align: center;
   height: 100%;
+
+  a {
+    color: #2874B6;
+  }
 }
 
 p {
@@ -27,7 +31,7 @@ form {
   position: relative;
   top: 50%;
   margin-top: -150px;
-  
+
   .field-wrapper {
     position: relative;
 
@@ -67,14 +71,21 @@ form {
   }
 }
 
+.startup-journal {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  font-size: 18px;
+}
+
 @media (max-width: 600px) {
   p {
-    font-size: 23px; 
+    font-size: 23px;
   }
   form {
     padding: 0 20px;
     margin-top: -200px;
-    
+
     .field-wrapper {
       input[type=email], input[type=submit] {
         width: 100%;
