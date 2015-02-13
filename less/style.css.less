@@ -12,7 +12,8 @@ body {
   font-family: "Roboto", "Helvetica", "Arial", sans-serif;
   color: #737373;
   text-align: center;
-  height: 100%;
+  margin: 0;
+  min-height: 100%;
 
   a {
     color: #2874B6;
@@ -25,47 +26,51 @@ p {
   margin: 30px 0 50px 0;
 }
 
-form {
-  max-width: 630px;
-  margin: 0px auto;
-  position: relative;
+section {
+  width: 100%;
+  position: absolute;
   top: 50%;
   margin-top: -150px;
 
-  .field-wrapper {
-    position: relative;
+  form {
+    max-width: 630px;
+    margin: 0px auto;
 
-    input {
-      height: 62px;
-      width: 100%;
-    }
+    .field-wrapper {
+      position: relative;
 
-    input[type=email] {
-      border: 1px solid #BBC0C3;
-      .box-shadow(inset 7px 7px 12px rgba(0, 0, 0, .04));
-      font-size: 20px;
-      font-weight: lighter;
-      color: #737373;
-      .rounded(6px);
-      padding: 17px;
-      font-family: "Roboto";
-    }
+      input {
+        height: 62px;
+        width: 100%;
+      }
 
-    input[type=submit] {
-      background: #2874B6;
-      color: #fff;
-      font-size: 20px;
-      border: none;
-      .border-radius(6px, 6px, 0, 0);
-      padding: 17px 22px;
-      position: absolute;
-      top: 0;
-      right: 0;
-      width: 200px;
-      -webkit-appearance: none;
+      input[type=email] {
+        border: 1px solid #BBC0C3;
+        .box-shadow(inset 7px 7px 12px rgba(0, 0, 0, .04));
+        font-size: 20px;
+        font-weight: lighter;
+        color: #737373;
+        .rounded(6px);
+        padding: 17px;
+        font-family: "Roboto";
+      }
 
-      &:hover {
-        background: darken(#2874B6, 5%);
+      input[type=submit] {
+        background: #2874B6;
+        color: #fff;
+        font-size: 20px;
+        border: none;
+        .border-radius(6px, 6px, 0, 0);
+        padding: 17px 22px;
+        position: absolute;
+        top: 0;
+        right: 0;
+        width: 200px;
+        -webkit-appearance: none;
+
+        &:hover {
+          background: darken(#2874B6, 5%);
+        }
       }
     }
   }
@@ -75,16 +80,31 @@ form {
   position: absolute;
   bottom: 0;
   width: 100%;
-  font-size: 18px;
+  font-size: 16px;
+}
+
+.changelog {
+  margin: 0;
+  padding: 0 30px;
+  list-style-type: none;
+  text-align: left;
+
+  li {
+    h2 {
+      color: #535353;
+      margin-top: 30px;
+      margin-bottom: 10px;
+    }
+  }
 }
 
 @media (max-width: 600px) {
   p {
     font-size: 23px;
   }
-  form {
+  section form {
     padding: 0 20px;
-    margin-top: -200px;
+    margin-top: -100px;
 
     .field-wrapper {
       input[type=email], input[type=submit] {
