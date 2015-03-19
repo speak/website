@@ -9,7 +9,7 @@ html {
 }
 
 body {
-  font-family: "Roboto", "Helvetica", "Arial", sans-serif;
+  font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   color: #737373;
   text-align: center;
   margin: 0;
@@ -21,66 +21,163 @@ body {
 }
 
 p {
-  font-size: 28px;
-  font-weight: lighter;
-  margin: 30px 0 50px 0;
+  margin: 0;
 }
 
-section {
-  width: 100%;
+.logo {
   position: absolute;
-  top: 50%;
-  margin-top: -150px;
+  top: 70px;
+  left: 70px;
+  padding: 0 0 40px;
 
-  form {
-    max-width: 630px;
-    margin: 0px auto;
+  img {
+    .opacity(.20);
+  }
+}
 
-    .field-wrapper {
+.content {
+  height: 100vh; // http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window
+
+  .tagline-container {
+    position: relative;
+    float: left;
+    height: 100%;
+    width: 60%;
+    padding: 70px;
+
+    .tagline {
+      text-align: left;
       position: relative;
+      top: 50%;
+      transform: translateY(-50%);
 
-      input {
-        height: 62px;
-        width: 100%;
+      h1 {
+        font-weight: normal;
+        color: #525252;
+        font-size: 31px;
+        margin: 0;
+        padding: 0 0 30px 0;
+        letter-spacing: -.5px;
+        clear: both;
       }
 
-      input[type=email] {
-        border: 1px solid #BBC0C3;
-        .box-shadow(inset 7px 7px 12px rgba(0, 0, 0, .04));
-        font-size: 20px;
+      p {
+        font-size: 24px;
         font-weight: lighter;
-        color: #737373;
-        .rounded(6px);
-        padding: 17px;
-        font-family: "Roboto";
+        color: #767676;
+        padding: 0 0 42px 0;
       }
 
-      input[type=submit] {
-        background: #2874B6;
-        color: #fff;
-        font-size: 20px;
-        border: none;
-        .border-radius(6px, 6px, 0, 0);
-        padding: 17px 22px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        width: 200px;
-        -webkit-appearance: none;
+      form {
+        .field-wrapper {
+          position: relative;
 
-        &:hover {
-          background: darken(#2874B6, 5%);
+          input {
+          }
+
+          input[type=email] {
+            border: 1px solid #BBC0C3;
+            font-size: 16px;
+            font-weight: lighter;
+            color: #838383;
+            .rounded(3px);
+            padding: 18px;
+            width: 343px;
+            margin-right: 8px;
+
+            &::-webkit-input-placeholder {
+              color: #b9b9b9;
+            }
+          }
+
+          input[type=submit] {
+            background: #2874B6;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            .rounded(3px);
+            padding: 19px 42px;
+            -webkit-appearance: none;
+
+            &:hover {
+              background: darken(#2874B6, 5%);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .app-container {
+    background: #f7f7f7;
+    float: left;
+    width: 40%;
+    height: 100%;
+    background: url('../images/forest.jpg');
+    background-size: cover;
+    background-position: top right;
+
+    .app {
+      background: url('../images/app.png');
+      background-size: 302px 500px;
+      width: 302px;
+      height: 500px;
+
+      position: relative;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%) translateY(-50%);
+    }
+  }
+}
+
+footer {
+  background: #f7f7f7;
+  height: 100px;
+
+  ul {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+
+    li {
+      display: inline-block;
+      position: relative;
+      margin-right: 40px;
+
+      a {
+        color: #929292;
+        text-decoration: none;
+        font-size: 14px;
+      }
+
+      &:after {
+        content: "";
+        display: block;
+        position: absolute;
+        top: 10px;
+        right: -25px;
+        width: 6px;
+        height: 6px;
+        background: #D8D8D8;
+        .rounded(3px);
+      }
+
+      &:last-child {
+        &:after {
+          display: none;
         }
       }
     }
   }
 }
 
-.startup-journal {
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-  font-size: 16px;
+section {
+  form {
+
+  }
 }
 
 .changelog {
@@ -98,23 +195,78 @@ section {
   }
 }
 
-@media (max-width: 600px) {
-  p {
-    font-size: 23px;
-  }
-  section form {
-    padding: 0 20px;
-    margin-top: -100px;
+@media (max-width: 1196px) {
+  .content .tagline-container .tagline {
+    form {
+      .field-wrapper {
+        max-width: 400px;
 
-    .field-wrapper {
-      input[type=email], input[type=submit] {
-        width: 100%;
-        position: static;
-        margin-bottom: 20px;
+        input[type="email"], input[type="submit"] {
+          width: 100%;
+          margin-bottom: 15px;
+        }
       }
+    }
+  }
+}
 
-      input[type=submit] {
-        .rounded(6px);
+@media (max-width: 860px) {
+  .content {
+    height: auto;
+
+    .tagline-container {
+      float: none;
+      height: auto;
+      width: 100%;
+
+      .tagline {
+        text-align: center;
+        transform: none;
+        padding-top: 70px;
+
+        form {
+          .field-wrapper {
+            max-width: 60%;
+            margin: 0px auto;
+          }
+        }
+      }
+    }
+
+    .app-container {
+      width: 100%;
+      height: 600px;
+    }
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 0 0 40px;
+
+    img {
+      .opacity(.20);
+    }
+  }
+
+  footer {
+    clear: both;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    .tagline-container {
+      .tagline {
+        p {
+          font-size: 21px;
+        }
+        form {
+          .field-wrapper {
+            max-width: 100%;
+          }
+        }
       }
     }
   }
