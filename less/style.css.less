@@ -51,6 +51,7 @@ p {
       top: 50%;
       transform: translateY(-50%);
       -webkit-transform: translateY(-50%);
+      max-width: 600px;
 
       h1 {
         font-weight: normal;
@@ -58,7 +59,7 @@ p {
         font-size: 31px;
         margin: 0;
         padding: 0 0 30px 0;
-        letter-spacing: -.5px;
+        letter-spacing: -1px;
         clear: both;
       }
 
@@ -202,6 +203,8 @@ section {
 
 @media (max-width: 1230px) {
   .content .tagline-container .tagline {
+    max-width: 400px;
+
     form {
       .field-wrapper {
         max-width: 400px;
@@ -229,6 +232,7 @@ section {
         transform: none;
         -webkit-transform: none;
         padding-top: 70px;
+        max-width: inherit;
 
         form {
           .field-wrapper {
