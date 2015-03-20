@@ -9,6 +9,20 @@
     <meta name="google-site-verification" content="w44XJOhIRhT__X2E0AkQdOh6RMioAZWjTDNlfhgIcAE" />
     <link rel="shortcut icon" href="images/favicon.png">
     <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+    <script src="//cdn.optimizely.com/js/2688840038.js"></script>
+
+    <script>
+      $(function(){
+        $("#ss-form").on("submit", function(ev) {
+          // ensures the optimizely object is defined globally using
+          window['optimizely'] = window['optimizely'] || [];
+
+          // sends a tracking call to Optimizely for the given event name.
+          window.optimizely.push(["trackEvent", "form_submit"]);
+          });
+        });
+    </script>
 
     <title>Speak | Frictionless communication for your remote team</title>
 
