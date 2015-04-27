@@ -15,13 +15,13 @@
     <script>
       /*$(function(){
         $("#ss-form").on("submit", function(ev) {
-          // ensures the optimizely object is defined globally using
-          window['optimizely'] = window['optimizely'] || [];
+    // ensures the optimizely object is defined globally using
+    window['optimizely'] = window['optimizely'] || [];
 
-          // sends a tracking call to Optimizely for the given event name.
-          window.optimizely.push(["trackEvent", "form_submit"]);
-          });
-        });*/
+    // sends a tracking call to Optimizely for the given event name.
+    window.optimizely.push(["trackEvent", "form_submit"]);
+    });
+    });*/
     </script>
 
     <title>Speak | Frictionless communication for your remote team</title>
@@ -31,7 +31,18 @@
 
   <body>
     <div class="content">
+      <section class="tagline-container">
+        <div class="logo">
+          <a href="http://speak.io"><img src="/images/logo-black.png" width="80" height="26" /></a>
+        </div>
+        <div class="tagline">
           {{ content }}
+        </div>
+      </section>
+
+      <section class="app-container">
+        <img src="/images/laptop.png" />
+      </section>
     </div>
 
     <footer>
