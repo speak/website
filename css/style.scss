@@ -11,9 +11,10 @@ html {
 body {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   color: #737373;
+  background: #f7f7f7;
   text-align: center;
   margin: 0;
-  min-height: 100%;
+  height: 100%;
 
   a {
     color: #2874B6;
@@ -35,13 +36,15 @@ p {
   }
 }
 
-
 .content {
-  height: 100vh; // http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window
+  background: #fff;
+  height: 100%;
+  display: flex;
+  display: -webkit-flex;
+  max-height: 810px;
 
   .tagline-container {
     position: relative;
-    float: left;
     height: 100%;
     width: 60%;
     padding: 70px;
@@ -78,17 +81,15 @@ p {
           input {
           }
 
-          input[type=email],
-          input[type=password] {
+          input[type=email] {
             border: 1px solid #BBC0C3;
             font-size: 16px;
             font-weight: lighter;
             color: #838383;
             border-radius: 3px;
             padding: 18px;
-            width: 343px;
+            width: 292px;
             margin-right: 8px;
-            margin-bottom: 8px;
 
             &::-webkit-input-placeholder {
               color: #b9b9b9;
@@ -114,32 +115,26 @@ p {
   }
 
   .app-container {
-    background: #f7f7f7;
-    float: left;
+    position: relative;
     width: 40%;
     height: 100%;
-    background: url('../images/forest.jpg');
-    background-size: cover;
-    background-position: top right;
-
-    .app {
-      background: url('../images/app.png');
-      background-size: 302px 500px;
-      width: 302px;
-      height: 500px;
-
-      position: relative;
-      top: 50%;
-      left: 50%;
-      transform: translateX(-50%) translateY(-50%);
-      -webkit-transform: translateX(-50%) translateY(-50%);
+    
+    img {
+      position: absolute;
+      bottom: 0;
+      right: 0;
+      width: 100%;
+      height: auto;
+      max-height: 693px;
+      max-width: 594px;
     }
   }
 }
 
 footer {
-  background: #f7f7f7;
   height: 100px;
+  clear: both;
+  background: #f7f7f7;
 
   ul {
     margin: 0;
@@ -205,29 +200,39 @@ section {
 }
 
 @media (max-width: 1230px) {
-  .content .tagline-container .tagline {
-    max-width: 400px;
-
-    form {
-      .field-wrapper {
+  .content {
+    .tagline-container {
+      width: 50%;
+      
+      .tagline {
         max-width: 400px;
 
-        input[type="email"], input[type="submit"] {
-          width: 100%;
-          margin-bottom: 15px;
+        form {
+          .field-wrapper {
+            max-width: 400px;
+
+            input[type="email"], input[type="submit"] {
+              width: 100%;
+              margin-bottom: 15px;
+            }
+          }
         }
       }
+    }
+    
+    .app-container {
+      width: 50%;
     }
   }
 }
 
 @media (max-width: 860px) {
   .content {
+    display: block;
     height: auto;
+    max-height: none;
 
     .tagline-container {
-      float: none;
-      height: auto;
       width: 100%;
 
       .tagline {
@@ -248,7 +253,18 @@ section {
 
     .app-container {
       width: 100%;
-      height: 600px;
+      overflow: hidden;
+      padding-left: 30px;
+      
+      img {
+        position: static;
+        float: right;
+        
+        &:after {
+          content: "";
+          clear: both;
+        }
+      }
     }
   }
 
@@ -262,10 +278,6 @@ section {
     img {
       opacity: .20;
     }
-  }
-
-  footer {
-    clear: both;
   }
 }
 
