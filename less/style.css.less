@@ -11,6 +11,7 @@ html {
 body {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   color: #737373;
+  background: #f7f7f7;
   text-align: center;
   margin: 0;
   min-height: 100%;
@@ -36,11 +37,13 @@ p {
 }
 
 .content {
-  height: 100vh; // http://stackoverflow.com/questions/1575141/make-div-100-height-of-browser-window
+  background: #fff;
+  height: 100vh;
+  display: flex;
+  max-height: 810px;
 
   .tagline-container {
     position: relative;
-    float: left;
     height: 100%;
     width: 60%;
     padding: 70px;
@@ -112,10 +115,9 @@ p {
 
   .app-container {
     background: #f7f7f7;
-    float: left;
     width: 40%;
     height: 100%;
-    background: url('../images/screen.png');
+    background: url('../images/laptop.png');
     background-position: bottom right;
     background-repeat: no-repeat;
     background-size: contain;
@@ -136,8 +138,9 @@ p {
 }
 
 footer {
-  background: #f7f7f7;
   height: 100px;
+  clear: both;
+  background: #f7f7f7;
 
   ul {
     margin: 0;
