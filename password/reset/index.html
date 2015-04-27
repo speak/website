@@ -1,0 +1,66 @@
+---
+layout: default
+---
+<h1>
+  Reset your password
+</h1>
+<section id="password-reset-wrap">
+  <p id="password-reset-instructions">
+    Fill in the form below to reset your password.
+  </p>
+  <form id="password-reset">
+    <div class="field-wrapper">
+      <input id="password" type="password" name="password" placeholder="Enter your new password" required>
+      <input id="password_confirmation" type="password" name="password_confirmation" placeholder="Confirm your new password" required>
+      <input type="submit" name="submit" value="Create your new password" id="ss-submit" class="jfk-button jfk-button-action ">
+    </div>
+  </form>
+</section>
+
+
+
+
+<script>
+  {% if site.GH_ENV == 'gh_pages' %}
+    bulldog_url = 'https://bulldog.speak.io/'
+  {% else %}
+    bulldog_url = 'https://docker:9393/'
+  {% endif %}
+
+  $(function(){
+    function GetURLParameter(sParam)  {
+      var sPageURL = window.location.search.substring(1);
+      var sURLVariables = sPageURL.split('&');
+      for (var i = 0; i < sURLVariables.length; i++) {
+        var sParameterName = sURLVariables[i].split('=');
+        if (sParameterName[0] == sParam){
+          return sParameterName[1];
+        }
+      }
+    }
+
+    var resetToken = GetURLParameter('reset_token');
+    if(!resetToken) {
+      window.location.href = "/";
+    } else {
+      var $form = $('#password-reset');
+      $form.on('submit', function(ev){
+        ev.preventDefault();
+        var password = $form.find("#password").val();
+        var password_confirmation = $form.find("#password_confirmation").val();
+        $.ajax({
+          type: 'POST',
+          url: (bulldog_url + 'password/' + resetToken),
+          data: {
+            password:password,
+            password_confirmation:password_confirmation
+          }
+        }).fail(function(xhr, status, error){
+          $("#password-reset-instructions").text(xhr.responseJSON.params.message);
+        }).done(function(data, status, xhr){
+          $('#password-reset-wrap').text("Great! Your password has been updated, you can now head on over to the app and log in.");
+        });
+      });
+    }
+  });
+</script>
