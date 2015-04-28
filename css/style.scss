@@ -1,5 +1,8 @@
 ---
 ---
+
+@import 'elements';
+
 html {
   height: 100%;
 
@@ -122,14 +125,31 @@ p {
     width: 40%;
     height: 100%;
     
-    img {
+    .video-wrapper {
+      height: auto;
+      width: 100%;
+      max-height: 693px;
+      max-width: 594px;
       position: absolute;
       bottom: 0;
       right: 0;
-      width: 100%;
-      height: auto;
-      max-height: 693px;
-      max-width: 594px;
+      
+      .play {
+        position: absolute;
+        top: 50%;
+        left: 50%;  
+        transform: translate(0, -50%);     
+        @include triangle(50px, right, #fff);
+        display: none;
+        z-index:1;
+      }
+    
+      video {
+        width: 100%;
+        height: auto;
+        max-height: 693px;
+        max-width: 594px;
+      }
     }
   }
 }
@@ -259,7 +279,7 @@ section {
       overflow: hidden;
       padding-left: 30px;
       
-      img {
+      .video-wrapper {
         position: static;
         float: right;
         
