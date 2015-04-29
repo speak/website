@@ -135,13 +135,21 @@ p {
       right: 0;
       
       .play {
-        position: absolute;
-        top: 50%;
-        left: 50%;  
-        transform: translate(0, -50%);     
-        @include triangle(50px, right, #fff);
         display: none;
-        z-index:1;
+        width: 180px;
+        height: 180px;
+        background: url('/images/play.png');
+        background-size: 180px 180px;
+        position: absolute;
+        z-index: 1;
+        top: 50%;
+        left: 55%;
+        transform: translate(-50%, -50%);
+        cursor: pointer;
+        
+        &:hover {
+          opacity: .9;
+        }
       }
     
       video {

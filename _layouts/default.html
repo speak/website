@@ -25,6 +25,7 @@
         });
         
         $('.play').click(function() {
+          ga(['send', 'event', 'button', 'click', 'Homepage Demo Video']);
           $video.currentTime = 3;
           $video.play();
         });
