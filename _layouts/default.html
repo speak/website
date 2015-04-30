@@ -13,6 +13,7 @@
     <script src="//cdn.optimizely.com/js/2688840038.js"></script>
     <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.4/keen.min.js" type="text/javascript"></script>
     <script src="/js/jquery.cookie.js" type="text/javascript"></script>
+    <script src="/js/math.uuid.js" type="text/javascript"></script>
 
     <script>
       $(function(){
@@ -49,17 +50,14 @@
         });
         
         var pageView = {
-            page: window.location.href,
-            time: new Date().toISOString(),
-            referrer: document.referrer,
-            agent: window.navigator.userAgent
+          id: Math.uuid(),
+          page: window.location.href,
+          time: new Date().toISOString(),
+          referrer: document.referrer,
+          agent: window.navigator.userAgent
         };
         
-        if (typeof $.cookie('visited') === 'undefined') {
-          client.addEvent("site.page_view", pageView, function(err, res){ if (err) { console.log(err) }});
-        }
-        
-        $.cookie('visited', true, { expires: 7 });
+        client.addEvent("site.page_view", pageView, function(err, res){ if (err) { console.log(err) }});
         
         // Track download
         
