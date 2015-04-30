@@ -24,6 +24,10 @@
           }
         });
         
+        $video.onended = function() {
+          $('.play').fadeIn();
+        }
+        
         $('.play').click(function() {
           ga(['send', 'event', 'button', 'click', 'Homepage Demo Video']);
           $video.currentTime = 3;
