@@ -3,6 +3,10 @@
 
 @import 'elements';
 
+.win {
+    display: none;
+}
+
 html {
   height: 100%;
 
@@ -74,10 +78,11 @@ p {
         font-size: 24px;
         font-weight: lighter;
         color: #767676;
-        padding: 0 0 42px 0;
+        padding: 0 0 52px 0;
       }
       
       .download-btn {
+        display: inline-block;
         background: #2874B6;
         color: #fff;
         font-size: 16px;
@@ -95,9 +100,30 @@ p {
       form {
         .field-wrapper {
           position: relative;
-
-          input {
-          }
+          display: flex;
+          
+          .button-wrapper {
+              display: inline-block;
+              text-align: center;
+              
+              input[type=submit], a {
+                  width: 100%;
+              }
+          
+              .download {
+                  display: block;
+                  font-size: 12px;
+                  width: 100%;
+                  text-align: center;
+                  color: #a3a3a3;
+                  margin-top: 14px;
+                  
+                  a {
+                      margin-left: 4px;
+                      color: #a3a3a3;
+                  }
+              }
+          }          
 
           input[type=text],
           input[type=password],
@@ -109,11 +135,25 @@ p {
             border-radius: 3px;
             padding: 18px;
             width: 292px;
+            height: 56px;
             margin-right: 8px;
-            margin-bottom: 10px;
 
             &::-webkit-input-placeholder {
               color: #b9b9b9;
+            }
+          }
+          
+          input[type=submit] {
+            background: #2874B6;
+            color: #fff;
+            font-size: 16px;
+            border: none;
+            border-radius: 3px;
+            padding: 19px 42px;
+            -webkit-appearance: none;
+
+            &:hover {
+              background: darken(#2874B6, 5%);
             }
           }
         }
@@ -242,8 +282,9 @@ section {
         form {
           .field-wrapper {
             max-width: 400px;
+            display: block;
 
-            input[type="email"], input[type="submit"] {
+            input[type="email"], .button-wrapper {
               width: 100%;
               margin-bottom: 15px;
             }
