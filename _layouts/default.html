@@ -16,17 +16,17 @@
 
     <script>
       $(function(){
-        // Detect if on Windows machine
-        var windows = navigator.platform.indexOf('Win') > -1;
+        // Detect platform
+        var platform = navigator.platform.indexOf('Win') > -1 ? 'win' : navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'other';
         
         // Get video
-        var $video = $('#demo')[0];
+        var video = $('#demo')[0];
         
         // Show windows video
-        if (windows) $video.src = '/videos/demo-windows.mp4';
+        if (platform == 'win') video.src = '/videos/demo-windows.mp4';
         
         // Handle video
-        $video.addEventListener("timeupdate", function(){
+        video.addEventListener("timeupdate", function(){
           if(this.currentTime >= 2.45 && this.currentTime < 3) {
             this.pause();
             $('.play').fadeIn();
@@ -35,14 +35,14 @@
           }
         });
         
-        $video.onended = function() {
+        video.onended = function() {
           $('.play').fadeIn();
         }
         
         $('.play').click(function() {
-          client.addEvent("site.watched_video", null, function(err, res){ if (err) { console.log(err) }});
-          $video.currentTime = 3;
-          $video.play();
+          client.addEvent("site.watched_video",  { platform: platform }, function(err, res){ if (err) { console.log(err) }});
+          video.currentTime = 3;
+          video.play();
         });
         
         // Track pageview
@@ -59,14 +59,15 @@
           page: window.location.href,
           time: new Date().toISOString(),
           referrer: document.referrer,
-          agent: window.navigator.userAgent
+          agent: window.navigator.userAgent,
+          platform: platform
         };
         
         client.addEvent("site.page_view", pageView, function(err, res){ if (err) { console.log(err) }});
         
         // Track download
         $('.download-btn').click(function() {
-          client.addEvent("site.downloaded_app", { platform: 'mac'}, function(err, res){ if (err) { console.log(err) }});
+          client.addEvent("site.downloaded_app", { platform: platform }, function(err, res){ if (err) { console.log(err) }});
         });
       });
     </script>
