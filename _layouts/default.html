@@ -22,8 +22,12 @@
         // Get video
         var video = $('#demo')[0];
         
-        // Show windows video
-        if (platform == 'win') video.src = '/videos/demo-windows.mp4';
+        // Toggle windows items
+        if (platform == 'win') {
+          $('.win').show();
+          $('.mac').hide();
+          video.src = '/videos/demo-windows.mp4';
+        }
         
         // Handle video
         video.addEventListener("timeupdate", function(){
