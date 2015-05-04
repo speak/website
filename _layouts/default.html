@@ -17,7 +17,7 @@
     <script>
       $(function(){
         // Detect platform
-        var platform = navigator.platform.indexOf('Win') > -1 ? 'win' : navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'other';
+        var platform = getParam('platform') || (navigator.platform.indexOf('Win') > -1 ? 'win' : navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'other');
         
         // Get video
         var video = $('#demo')[0];
@@ -73,6 +73,13 @@
         $('.download-btn').click(function() {
           client.addEvent("site.downloaded_app", { platform: platform }, function(err, res){ if (err) { console.log(err) }});
         });
+        
+        function getParam(name) {
+            name = name.replace(/[\[]/, "\\[").replace(/[\]]/, "\\]");
+            var regex = new RegExp("[\\?&]" + name + "=([^&#]*)"),
+                results = regex.exec(location.search);
+            return results === null ? "" : decodeURIComponent(results[1].replace(/\+/g, " "));
+        }
       });
     </script>
 

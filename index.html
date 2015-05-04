@@ -10,18 +10,24 @@ layout: default
   Speak helps remote teams improve collaboration by providing instant, push-to-talk communication.
 </p>
 
-<div class="mac">
-  <a href="https://s3.amazonaws.com/speak-production-releases/darwin/speak-latest.zip" class="download-btn">Download Mac Beta</a>
-</div>
-
-<div class="win">
-  <form action="https://docs.google.com/forms/d/1sKT_05uwDbWNU92sL0HLxOZDfMaPzO6DN_o_T8np9TA/formResponse" method="POST" id="ss-form" target="_self">
-    <div class="field-wrapper">
-      <input type="email" name="entry.981815137" placeholder="Enter your email" required>
-      <input type="hidden" name="draftResponse" value="[,,&quot;-1364399798404626896&quot;]">
-      <input type="hidden" name="pageHistory" value="0">
-      <input type="hidden" name="fbzx" value="-1364399798404626896">
-      <input type="submit" name="submit" value="Request Beta Access" id="ss-submit" class="jfk-button jfk-button-action ">
+<form class="mac">
+  <div class="field-wrapper">
+    <div class="button-wrapper">
+      <a href="https://s3.amazonaws.com/speak-production-releases/darwin/speak-latest.zip" class="download-btn">Download Mac Beta</a>
+      <span class="download">Or<a href="/?platform=win">Join Windows Beta</a></span>
     </div>
-  </form>
-</div>
+  </div>
+</form>
+
+<form class="win" action="https://docs.google.com/forms/d/1sKT_05uwDbWNU92sL0HLxOZDfMaPzO6DN_o_T8np9TA/formResponse" method="POST" id="ss-form" target="_self">
+  <div class="field-wrapper">
+    <input type="email" name="entry.981815137" placeholder="Enter your email" required>
+    <input type="hidden" name="draftResponse" value="[,,&quot;-1364399798404626896&quot;]">
+    <input type="hidden" name="pageHistory" value="0">
+    <input type="hidden" name="fbzx" value="-1364399798404626896">
+    <div class="button-wrapper">
+      <input type="submit" name="submit" value="Request Beta Access" id="ss-submit" class="jfk-button jfk-button-action ">
+      <span class="download">Or<a href="/?platform=mac">Download for Mac</a></span>
+    </div>
+  </div>
+</form>
