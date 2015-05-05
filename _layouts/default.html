@@ -13,58 +13,8 @@
     <script src="//cdn.optimizely.com/js/2688840038.js"></script>
     <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.4/keen.min.js" type="text/javascript"></script>
     <script src="/js/math.uuid.js" type="text/javascript"></script>
-
-    <script>
-      $(function(){
-        // Handle video
-        
-        var $video = $('#demo')[0];
-        $video.addEventListener("timeupdate", function(){
-          if(this.currentTime >= 2.45 && this.currentTime < 3) {
-            this.pause();
-            $('.play').fadeIn();
-          } else {
-            $('.play').fadeOut();
-          }
-        });
-        
-        $video.onended = function() {
-          $('.play').fadeIn();
-        }
-        
-        $('.play').click(function() {
-          client.addEvent("site.watched_video", null, function(err, res){ if (err) { console.log(err) }});
-          $video.currentTime = 3;
-          $video.play();
-        });
-        
-        // Track pageview
-        
-        var client = new Keen({
-          projectId: "54cb9a9959949a70595863a7",
-          writeKey: "e984f7a6787daca6eb212ec9621b5e6ab6743e7f4d7dfede60ec3833beac56c74e4d73c0f266b149e6539e304f96698c4b37ec6c8bcfdc80ff5ec0c36044cc6f89550fbfd6c0ea2cd217d186bc1f205a03b227d192af4cdfad503f692fc7b236865cc2201d4260e4f72df53a93b39787",
-          protocol: "https",
-          host: "api.keen.io/3.0",
-          requestType: "jsonp"
-        });
-        
-        var pageView = {
-          id: Math.uuid(),
-          page: window.location.href,
-          time: new Date().toISOString(),
-          referrer: document.referrer,
-          agent: window.navigator.userAgent
-        };
-        
-        client.addEvent("site.page_view", pageView, function(err, res){ if (err) { console.log(err) }});
-        
-        // Track download
-        
-        $('.download-btn').click(function() {
-          client.addEvent("site.downloaded_app", { platform: 'mac'}, function(err, res){ if (err) { console.log(err) }});
-        });
-      });
-    </script>
+    <script src="/js/get-param.js" type="text/javascript"></script>
+    <script src="/js/index.js" type="text/javascript"></script>
 
     <title>Speak | Frictionless communication for your remote team</title>
 
