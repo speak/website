@@ -161,7 +161,7 @@ p {
     }
   }
   
-  .app-container-variant {
+  .app-container-variant, .app-container-mobile {
       display: none;
   }
 
@@ -373,6 +373,16 @@ section {
           }
         }
       }
+    }
+    
+    // override experiment on mobile
+    
+    .app-container {
+        display: none !important;
+    }
+    
+    .app-container-mobile {
+        display: block !important;
     }
   }
 }
