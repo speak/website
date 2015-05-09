@@ -8,7 +8,8 @@ layout: simple
   Fill in the form below to reset your password.
 </p>
 <form id="password-reset">
-  <div class="banner"></div>
+  <div class="banner error"></div>
+  <div class="banner success"></div>
   <div class="field-wrapper">
     <input id="password" type="password" name="password" placeholder="Enter your new password" required>
     <input id="password_confirmation" type="password" name="password_confirmation" placeholder="Confirm your new password" required>
@@ -52,11 +53,11 @@ layout: simple
             password_confirmation:password_confirmation
           }
         }).fail(function(xhr, status, error){
-          var $banner = $(".banner");
-          $banner.addClass('error').text(xhr.responseJSON.params.message).show();
+          $(".banner").hide();
+          $(".banner.error").text(xhr.responseJSON.params.message).show();
         }).done(function(data, status, xhr){
-          var $banner = $(".banner");
-          $banner.addClass('success').text("Great! Your password has been updated, you can now head on over to the app and log in.");
+          $(".banner").hide();
+          $(".banner.success").text("Great! Your password has been updated, you can now head on over to the app and log in.").show();
         });
       });
     }
