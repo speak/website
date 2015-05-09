@@ -1,0 +1,116 @@
+---
+---
+
+@import 'elements';
+
+@media (max-width: 1230px) {
+  .content {
+    .tagline-container {
+      width: 50%;
+      
+      .tagline {
+        max-width: 400px;
+
+        form {
+          .field-wrapper {
+            max-width: 400px;
+            display: block;
+
+            input[type="email"], .button-wrapper {
+              width: 100%;
+              margin-bottom: 15px;
+            }
+          }
+        }
+      }
+    }
+    
+    .app-container {
+      width: 50%;
+    }
+  }
+}
+
+@media (max-width: 860px) {
+  .content {
+    display: block;
+    height: auto;
+    max-height: none;
+
+    .tagline-container {
+      width: 100%;
+
+      .tagline {
+        text-align: center;
+        transform: none;
+        -webkit-transform: none;
+        padding-top: 70px;
+        max-width: inherit;
+
+        form {
+          .field-wrapper {
+            max-width: 60%;
+            margin: 0px auto;
+          }
+        }
+      }
+    }
+
+    .app-container {
+      width: 100%;
+      overflow: hidden;
+      padding-left: 30px;
+      
+      .video-wrapper {
+        position: static;
+        float: right;
+        
+        &:after {
+          content: "";
+          clear: both;
+        }
+      }
+    }
+  }
+
+  .logo {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    -webkit-transform: translateX(-50%);
+    padding: 0 0 40px;
+
+    img {
+      opacity: .20;
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    .tagline-container {
+      padding: 70px 40px 40px 40px;
+
+      .tagline {
+        p {
+          font-size: 21px;
+        }
+        form {
+          .field-wrapper {
+            max-width: 100%;
+          }
+        }
+      }
+    }
+    
+    // override experiment on mobile
+    
+    .app-container {
+        display: none !important;
+    }
+    
+    .app-container-mobile {
+        display: block !important;
+    }
+  }
+}

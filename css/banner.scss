@@ -1,0 +1,53 @@
+---
+---
+
+@import 'elements';
+
+#banner-wrapper {
+  width: 100%;
+}
+
+.banner {
+  display: none;
+  padding: 10px 30px 10px 10px;
+  width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 15px;
+  position: relative;
+  color: rgba(255,255,255,0.85);
+  @include border-radius(3px);
+  text-align: left;
+  font-size: 13px;
+
+  &.info {
+    background: #5080D6;
+  }
+
+  &.success {
+    background: #60BE42;
+  }
+
+  &.error {
+    background: #D65050;
+  }
+
+  a.close {
+    top: 8px;
+    right: 12px;
+    position: absolute;
+    display: inline-block;
+    color: #fff;
+    width: 15px;
+    text-align: center;
+    @include opacity(0.7);
+
+    i {
+      font-size: 16px;
+      line-height: 16px;
+    }
+
+    &:hover {
+      @include opacity(1);
+    }
+  }
+}

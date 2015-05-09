@@ -28,6 +28,10 @@ body {
   }
 }
 
+h1 {
+    color: #474747;
+}
+
 p {
   margin: 0;
 }
@@ -66,7 +70,6 @@ p {
 
       h1 {
         font-weight: normal;
-        color: #525252;
         font-size: 31px;
         margin: 0;
         padding: 0 0 30px 0;
@@ -106,7 +109,7 @@ p {
               display: inline-block;
               text-align: center;
               
-              input[type=submit], a {
+              a {
                   width: 100%;
               }
           
@@ -128,33 +131,7 @@ p {
           input[type=text],
           input[type=password],
           input[type=email] {
-            border: 1px solid #BBC0C3;
-            font-size: 16px;
-            font-weight: lighter;
-            color: #838383;
-            border-radius: 3px;
-            padding: 18px;
             width: 292px;
-            height: 56px;
-            margin-right: 8px;
-
-            &::-webkit-input-placeholder {
-              color: #b9b9b9;
-            }
-          }
-          
-          input[type=submit] {
-            background: #2874B6;
-            color: #fff;
-            font-size: 16px;
-            border: none;
-            border-radius: 3px;
-            padding: 19px 42px;
-            -webkit-appearance: none;
-
-            &:hover {
-              background: darken(#2874B6, 5%);
-            }
           }
         }
       }
@@ -271,118 +248,6 @@ section {
       color: #535353;
       margin-top: 30px;
       margin-bottom: 10px;
-    }
-  }
-}
-
-@media (max-width: 1230px) {
-  .content {
-    .tagline-container {
-      width: 50%;
-      
-      .tagline {
-        max-width: 400px;
-
-        form {
-          .field-wrapper {
-            max-width: 400px;
-            display: block;
-
-            input[type="email"], .button-wrapper {
-              width: 100%;
-              margin-bottom: 15px;
-            }
-          }
-        }
-      }
-    }
-    
-    .app-container {
-      width: 50%;
-    }
-  }
-}
-
-@media (max-width: 860px) {
-  .content {
-    display: block;
-    height: auto;
-    max-height: none;
-
-    .tagline-container {
-      width: 100%;
-
-      .tagline {
-        text-align: center;
-        transform: none;
-        -webkit-transform: none;
-        padding-top: 70px;
-        max-width: inherit;
-
-        form {
-          .field-wrapper {
-            max-width: 60%;
-            margin: 0px auto;
-          }
-        }
-      }
-    }
-
-    .app-container {
-      width: 100%;
-      overflow: hidden;
-      padding-left: 30px;
-      
-      .video-wrapper {
-        position: static;
-        float: right;
-        
-        &:after {
-          content: "";
-          clear: both;
-        }
-      }
-    }
-  }
-
-  .logo {
-    position: absolute;
-    left: 50%;
-    transform: translateX(-50%);
-    -webkit-transform: translateX(-50%);
-    padding: 0 0 40px;
-
-    img {
-      opacity: .20;
-    }
-  }
-}
-
-@media (max-width: 600px) {
-  .content {
-    .tagline-container {
-      padding: 70px 40px 40px 40px;
-
-      .tagline {
-        p {
-          font-size: 21px;
-        }
-        form {
-          .field-wrapper {
-            max-width: 100%;
-          }
-        }
-      }
-    }
-    
-    // override experiment on mobile
-    
-    .app-container {
-        display: none !important;
-    }
-    
-    .app-container-mobile {
-        display: block !important;
     }
   }
 }

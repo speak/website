@@ -1,0 +1,37 @@
+---
+---
+
+@import 'elements';
+
+input[type=text],
+input[type=password],
+input[type=email] {
+    border: 1px solid #BBC0C3;
+    font-size: 16px;
+    font-weight: lighter;
+    color: #838383;
+    border-radius: 3px;
+    padding: 18px;
+    width: 100%;
+    height: 56px;
+    margin-right: 8px;
+    
+    &::-webkit-input-placeholder {
+      color: #b9b9b9;
+    }
+}
+
+input[type=submit] {
+  background: #2874B6;
+  color: #fff;
+  font-size: 16px;
+  border: none;
+  border-radius: 3px;
+  padding: 19px 42px;
+  -webkit-appearance: none;
+  width: 100%;
+
+  &:hover {
+    background: darken(#2874B6, 5%);
+  }
+}

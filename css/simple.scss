@@ -1,0 +1,36 @@
+---
+---
+
+@import 'elements';
+
+.content-simple {
+    height: 100%;
+    
+    .logo {
+        position: static;
+        padding: 40px 0;
+    }
+    
+    > section {
+        width: 400px;
+        padding: 40px;
+        margin: 0px auto;
+        background: #fff;
+        
+        h1 {
+            margin-top: 0;
+        }
+        
+        > p {
+            padding: 0 0 30px 0;
+        }
+        
+        form {
+            input[type=text],
+            input[type=password],
+            input[type=email] {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}
