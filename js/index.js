@@ -20,8 +20,8 @@ $(function(){
   if (platform == 'win') {
     $('.win').show();
     $('.mac').hide();
-    video.src = '/videos/demo-windows.mp4';
-    video_mobile.src = '/videos/demo-windows.mp4';
+    video.src = '/videos/windows.mp4';
+    video_mobile.src = '/videos/windows.mp4';
     video.poster = '/images/laptop-windows.png';
     video_mobile.poster = '/images/laptop-windows.png';
   }
