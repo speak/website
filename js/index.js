@@ -61,7 +61,7 @@ $(function(){
   var referrer_site = referrer[0] || url;
   var referrer_params = referrer[1] || '';
   
-  var pageView = {
+  var details = {
     id: Math.uuid(),
     page: window.location.href,
     time: new Date().toISOString(),
@@ -71,10 +71,10 @@ $(function(){
     platform: platform
   };
   
-  client.addEvent("site.page_view", pageView, function(err, res){ if (err) { console.log(err) }});
+  client.addEvent("site.page_view", details);
   
   // Track download
   $('.download-btn').click(function() {
-    client.addEvent("site.downloaded_app", { platform: platform }, function(err, res){ if (err) { console.log(err) }});
+    client.addEvent("site.downloaded_app", details);
   });
 });
