@@ -1,0 +1,37 @@
+---
+---
+
+@import 'elements';
+
+.post {
+    height: 100%;
+    
+    .logo {
+        position: static;
+        padding: 40px 0;
+    }
+    
+    > section {
+        margin: 30px;
+        padding: 30px;
+        background: #fff;
+        
+        > ol, > ul {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+        }
+        
+        .changelog {
+          li {
+            text-align: left;
+            margin-bottom: 10px;
+          }
+        }
+        
+        h1 {
+          text-align: left;
+          margin-top: 0;
+        }
+    }
+}

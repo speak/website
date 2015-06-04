@@ -1,31 +1,27 @@
 ---
-layout: default
+layout: simple
 ---
 <h1>
   Reset your password
 </h1>
-<section id="password-reset-wrap">
-  <p id="password-reset-instructions">
-    Fill in the form below to reset your password.
-  </p>
-  <form id="password-reset">
-    <div class="field-wrapper">
-      <input id="password" type="password" name="password" placeholder="Enter your new password" required>
-      <input id="password_confirmation" type="password" name="password_confirmation" placeholder="Confirm your new password" required>
-      <br />
-      <input type="submit" name="submit" value="Create your new password" id="ss-submit" class="jfk-button jfk-button-action ">
-    </div>
-  </form>
-</section>
-
-
-
+<p id="password-reset-instructions">
+  Almost there, choose a nice secure password below, you beautiful forgetful thing!
+</p>
+<form id="password-reset">
+  <div class="banner error"></div>
+  <div class="banner success"></div>
+  <div class="field-wrapper">
+    <input id="password" type="password" name="password" placeholder="Your new password" required>
+    <input id="password_confirmation" type="password" name="password_confirmation" placeholder="Confirm new password" required>
+    <input type="submit" name="submit" value="Save password" id="ss-submit" class="jfk-button jfk-button-action ">
+  </div>
+</form>
 
 <script>
   {% if site.GH_ENV == 'gh_pages' %}
     bulldog_url = 'https://bulldog.speak.io/'
   {% else %}
-    bulldog_url = 'https://docker:9393/'
+    bulldog_url = 'http://docker:9393/'
   {% endif %}
 
   $(function(){
@@ -57,9 +53,11 @@ layout: default
             password_confirmation:password_confirmation
           }
         }).fail(function(xhr, status, error){
-          $("#password-reset-instructions").text(xhr.responseJSON.params.message);
+          $(".banner").hide();
+          $(".banner.error").text(xhr.responseJSON.params.message).show();
         }).done(function(data, status, xhr){
-          $('#password-reset-wrap').text("Great! Your password has been updated, you can now head on over to the app and log in.");
+          $(".banner").hide();
+          $(".banner.success").text("Great! Your password has been updated, you can now head on over to the app and log in.").show();
         });
       });
     }
