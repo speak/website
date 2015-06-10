@@ -2,6 +2,7 @@
 ---
 
 @import 'elements';
+@import 'variables';
 
 .win {
     display: none;
@@ -18,7 +19,6 @@ html {
 body {
   font-family: "Open Sans", "Helvetica", "Arial", sans-serif;
   color: #737373;
-  background: #f7f7f7;
   text-align: center;
   margin: 0;
   height: 100%;
@@ -28,12 +28,25 @@ body {
   }
 }
 
+h1, h2 {
+  font-family: "Cabin";
+}
+
 h1 {
-    color: #474747;
+  color: #474747;
+}
+
+h2 {
+  color: #4C4C4C;
+  font-size: 33px;
+  font-weight: bold;
 }
 
 p {
   margin: 0;
+  font-size: 18px;
+  color: #7E7E7E;
+  line-height: 1.5;
 }
 
 .logo {
@@ -47,155 +60,38 @@ p {
   }
 }
 
-.content {
-  background: #fff;
-  height: 100%;
-  display: flex;
-  display: -webkit-flex;
-  max-height: 810px;
-
-  .tagline-container {
-    position: relative;
-    height: 100%;
-    width: 60%;
-    padding: 70px;
-
-    .tagline {
-      text-align: left;
-      position: relative;
-      top: 50%;
-      transform: translateY(-50%);
-      -webkit-transform: translateY(-50%);
-      max-width: 600px;
-
-      h1 {
-        font-weight: normal;
-        font-size: 31px;
-        margin: 0;
-        padding: 0 0 30px 0;
-        letter-spacing: -1px;
-        clear: both;
-      }
-
-      p {
-        font-size: 24px;
-        font-weight: lighter;
-        color: #767676;
-        padding: 0 0 52px 0;
-      }
-      
-      .download-btn {
-        display: inline-block;
-        background: #2874B6;
-        color: #fff;
-        font-size: 16px;
-        border: none;
-        border-radius: 3px;
-        padding: 19px 42px;
-        -webkit-appearance: none;
-        text-decoration: none;
-
-        &:hover {
-          background: darken(#2874B6, 5%);
-        }
-      }
-
-      form {
-        .field-wrapper {
-          position: relative;
-          display: flex;
-          
-          .button-wrapper {
-              display: inline-block;
-              text-align: center;
-              
-              a {
-                  width: 100%;
-              }
-          
-              .download {
-                  display: block;
-                  font-size: 12px;
-                  width: 100%;
-                  text-align: center;
-                  color: #a3a3a3;
-                  margin-top: 14px;
-                  
-                  a {
-                      margin-left: 4px;
-                      color: #a3a3a3;
-                  }
-              }
-          }          
-
-          input[type=text],
-          input[type=password],
-          input[type=email] {
-            width: 292px;
-          }
-        }
-      }
-    }
+.cta {
+  background: #2874B6;
+  padding: 60px 0;
+  
+  h2 {
+    color: #fff;
   }
   
-  .app-container-mobile {
-      display: none;
-  }
-
-  .app-container {
-    position: relative;
-    width: 40%;
-    height: 100%;
+  .button {
+    background: #fff;
+    color: $blue;
+    border: none;
     
-    .video-wrapper {
-      height: auto;
-      width: 100%;
-      max-height: 693px;
-      max-width: 594px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      
-      .play {
-        display: none;
-        width: 180px;
-        height: 180px;
-        background: url('/images/play.png');
-        background-size: 180px 180px;
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 55%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        
-        &:hover {
-          opacity: .9;
-        }
-      }
-    
-      video {
-        width: 100%;
-        height: auto;
-        max-height: 693px;
-        max-width: 594px;
-      }
+    &:hover, &:focus {
+      color: $blue;
+      background: darken(#fff, 5%);
     }
   }
 }
 
-footer {
-  height: 100px;
-  clear: both;
+.footer {
   background: #f7f7f7;
+  padding: 60px 0;
+  
+  .row {
+    margin-bottom: 0;
+  }
 
   ul {
     margin: 0;
     padding: 0;
     position: relative;
-    top: 50%;
-    transform: translateY(-50%);
-    -webkit-transform: translateY(-50%);
 
     li {
       display: inline-block;
@@ -206,6 +102,10 @@ footer {
         color: #929292;
         text-decoration: none;
         font-size: 14px;
+        
+        &:hover {
+          text-decoration: underline;
+        }
       }
 
       &:after {
@@ -227,6 +127,17 @@ footer {
           display: none;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .footer ul li {
+    width: 100%;
+    margin: 0;
+    
+    &:after {
+      display: none;
     }
   }
 }
