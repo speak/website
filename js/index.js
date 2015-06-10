@@ -24,6 +24,8 @@ $(function(){
     video_mobile.src = '/videos/windows.mp4';
     video.poster = '/images/laptop-windows.png';
     video_mobile.poster = '/images/laptop-windows.png';
+  } else {
+    window.optimizely.push(["activate", 3029760201]);
   }
   
   // Handle video
