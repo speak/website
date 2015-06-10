@@ -77,4 +77,8 @@ $(function(){
   $('.download-btn').click(function() {
     client.addEvent("site.downloaded_app", details);
   });
+  
+  $(".button-win").click(function() {
+    $("#email").focus();
+  });
 });
