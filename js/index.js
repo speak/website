@@ -77,7 +77,7 @@ $(function(){
   
   // Track download
   $('.download-btn').click(function() {
-    ga('send', 'event', 'button', 'click', 'download');
+    ga('send', 'event', 'click', 'download');
     client.addEvent("site.downloaded_app", details);
   });
   
