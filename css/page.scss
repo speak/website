@@ -24,7 +24,7 @@
   }
   
   .tools {
-    .img {
+    img {
       width: 210px;
       height: 210px;
       background: #fff;
@@ -55,10 +55,6 @@
       margin-bottom: 40px;
       min-height: 250px;
     }
-    
-    .workfrom .img { background-image: url('/images/workfrom.png'); }
-    .remotive .img { background-image: url('/images/remotive.png'); }
-    .koding .img { background-image: url('/images/koding.png'); }
   }
 }
 
@@ -121,7 +117,7 @@
   .page .tools {
     text-align: center;
     
-    .img {
+    img {
       float: none;
       margin: 0px auto;
       margin-bottom: 30px;
