@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+  {% include head.html %}
+
+  <body class="page">
+    <div class="page-header">
+      <div class="container">
+        <div class="sixteen columns">
+          <nav>
+            <a href="/" class="logo"><img src="/images/logo-black.png" alt="Speak - Better Team Communication" width="80" height="26" /></a>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="http://blog.speak.io/tag/startup-journal">Startup Journal</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="page-subheader" style="background-image: url('/images/tools-header.png')">
+          <div class="container">
+            <div class="sixteen columns">
+              <h1>{{ page.title }}</h1>
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    <div class="content">
+      {{ content }}
+      
+      {% include footer.html %}
+    </div>
+
+    {% include ga.html %}
+  </body>
+</html>

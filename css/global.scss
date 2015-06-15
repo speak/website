@@ -49,7 +49,7 @@ h2 {
 p {
   margin: 0;
   font-size: 18px;
-  color: #7E7E7E;
+  color: #676767;
   line-height: 1.5;
 }
 
@@ -92,10 +92,11 @@ p {
     margin-bottom: 0;
   }
 
-  ul {
+  div ul {
     margin: 0;
     padding: 0;
     position: relative;
+    text-align: center;
 
     li {
       display: inline-block;
@@ -136,7 +137,7 @@ p {
 }
 
 @media (max-width: 480px) {
-  .footer ul li {
+  .footer div ul li {
     width: 100%;
     margin: 0;
     

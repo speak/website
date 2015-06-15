@@ -1,91 +1,12 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
-    <meta name="description" content="">
-    <meta name="author" content="">
-    <meta name="google-site-verification" content="w44XJOhIRhT__X2E0AkQdOh6RMioAZWjTDNlfhgIcAE" />
-    
-    <meta property="og:title" content="Speak | Better Team Communication" />
-    <meta property="og:site_name" content="Speak"/>
-    <meta property="og:url" content="http://speak.io" />
-    <meta property="og:description" content="Speak improves team communication by providing real presence and instant audio. You have a dock for your apps, why not for your people?" />
-    <meta property="og:locale" content="en_US" /> 
-    <meta property="og:type" content="article" />
-    
-    <link rel="shortcut icon" href="images/favicon.png">
-    <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400|Cabin:400,700' rel='stylesheet' type='text/css'>
-    
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-    <script src="//cdn.optimizely.com/js/2688840038.js"></script>
-    <script src="https://d26b395fwzu5fz.cloudfront.net/3.2.4/keen.min.js" type="text/javascript"></script>
-    <script src="/js/math.uuid.js" type="text/javascript"></script>
-    <script src="/js/get-param.js" type="text/javascript"></script>
-    <script src="/js/index.js" type="text/javascript"></script>
-
-    <title>Frictionless audio and video communication for your remote team</title>
-
-    <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-    <link rel="stylesheet" type="text/css" href="/css/skeleton.css"> 
-    <link rel="stylesheet" type="text/css" href="/css/buttons.css">
-    <link rel="stylesheet" type="text/css" href="/css/form.css">
-    <link rel="stylesheet" type="text/css" href="/css/banner.css">
-    <link rel="stylesheet" type="text/css" href="/css/global.css">
-    <link rel="stylesheet" type="text/css" href="/css/index.css">
-  </head>
+  {% include head.html %}
 
   <body>
     <div class="content">
       {{ content }}
-      
-      <div class="cta mac">
-        <div class="container">
-          <div class="row">
-            <div class="sixteen columns">
-              <h2>Try Speak for free!</h2>
-              <a href="https://s3.amazonaws.com/speak-production-releases/darwin/install-speak.dmg" class="button button-primary download-btn">Download for Mac</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div class="cta win">
-        <div class="container">
-          <div class="row">
-            <div class="sixteen columns">
-              <h2>We'll let you know when Windows is ready!</h2>
-              <a class="button button-primary button-win">Join Windows Beta</a>
-            </div>
-          </div>
-        </div>
-      </div>
-    
-      <div class="footer">
-        <div class="container">
-          <div class="row">
-            <div class="sixteen columns">
-              <ul>
-                <li><a href="http://blog.speak.io/tag/startup-journal/">Our Startup Journey</a></li>
-                <li><a href="http://www.twitter.com/speak_io">Follow Speak on Twitter</a></li>
-              </ul>
-            </div>
-          </div>
-        </div>
-      </div>
+      {% include footer.html %}
     </div>
 
-    <!-- GA Tracking Code -->
-    <script>
-      (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-        (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-        m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-      })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-
-      ga('create', 'UA-58556084-1', 'auto');
-      ga('send', 'pageview');
-
-    </script>
-  </body>
+    {% include ga.html %}
 </html>

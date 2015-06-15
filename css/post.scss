@@ -3,11 +3,8 @@
 
 @import 'elements';
 
-body {
-  background: #f7f7f7;
-}
-
 .post {
+    background: #f7f7f7;
     height: 100%;
     
     .logo {
@@ -15,27 +12,35 @@ body {
         padding: 40px 0;
     }
     
-    > section {
-        margin: 30px;
-        padding: 30px;
+    .changelog {
         background: #fff;
+        margin-bottom: 40px;
         
-        > ol, > ul {
+        ol {
           margin: 0;
           padding: 0;
           list-style: none;
-        }
-        
-        .changelog {
-          li {
+          padding: 40px;
+          
+          h2 {
+            margin-top: 0;
+          }
+          
+          > li {
             text-align: left;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
+            
+            li {
+              margin-bottom: 10px;
+            }
           }
         }
         
         h1 {
+          padding: 40px 40px 0 40px;
           text-align: left;
-          margin-top: 0;
+          margin: 0;
+          font-size: 22px;
         }
     }
 }

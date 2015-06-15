@@ -1,118 +1,123 @@
 ---
 layout: post
 ---
-<h1>Speak Changelog</h2>
-<ol class="changelog">
-  <li>
-    <a name="0.4.0"></a>
-    <h2>v0.4.0</h2>
-    <ul>
-      <li>We're excited to have a beta of both <strong>video and screen sharing</strong> in this release! 🎉 Of course this is just the first iteration and we'll be improving every day so please report any 🐛 you might find!</li>
-      <li>Fixed: Dock now displays ongoing call, even when normally hidden</li>
-      <li>Fixed: Issue where tooltip would not close automatically</li>
-      <li>Fixed: Improved handling and messaging when disconnected</li>
-      <li>Fixed: We polished up a lot of little areas in the UI, language, rounding, spacing and more. Think of it as a bit of a spring clean!</li>
-    </ul>
-  </li>
-  <li>
-    <a name="0.3.4"></a>
-    <h2>v0.3.4</h2>
-    <ul>
-      <li>Fixed: Race condition causing the app to never sign in for a small percentage of users 😳</li>
-      <li>Fixed: Alt-click a user should mark missed calls as read (did you know you can alt-click to skip the menu?)</li>
-      <li>Fixed: Error handling in audio preferences improved</li>
-    </ul>
-  </li>
-  <li>
-    <a name="0.3.3"></a>
-    <h2>v0.3.3</h2>
-    <ul>
-      <li>New: The client is now capable of connecting to geo-distributed servers for improved quality and speed</li>
-      <li>New: You can now change the desktop that the dock is displayed on, finally!</li>
-      <li>New: Ability to ping offline users</li>
-      <li>New: Ability to kick folks out of calls</li>
-      <li>New: Idle team mates now show how long it's been since they were active</li>
-      <li>Fixed: Offline team mates are now ordered correctly</li>
-      <li>Fixed: Offline team mates sometimes displaying as idle</li>
-      <li>Fixed: Issue where calling continues when cancelled during a multi party call</li>
-      <li>Fixed: Issue where folks in a call appear not to be</li>
-      <li>Fixed: Issue where you can be manually offline and in a call</li>
-      <li>Fixed: Better handling of going offline during a call</li>
-      <li>Fixed: Client now reconnects faster after being offline</li>
-      <li>Fixed: Various small UI glitches</li>
-    </ul>
-  </li>
-  <li>
-    <a name="0.3.2"></a>
-    <h2>v0.3.2</h2>
-    <ul>
-      <li>New: Dock now grows from center of screen like app dock</li>
-      <li>New: Twitter link in app menu, we really need some followers ya'll!</li>
-      <li>Fixed: If media connection is lost during a call it will rejoin call upon reconnection</li>
-      <li>Fixed: Issue where dock would float in the screen instead of being against edge</li>
-      <li>Fixed: Issue where audio continues to be uploaded after call is ended</li>
-      <li>Fixed: Issue where you would stay idle after resuming laptop from sleep</li>
-      <li>Fixed: Calling sound continued after ignoring a call</li>
-      <li>Fixed: Music now resumes when a call finishes as expected</li>
-      <li>Fixed: Improved resource consumption when idle</li>
-      <li>Fixed: CMD+SHIFT+H miswritten in shortcuts preferences</li>
-      <li>Fixed: Updated language around call and accept mode</li>
-      <li>Fixed: Unclickable area on screen when signed out of Speak</li>
-      <li>Fixed: If muted when another user joins a call the UI appears to unmute</li>
-      <li>Fixed: A number of minor display issues and refinements #littlebigdetails</li>
-    </ul>
-  </li>
-  <li>
-    <a name="0.3.1"></a>
-    <h2>v0.3.1</h2>
-    <ul>
-      <li>New: Now downloads via dmg installer on Mac</li>
-      <li>New: Added CMD+SHIFT+H global shortcut to leave a call</li>
-      <li>Fixed: Unable to signup with Slack when profile doesn't include an avatar</li>
-      <li>Fixed: No longer sending speaking events whilst calling and unanswered</li>
-      <li>Fixed: Stops ability to drag images into Speak windows and have them load</li>
-      <li>Fixed: Much improved error reporting so we can track bugs down quickly!</li>
-    </ul>
-  </li>
-  <li>
-    <a name="0.3.0"></a>
-    <h2>v0.3.0</h2>
-    <ul>
-      <li>New: Change dock to right hand side of screen!</li>
-      <li>New: Option to accept an invite and change team</li>
-      <li>New: Added direct link to email us under 'contact support'</li>
-      <li>Fixed: Undefined user after call</li>
-      <li>Fixed: Now better handling of errors during Slack authentication</li>
-      <li>Fixed: Numerous other small issues and bug fixes</li>
-    </ul>
-  </li>
-  <li>
-    <a name="0.2.9"></a>
-    <h2>v0.2.9</h2>
-    <ul>
-      <li>New: Link to this change log!</li>
-      <li>New: Call when idle preference is now enabled by default</li>
-      <li>Fixed: Instances where there would be no audio notification</li>
-      <li>Fixed: Possible to appear muted but not be after leaving a call in mute state</li>
-      <li>Fixed: Ability to clear missed call notifications in a call</li>
-      <li>Fixed: Invite tooltip animation #littlebigdetails</li>
-    </ul>
-  </li>
-  <li>
-    <a name="0.2.8"></a>
-    <h2>v0.2.8</h2>
-    <ul>
-      <li>New: Upload your own avatar from the profile preferences</li>
-      <li>New: Option to disable instant audio when idle/away from the computer</li>
-      <li>New: Missing a call will now add a badge to the user so you know to call back</li>
-      <li>New: Clearer denotation when calling a user and not yet connected</li>
-      <li>New: Alt+click on a users picture to audio call them and skip the menu</li>
-      <li>Fixed: Several issues when loading after first signup</li>
-      <li>Fixed: CMD+SHIFT+N shortcut now working</li>
-      <li>Fixed: Improved animations for calls</li>
-      <li>Fixed: General call stability improvements in multiparty</li>
-      <li>Fixed: Slack authentication now has a bigger window size</li>
-      <li>Fixed: Signin link on forgot password screen</li>
-    </ul>
-  </li>
-</ol>
+
+<div class="container changelog">
+  <div class="sixteen columns">
+    <h1>Speak Changelog</h2>
+    <ol class="changelog">
+      <li>
+        <a name="0.4.0"></a>
+        <h2>v0.4.0</h2>
+        <ul>
+          <li>We're excited to have a beta of both <strong>video and screen sharing</strong> in this release! 🎉 Of course this is just the first iteration and we'll be improving every day so please report any 🐛 you might find!</li>
+          <li>Fixed: Dock now displays ongoing call, even when normally hidden</li>
+          <li>Fixed: Issue where tooltip would not close automatically</li>
+          <li>Fixed: Improved handling and messaging when disconnected</li>
+          <li>Fixed: We polished up a lot of little areas in the UI, language, rounding, spacing and more. Think of it as a bit of a spring clean!</li>
+        </ul>
+      </li>
+      <li>
+        <a name="0.3.4"></a>
+        <h2>v0.3.4</h2>
+        <ul>
+          <li>Fixed: Race condition causing the app to never sign in for a small percentage of users 😳</li>
+          <li>Fixed: Alt-click a user should mark missed calls as read (did you know you can alt-click to skip the menu?)</li>
+          <li>Fixed: Error handling in audio preferences improved</li>
+        </ul>
+      </li>
+      <li>
+        <a name="0.3.3"></a>
+        <h2>v0.3.3</h2>
+        <ul>
+          <li>New: The client is now capable of connecting to geo-distributed servers for improved quality and speed</li>
+          <li>New: You can now change the desktop that the dock is displayed on, finally!</li>
+          <li>New: Ability to ping offline users</li>
+          <li>New: Ability to kick folks out of calls</li>
+          <li>New: Idle team mates now show how long it's been since they were active</li>
+          <li>Fixed: Offline team mates are now ordered correctly</li>
+          <li>Fixed: Offline team mates sometimes displaying as idle</li>
+          <li>Fixed: Issue where calling continues when cancelled during a multi party call</li>
+          <li>Fixed: Issue where folks in a call appear not to be</li>
+          <li>Fixed: Issue where you can be manually offline and in a call</li>
+          <li>Fixed: Better handling of going offline during a call</li>
+          <li>Fixed: Client now reconnects faster after being offline</li>
+          <li>Fixed: Various small UI glitches</li>
+        </ul>
+      </li>
+      <li>
+        <a name="0.3.2"></a>
+        <h2>v0.3.2</h2>
+        <ul>
+          <li>New: Dock now grows from center of screen like app dock</li>
+          <li>New: Twitter link in app menu, we really need some followers ya'll!</li>
+          <li>Fixed: If media connection is lost during a call it will rejoin call upon reconnection</li>
+          <li>Fixed: Issue where dock would float in the screen instead of being against edge</li>
+          <li>Fixed: Issue where audio continues to be uploaded after call is ended</li>
+          <li>Fixed: Issue where you would stay idle after resuming laptop from sleep</li>
+          <li>Fixed: Calling sound continued after ignoring a call</li>
+          <li>Fixed: Music now resumes when a call finishes as expected</li>
+          <li>Fixed: Improved resource consumption when idle</li>
+          <li>Fixed: CMD+SHIFT+H miswritten in shortcuts preferences</li>
+          <li>Fixed: Updated language around call and accept mode</li>
+          <li>Fixed: Unclickable area on screen when signed out of Speak</li>
+          <li>Fixed: If muted when another user joins a call the UI appears to unmute</li>
+          <li>Fixed: A number of minor display issues and refinements #littlebigdetails</li>
+        </ul>
+      </li>
+      <li>
+        <a name="0.3.1"></a>
+        <h2>v0.3.1</h2>
+        <ul>
+          <li>New: Now downloads via dmg installer on Mac</li>
+          <li>New: Added CMD+SHIFT+H global shortcut to leave a call</li>
+          <li>Fixed: Unable to signup with Slack when profile doesn't include an avatar</li>
+          <li>Fixed: No longer sending speaking events whilst calling and unanswered</li>
+          <li>Fixed: Stops ability to drag images into Speak windows and have them load</li>
+          <li>Fixed: Much improved error reporting so we can track bugs down quickly!</li>
+        </ul>
+      </li>
+      <li>
+        <a name="0.3.0"></a>
+        <h2>v0.3.0</h2>
+        <ul>
+          <li>New: Change dock to right hand side of screen!</li>
+          <li>New: Option to accept an invite and change team</li>
+          <li>New: Added direct link to email us under 'contact support'</li>
+          <li>Fixed: Undefined user after call</li>
+          <li>Fixed: Now better handling of errors during Slack authentication</li>
+          <li>Fixed: Numerous other small issues and bug fixes</li>
+        </ul>
+      </li>
+      <li>
+        <a name="0.2.9"></a>
+        <h2>v0.2.9</h2>
+        <ul>
+          <li>New: Link to this change log!</li>
+          <li>New: Call when idle preference is now enabled by default</li>
+          <li>Fixed: Instances where there would be no audio notification</li>
+          <li>Fixed: Possible to appear muted but not be after leaving a call in mute state</li>
+          <li>Fixed: Ability to clear missed call notifications in a call</li>
+          <li>Fixed: Invite tooltip animation #littlebigdetails</li>
+        </ul>
+      </li>
+      <li>
+        <a name="0.2.8"></a>
+        <h2>v0.2.8</h2>
+        <ul>
+          <li>New: Upload your own avatar from the profile preferences</li>
+          <li>New: Option to disable instant audio when idle/away from the computer</li>
+          <li>New: Missing a call will now add a badge to the user so you know to call back</li>
+          <li>New: Clearer denotation when calling a user and not yet connected</li>
+          <li>New: Alt+click on a users picture to audio call them and skip the menu</li>
+          <li>Fixed: Several issues when loading after first signup</li>
+          <li>Fixed: CMD+SHIFT+N shortcut now working</li>
+          <li>Fixed: Improved animations for calls</li>
+          <li>Fixed: General call stability improvements in multiparty</li>
+          <li>Fixed: Slack authentication now has a bigger window size</li>
+          <li>Fixed: Signin link on forgot password screen</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+</div>
