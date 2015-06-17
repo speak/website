@@ -170,9 +170,12 @@
         box-shadow: 0px 1px 0px rgba(0,0,0,.10);
         
         p {
-          font-family: Georgia, Times, serif;
           color: #494949;
-          font-size: 17px;
+          font-size: 16px;
+          
+          span {
+            font-family: Georgia, Times, serif;
+          }
         }
         
         &:after, &:before {

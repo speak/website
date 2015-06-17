@@ -1,15 +1,15 @@
-      <div class="cta mac">
+      <div class="cta mac"{% if page.color %} style="background-color: #{{ page.color }}"{% endif %}>
         <div class="container">
           <div class="row">
             <div class="sixteen columns">
               <h2>Try Speak for free!</h2>
-              <a href="https://s3.amazonaws.com/speak-production-releases/darwin/install-speak.dmg" class="button button-primary download-btn">Download for Mac</a>
+              <a href="https://s3.amazonaws.com/speak-production-releases/darwin/install-speak.dmg" class="button button-primary download-btn"{% if page.color %} style="color: #{{ page.color }}"{% endif %}>Download for Mac</a>
             </div>
           </div>
         </div>
       </div>
     
-      <div class="cta win">
+      <div class="cta win"{% if page.color %} style="background-color: #{{ page.color }}"{% endif %}>
         <div class="container">
           <div class="row">
             <div class="sixteen columns">
@@ -23,11 +23,28 @@
       <div class="footer">
         <div class="container">
           <div class="row">
-            <div class="sixteen columns">
+            <div class="four columns">
+              <h4>Features</h4>
               <ul>
-                <li><a href="http://blog.speak.io/tag/startup-journal/">Our Startup Journey</a></li>
+                <li><a href="/features/built-for-teams">Built for Teams</a></li>
+                <li><a href="/features/fast-and-reliable">Fast & Reliable</a></li>
+                <li><a href="/features/team-presence">Team Presence</a></li>
+              </ul>
+            </div>
+            <div class="four columns">
+              <h4>Community</h4>
+              <ul>
                 <li><a href="http://www.twitter.com/speak_io">Follow Speak on Twitter</a></li>
-                <li><a href="/tools-for-remote-workers-digital-nomads">Remote Tools</a></li>
+                <li><a href="/tools-for-remote-workers-digital-nomads">Tools for Remote Workers</a></li>
+                <li><a href="http://blog.speak.io">The Speak Blog</a></li>
+              </ul>
+            </div>
+            <div class="eight columns">
+              <h4>From the Blog</h4>
+              <ul>
+                <li><a href="http://blog.speak.io/the-10-best-places-to-find-telecommuting-jobs-other-than-craigslist/">The 10 Best Places to Find Telecommuting Jobs Other Than Craigslist</a></li>
+                <li><a href="http://blog.speak.io/10-must-have-tools-for-remote-workers-and-digital-nomads/">10 Must-Have Tools for Remote Workers and Digital Nomads</a></li>
+                <li><a href="http://blog.speak.io/the-state-of-speak/">The State of Speak</a></li>
               </ul>
             </div>
           </div>

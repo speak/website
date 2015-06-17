@@ -1,0 +1,40 @@
+    <div class="page-header" style="background-image: url('/images/{{ page.header_pattern }}.png'); background-color: #{{ page.color }};')">
+      <div class="container">
+        <div class="sixteen columns">
+          <nav>
+            <a href="/" class="logo"><img src="/images/logo-white.png" alt="Speak - Better Team Communication" width="80" height="26" /></a>
+            <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="http://blog.speak.io/tag/startup-journal">Startup Journal</a></li>
+            </ul>
+          </nav>
+        </div>
+      </div>
+      <div class="page-subheader">
+          <div class="container">
+            <div class="sixteen columns">
+              <h1>{{ page.title }}</h1>
+              {% if page.subtitle %}
+              <p>
+                {{ page.subtitle }}
+              </p>
+            {% endif %}
+              {% if page.header_image %}
+                <img src="/images/{{ page.header_image }}.png" width="516" height="289" />
+              {% endif %}
+            </div>
+          </div>
+      </div>
+    </div>
+    
+    {% if page.description %}
+    <div class="intro">
+      <div class="container">
+        <div class="fifteen offset-by-one columns">
+          <p>
+            {{ page.description }}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endif %}
