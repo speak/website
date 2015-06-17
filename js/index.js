@@ -1,5 +1,7 @@
 $(function(){
-  var env = window.location.href.indexOf('docker:5000') > -1 ? 'dev' : 'prod';
+  var env = window.location.href.indexOf('docker:5000') > -1 || window.location.href.indexOf('localhost:4001') ? 'dev' : 'prod';
+  
+  console.log(env);
   
   if (env == 'dev') {
     var keen_project_id = '54cb8b0e46f9a73b4b13f4f7';
@@ -27,17 +29,19 @@ $(function(){
   }
   
   // Handle video
-  video.addEventListener("timeupdate", function(){
-    if(this.currentTime >= 2.45 && this.currentTime < 3) {
-      this.pause();
-      $('.play').fadeIn();
-    } else {
-      $('.play').fadeOut();
-    }
-  });
+  if (video) {
+    video.addEventListener("timeupdate", function(){
+      if(this.currentTime >= 2.45 && this.currentTime < 3) {
+        this.pause();
+        $('.play').fadeIn();
+      } else {
+        $('.play').fadeOut();
+      }
+    });
   
-  video.onended = function() {
-    $('.play').fadeIn();
+    video.onended = function() {
+      $('.play').fadeIn();
+    }
   }
   
   $('.play').click(function() {
