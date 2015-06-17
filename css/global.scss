@@ -32,7 +32,7 @@ body {
   height: 100%;
 }
 
-h1, h2 {
+h1, h2, h3 {
   font-family: "Cabin";
 }
 
@@ -44,6 +44,12 @@ h2 {
   color: #4C4C4C;
   font-size: 33px;
   font-weight: bold;
+}
+
+h3 {
+  color: #474747;
+  font-size: 38px;
+  font-weight: normal;
 }
 
 p {
@@ -67,6 +73,7 @@ p {
 .cta {
   background: #2874B6;
   padding: 60px 0;
+  text-align: center;
   
   h2 {
     color: #fff;
@@ -84,24 +91,25 @@ p {
   }
 }
 
+.full {
+  width: 100%;
+}
+
+
 .footer {
   background: #f7f7f7;
   padding: 60px 0;
-  
-  .row {
-    margin-bottom: 0;
-  }
+  text-align: left;
 
   div ul {
     margin: 0;
     padding: 0;
     position: relative;
-    text-align: center;
 
     li {
-      display: inline-block;
       position: relative;
-      margin-right: 40px;
+      margin-bottom: 4px;
+      list-style: none;
 
       a {
         color: #929292;
@@ -110,26 +118,6 @@ p {
         
         &:hover {
           text-decoration: underline;
-        }
-      }
-
-      &:after {
-        content: "";
-        display: block;
-        position: absolute;
-        top: 10px;
-        right: -25px;
-        width: 6px;
-        height: 6px;
-        background: #D8D8D8;
-        border-radius: 3px;
-      }
-
-      &:last-child {
-        margin-right: 0;
-
-        &:after {
-          display: none;
         }
       }
     }
