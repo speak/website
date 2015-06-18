@@ -96,48 +96,31 @@
       }
     }
   }
-  
-  .app-container-mobile {
-      display: none;
-  }
 
-  .app-container {
+  .app-demo {
     position: relative;
-    width: 40%;
+    width: 50%;
     height: 100%;
+    min-height: 560px;
     
-    .video-wrapper {
-      height: auto;
-      width: 100%;
-      max-height: 693px;
-      max-width: 594px;
+    .laptop {
+      background: #1E1E1F;
+      height: 691px;
+      width: 594px;
       position: absolute;
       bottom: 0;
       right: 0;
-      
-      .play {
-        display: none;
-        width: 180px;
-        height: 180px;
-        background: url('/images/play.png');
-        background-size: 180px 180px;
-        position: absolute;
-        z-index: 1;
-        top: 50%;
-        left: 55%;
-        transform: translate(-50%, -50%);
-        cursor: pointer;
-        
-        &:hover {
-          opacity: .9;
-        }
-      }
+      border-top-left-radius: 30px;
+      transform-origin: bottom right;
     
-      video {
-        width: 100%;
-        height: auto;
-        max-height: 693px;
-        max-width: 594px;
+      .desktop {
+        background: #fff;
+        width: 531px;
+        height: 631px;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        border-top-left-radius: 2px;
       }
     }
   }
@@ -283,14 +266,31 @@
         }
       }
     }
-    
-    .app-container {
-      width: 50%;
+  }
+}
+
+@media (max-width: 1118px) {
+  .app-demo {
+    .laptop {
+      transform-origin: bottom right;
+      transform: scale(.9);
+    }
+  }
+}
+
+@media (max-width: 1000px) {
+  .app-demo {
+    .laptop {
+      transform: scale(.8);
     }
   }
 }
 
 @media (max-width: 860px) {
+  .hero-wrapper .app-demo {
+    width: 100%;
+  }
+  
   .hero-wrapper {
     display: block;
     height: auto;
@@ -311,22 +311,6 @@
             max-width: 60%;
             margin: 0px auto;
           }
-        }
-      }
-    }
-
-    .app-container {
-      width: 100%;
-      overflow: hidden;
-      padding-left: 30px;
-      
-      .video-wrapper {
-        position: static;
-        float: right;
-        
-        &:after {
-          content: "";
-          clear: both;
         }
       }
     }
@@ -362,6 +346,12 @@
 }
 
 @media (max-width: 600px) {
+  .app-demo {
+    .laptop {
+      transform: scale(.65);
+    }
+  }
+  
   .hero-wrapper {
     .tagline-container {
       padding: 70px 40px 40px 40px;
@@ -376,16 +366,6 @@
           }
         }
       }
-    }
-    
-    // override experiment on mobile
-    
-    .app-container {
-        display: none !important;
-    }
-    
-    .app-container-mobile {
-        display: block !important;
     }
   }
 }
