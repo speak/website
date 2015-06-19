@@ -96,34 +96,6 @@
       }
     }
   }
-
-  .app-demo {
-    position: relative;
-    width: 50%;
-    height: 100%;
-    min-height: 560px;
-    
-    .laptop {
-      background: #1E1E1F;
-      height: 691px;
-      width: 594px;
-      position: absolute;
-      bottom: 0;
-      right: 0;
-      border-top-left-radius: 30px;
-      transform-origin: bottom right;
-    
-      .desktop {
-        background: #fff;
-        width: 531px;
-        height: 631px;
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        border-top-left-radius: 2px;
-      }
-    }
-  }
 }
 
 .testimonial-wrapper {
