@@ -23,7 +23,7 @@ $(function(){
       $(".banner.error").text(xhr.responseJSON.params.message).show();
     }).done(function(data, status, xhr){
       $(".banner").hide();
-      $(".banner.success").text("Success! Now download the app.").show();
+      $('section').addClass('flipped');
     });
   });
 });
