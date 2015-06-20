@@ -24,11 +24,15 @@ body {
     margin: 0;
     padding: 0;
     background: #fff;
+    -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+    -moz-backface-visibility: hidden; /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
   }
   
   .back {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
-    backface-visibility: hidden;
   }
   
   .download {
@@ -41,8 +45,12 @@ body {
     padding: 30px;
     margin: 0px auto;
     background: #fff;
+    -webkit-transform-style: preserve-3d;
+    -webkit-transition: all 1s;
+    -moz-transform-style: preserve-3d;
+    -moz-transition: all 1s;
     transform-style: preserve-3d;
-    transition: transform 1s;
+    transition: all 1s;
 
     h1 {
       margin-top: 0;
@@ -62,6 +70,8 @@ body {
   }
   
   > section.flipped {
+    -webkit-transform: rotateY( 180deg );
+    -moz-transform: rotateY( 180deg );
     transform: rotateY( 180deg );
   }
   
