@@ -1,14 +1,14 @@
 ---
 title: Accept your invite
 layout: simple
+script: invite.js
 ---
-<h1>
-  Accept Invite
-</h1>
+
+<h1>Accept Invite</h1>
 <p id="password-reset-instructions">
   You're joining an org...
 </p>
-<form id="invite-accept">
+<form id="invite-accept" action="{% if site.GH_ENV == 'gh_pages' %}https://bulldog.speak.io{% else %}http://docker:9393{% endif %}/users">
   <div class="banner error"></div>
   <div class="banner success"></div>
   <div class="field-wrapper">
@@ -19,51 +19,3 @@ layout: simple
     <input type="submit" name="submit" value="Join" id="ss-submit" class="jfk-button jfk-button-action ">
   </div>
 </form>
-
-<script>
-  {% if site.GH_ENV == 'gh_pages' %}
-    bulldog_url = 'https://bulldog.speak.io/'
-  {% else %}
-    bulldog_url = 'http://docker:9393/'
-  {% endif %}
-
-  $(function(){
-    function GetURLParameter(sParam)  {
-      var sPageURL = window.location.search.substring(1);
-      var sURLVariables = sPageURL.split('&');
-      for (var i = 0; i < sURLVariables.length; i++) {
-        var sParameterName = sURLVariables[i].split('=');
-        if (sParameterName[0] == sParam){
-          return sParameterName[1];
-        }
-      }
-    }
-
-    var $form = $('#invite-accept');
-    var code = GetURLParameter('code');
-    var email = GetURLParameter('email');
-    $form.find('input.email').val(email);
-    
-    $form.on('submit', function(ev){
-      ev.preventDefault();
-      
-      $.ajax({
-        type: 'POST',
-        url: bulldog_url + 'users',
-        data: {
-          email: $form.find('input.email').val(),
-          first_name: $form.find('input.first-name').val(),
-          last_name: $form.find('input.last-name').val(),
-          password: $form.find('input.password').val(),
-          invite_code: code
-        }
-      }).fail(function(xhr, status, error){
-        $(".banner").hide();
-        $(".banner.error").text(xhr.responseJSON.params.message).show();
-      }).done(function(data, status, xhr){
-        $(".banner").hide();
-        $(".banner.success").text("Success! Now download the app.").show();
-      });
-    });
-  });
-</script>
