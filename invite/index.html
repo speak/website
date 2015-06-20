@@ -4,18 +4,18 @@ layout: simple
 script: invite.js
 ---
 
-<h1>Accept Invite</h1>
+<h1>Almost there&hellip;</h1>
 <p id="password-reset-instructions">
-  You're joining an org...
+  Just a couple of details and we'll have you in the <strong>Bobs Burgers</strong> team.
 </p>
 <form id="invite-accept" action="{% if site.GH_ENV == 'gh_pages' %}https://bulldog.speak.io{% else %}http://docker:9393{% endif %}/users">
   <div class="banner error"></div>
   <div class="banner success"></div>
   <div class="field-wrapper">
-    <input class="email" id="email" type="text" name="email" placeholder="Work email" required>
     <input class="first-name" id="first_name" type="text" name="first_name" placeholder="First name" required>
     <input class="last-name" id="last_name" type="text" name="last_name" placeholder="Last name" required>
-    <input class="password" id="password" type="password" name="password" placeholder="Your password" required>
-    <input type="submit" name="submit" value="Join" id="ss-submit" class="jfk-button jfk-button-action ">
+    <input class="email" id="email" type="text" name="email" placeholder="Work email" required>
+    <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
+    <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
   </div>
 </form>
