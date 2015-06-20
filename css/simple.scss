@@ -20,19 +20,28 @@ body {
     display: block;
     position: absolute;
     width: 340px;
-    min-height: 400px;
+    min-height: 320px;
     margin: 0;
     padding: 0;
     background: #fff;
-    -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
-    -moz-backface-visibility: hidden; /* Chrome, Safari, Opera */
-    backface-visibility: hidden;
+    
+    // this adds some padding to the left and right to stop visual glitches
+    // when rotating in safari
+    border-right: 10px solid #fff;
+    border-left: 10px solid #fff;
+    margin-left: -10px;
+    margin-right: -10px;
+    box-sizing: content-box;
   }
   
   .back {
-    -webkit-transform: rotateY( 180deg );
-    -moz-transform: rotateY( 180deg );
-    transform: rotateY( 180deg );
+    -webkit-transform: rotateY( 180deg ) translateZ(1px);
+    -moz-transform: rotateY( 180deg ) translateZ(1px);
+    transform: rotateY( 180deg ) translateZ(1px);
+
+    -webkit-backface-visibility: hidden; /* Chrome, Safari, Opera */
+    -moz-backface-visibility: hidden; /* Chrome, Safari, Opera */
+    backface-visibility: hidden;
   }
   
   .download {
