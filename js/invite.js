@@ -1,9 +1,18 @@
 $(function(){
   var $form = $('#invite-accept');
   var action = $form.attr('action');
+  var invite = $form.attr('action').replace('/users', '/invite/');
   var code = getParam('code');
-  var email = getParam('email');
-  $form.find('input.email').val(email);
+  
+  // load team name and email from bulldog
+  $.ajax({
+    type: 'GET',
+    url: invite + code
+  }).done(function(data, status, xhr){
+
+    $form.find('input.email').val(data.email);
+    $('#team-name').html('<strong>'+ data.organization_name +'</strong>');    
+  });
   
   $form.on('submit', function(ev){
     ev.preventDefault();

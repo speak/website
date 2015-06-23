@@ -7,7 +7,7 @@ script: invite.js
 <figure class="front">
   <h1>Almost there&hellip;</h1>
   <p id="password-reset-instructions">
-    Just a couple of details and we'll have you in the <strong>Bobs Burgers</strong> team.
+    Just a couple of details and we'll have you in the <span id="team-name">right</span> team.
   </p>
   <form id="invite-accept" action="{% if site.GH_ENV == 'gh_pages' %}https://bulldog.speak.io{% else %}http://docker:9393{% endif %}/users">
     <div class="banner error"></div>
