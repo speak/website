@@ -1,0 +1,35 @@
+---
+title: Accept your invite
+layout: simple
+script: invite.js
+---
+
+<figure class="front">
+  <h1>Almost there&hellip;</h1>
+  <p id="password-reset-instructions">
+    Just a couple of details and we'll have you in the <span id="team-name">right</span> team.
+  </p>
+  <form id="invite-accept" action="{% if site.GH_ENV == 'gh_pages' %}https://bulldog.speak.io{% else %}http://docker:9393{% endif %}/users">
+    <div class="banner error"></div>
+    <div class="banner success"></div>
+    <div class="field-wrapper">
+      <input class="first-name" id="first_name" type="text" name="first_name" placeholder="First name" required>
+      <input class="last-name" id="last_name" type="text" name="last_name" placeholder="Last name" required>
+      <input class="email" id="email" type="text" name="email" placeholder="Work email" required>
+      <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
+      <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
+    </div>
+  </form>
+</figure>
+
+<figure class="back download">
+  <h1>
+    Download for Mac
+  </h1>
+  <p>
+    You'll need to download the desktop app to connect with the rest of <strong>Bobs Burgers</strong>, it'll only take a moment!
+  </p>
+  <p>
+    <a href="{{ site.download_url_mac }}" class="button button-primary">Download for Mac</a>
+  </p>
+</figure>
