@@ -1,5 +1,5 @@
 $(function(){
-  var env = window.location.href.indexOf('docker') > -1 || window.location.href.indexOf('localhost') ? 'dev' : 'prod';
+  var env = (window.location.href.indexOf('docker') > -1 || window.location.href.indexOf('localhost') > -1) ? 'dev' : 'prod';
   
   if (env == 'dev') {
     var keen_project_id = '54cb8b0e46f9a73b4b13f4f7';
