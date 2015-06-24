@@ -7,7 +7,7 @@ script: invite.js
 <figure class="front">
   <h1>Almost there&hellip;</h1>
   <p id="password-reset-instructions">
-    Just a couple of details and we'll have you in the <span id="team-name">right</span> team.
+    Just a couple of details and we'll have you in the <span class="team-name">right</span> team.
   </p>
   <form id="invite-accept" action="{% if site.GH_ENV == 'gh_pages' %}https://bulldog.speak.io{% else %}http://docker:9393{% endif %}/users">
     <div class="banner error"></div>
@@ -27,7 +27,7 @@ script: invite.js
     Download for Mac
   </h1>
   <p>
-    You'll need to download the desktop app to connect with the rest of <strong>Bobs Burgers</strong>, it'll only take a moment!
+    You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
   </p>
   <p>
     <a href="{{ site.download_url_mac }}" class="button button-primary">Download for Mac</a>

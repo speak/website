@@ -11,7 +11,7 @@ $(function(){
   }).done(function(data, status, xhr){
 
     $form.find('input.email').val(data.email);
-    $('#team-name').html('<strong>'+ data.organization_name +'</strong>');    
+    $('.team-name').html('<strong>'+ data.organization_name +'</strong>');    
   });
   
   $form.on('submit', function(ev){
