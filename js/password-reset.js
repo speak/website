@@ -20,5 +20,6 @@ $(function(){
       $(".banner").hide();
       $(".banner.success").text("Great! Your password has been updated, you can now head on over to the app and log in.").show();
     });
+    return false;
   });
 });
