@@ -1,7 +1,5 @@
 $(function(){
-  var env = window.location.href.indexOf('docker:5000') > -1 || window.location.href.indexOf('localhost:4001') ? 'dev' : 'prod';
-  
-  console.log(env);
+  var env = (window.location.href.indexOf('docker') > -1 || window.location.href.indexOf('localhost') > -1) ? 'dev' : 'prod';
   
   if (env == 'dev') {
     var keen_project_id = '54cb8b0e46f9a73b4b13f4f7';
@@ -76,14 +74,4 @@ $(function(){
   };
   
   client.addEvent("site.page_view", details);
-  
-  // Track download
-  $('.download-btn').click(function() {
-    ga('send', 'event', 'click', 'download');
-    client.addEvent("site.downloaded_app", details);
-  });
-  
-  $(".button-win").click(function() {
-    $("#email").focus();
-  });
 });
