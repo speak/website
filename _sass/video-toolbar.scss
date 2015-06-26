@@ -1,0 +1,89 @@
+#video-toolbar {
+  position: absolute;
+  z-index: 999;
+  top: 20px;
+  left: 50%;
+  width: 100%;
+  text-align: center;
+  transform: translate3d(-50%, -6%, 0);
+  transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  opacity: 0;
+  
+  ul {
+    margin: 0;
+    padding: 0;
+  }
+  
+  li {
+    margin: 0 5px;
+    list-style: none;
+    display: inline-block;
+    
+    a {
+      -webkit-app-region: no-drag;
+      background-color: #fff;
+      background-size: 20px 20px;
+      background-position: center center;
+      background-repeat: no-repeat;
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      width: 35px;
+      height: 35px;
+      cursor: default;
+      display: block;
+      @include border-radius(18px);
+      
+      &.mute {
+        background-image: url('../images/icons/toolbar-icon-mute.png');
+        &.muted { background-image: url('../images/icons/toolbar-icon-mute-enabled.png'); }
+      }
+      
+      &.video {
+        background-image: url('../images/icons/toolbar-icon-video.png');
+        &.enabled { background-image: url('../images/icons/toolbar-icon-video-enabled.png'); }
+      }
+      
+      &.screen {
+        background-image: url('../images/icons/toolbar-icon-screen.png');
+        &.enabled { background-image: url('../images/icons/toolbar-icon-screen-enabled.png'); }
+      }
+      
+      &.leave {
+        background-image: url('../images/icons/toolbar-icon-leave.png');
+      }
+    }
+  }
+}
+
+/* CSS for high-resolution devices */
+@media only screen and (-Webkit-min-device-pixel-ratio: 1.5),
+only screen and (-moz-min-device-pixel-ratio: 1.5),
+only screen and (-o-min-device-pixel-ratio: 3/2),
+only screen and (min-device-pixel-ratio: 1.5) {
+  #toolbar li a {
+    &.mute {
+      background-image: url('../images/icons/toolbar-icon-mute@2x.png');
+      &.muted { background-image: url('../images/icons/toolbar-icon-mute-enabled@2x.png'); }
+    }
+    
+    &.video {
+      background-image: url('../images/icons/toolbar-icon-video@2x.png');
+      &.enabled { background-image: url('../images/icons/toolbar-icon-video-enabled@2x.png'); }
+    }
+    
+    &.screen {
+      background-image: url('../images/icons/toolbar-icon-screen@2x.png');
+      &.enabled { background-image: url('../images/icons/toolbar-icon-screen-enabled@2x.png'); }
+    }
+    
+    &.leave {
+      background-image: url('../images/icons/toolbar-icon-leave@2x.png');
+    }
+  }
+}
+
+#video:hover {
+  #toolbar {
+    transform: translate3d(-50%, 0, 0);
+    opacity: 1;
+  }
+}
