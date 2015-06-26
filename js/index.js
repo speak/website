@@ -49,7 +49,7 @@ $(function(){
   });
   
   // Track pageview
-  var client = new Keen({
+  client = new Keen({
     projectId: keen_project_id,
     writeKey: keen_write_key,
     protocol: "https",
@@ -63,7 +63,7 @@ $(function(){
   var referrer_site = referrer[0] || url;
   var referrer_params = referrer[1] || '';
   
-  var details = {
+  details = {
     id: Math.uuid(),
     page: window.location.href,
     time: new Date().toISOString(),
