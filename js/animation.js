@@ -1,25 +1,40 @@
 $(function(){
-  var $demo = $(".app-demo")
-  $demo.addClass('bounce-in');
-
-  setTimeout(function() { $demo.addClass('mouse-fade-in') },           2000);
-  setTimeout(function() { $demo.addClass('mouse-move-tooltip') },      2000);
-  setTimeout(function() { $demo.addClass('face-active') },             2300);
-  setTimeout(function() { $demo.addClass('tooltip-fade-in') },         3100);
-  setTimeout(function() { $demo.addClass('mouse-hover-tooltip') },     4000);
-  setTimeout(function() { $demo.addClass('highlight-video-call') },    4200);
-  setTimeout(function() { $demo.addClass('tooltip-fade-out') },        5400);
-  setTimeout(function() { $demo.addClass('bounce-out') },              6000);
-  setTimeout(function() { $demo.addClass('video-fade-in') },           6000);
-  setTimeout(function() { $demo.addClass('video-show-toolbar') },      6800);
-  setTimeout(function() { $demo.addClass('video-feed-fade-in') },      6800);
-  setTimeout(function() { $demo.addClass('mouse-hover-video-on') },    7500);
-  setTimeout(function() { $demo.addClass('mouse-click-video-on') },    8700);
-  setTimeout(function() { $demo.removeClass('mouse-click-video-on') }, 8900);
-  setTimeout(function() { $("#video-toolbar li a.video").addClass('enabled') }, 8900);
-  setTimeout(function() { $demo.addClass('mouse-hover-end-call') },    12000);
-  setTimeout(function() { $demo.addClass('mouse-click-end-call') },    13000);
-  setTimeout(function() { $demo.removeClass('mouse-click-end-call') },    13200);
-  setTimeout(function() { $demo.addClass('video-fade-out') },      13200);
-
+  var $demo      = $(".app-demo");
+  var playhead   = 0;
+  var animations = {
+    "bounce-in": 0,
+    "mouse-fade-in":                2000,
+    "mouse-move-tooltip":           0,
+    "face-active":                  300,
+    "tooltip-fade-in":              800,
+    "mouse-hover-tooltip":          900,
+    "highlight-video-call":         200,
+    "tooltip-fade-out":             1200,
+    "bounce-out":                   600,
+    "video-fade-in":{
+      delay: 600,
+      onComplete: function() { 
+        $('#big-video')[0].play();
+        $('#small-video')[0].play();
+      }
+    },
+    "video-show-toolbar":           800,
+    "mouse-hover-end-call":         7200,
+    "mouse-click-end-call-on":      1000,
+    "mouse-click-end-call-off":     200,
+    "video-fade-out":               200
+  }
+  
+  function setupAnimation(name, delay) {
+    if (typeof animations[name].onComplete === "function")
+      animations[name].onComplete();
+    
+    setTimeout(function() { $demo.addClass(name); }, delay);
+  }
+  
+  for (var name in animations) {
+    var delay = (typeof animations[name].delay === "undefined") ? animations[name] : animations[name].delay;
+    playhead = playhead+delay;
+    setupAnimation(name, playhead);
+  }
 });

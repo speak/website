@@ -90,7 +90,11 @@ layout: default
         </ul>
         
         <div class="video-window">
-          <div class="feed"></div>
+          <div class="feed">
+            <video id="big-video" width="450" height="300">
+              <source src="/videos/allison.mp4" type="video/mp4" />
+            </video>
+          </div>
           <div id="video-toolbar">
             <ul>
               <li><a class="mute"></a></li>
@@ -100,7 +104,11 @@ layout: default
             </ul>
           </div>
           <ul class="participants">
-            <li><img src="/images/demo/eric.png" /></li>
+            <li>
+              <video id="small-video" poster="/images/demo/eric.png" width="122" height="80">
+                <source src="/videos/eric.mp4" type="video/mp4" />
+              </video>
+            </li>
           </ul>
         </div>
       </div>
