@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+<url>
+  <loc>http://speak.io/</loc>
+  <lastmod>2015-06-18T19:56:59+00:00</lastmod>
+</url>
+<url>
+  <loc>http://speak.io/?platform=win</loc>
+  <lastmod>2015-06-18T19:56:59+00:00</lastmod>
+</url>
+<url>
+  <loc>http://speak.io/?platform=mac</loc>
+  <lastmod>2015-06-18T19:56:59+00:00</lastmod>
+</url>
+<url>
+  <loc>http://speak.io/features/built-for-teams/</loc>
+  <lastmod>2015-06-18T19:56:59+00:00</lastmod>
+</url>
+<url>
+  <loc>http://speak.io/features/fast-and-reliable/</loc>
+  <lastmod>2015-06-18T19:56:59+00:00</lastmod>
+</url>
+<url>
+  <loc>http://speak.io/features/team-presence/</loc>
+  <lastmod>2015-06-18T19:56:59+00:00</lastmod>
+</url>
+<url>
+  <loc>http://speak.io/tools-for-remote-workers-digital-nomads/</loc>
+  <lastmod>2015-06-18T19:56:59+00:00</lastmod>
+</url>
+</urlset>
