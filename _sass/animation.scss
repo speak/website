@@ -1,7 +1,7 @@
 // Animation timings
 
 
-/*.app-demo.animate {
+/*.animate {
   .dock > li {
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); 
     -webkit-animation-fill-mode: forwards;
@@ -16,114 +16,117 @@
 @-webkit-keyframes bounce-in {
   100% { transform: translate3d(55px,0,0); }
 }*/
-
-.app-demo.bounce-in {
-  .dock > li {
-    transform: translate3d(55px,0,0);
-    &:first-child { transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275); }
-    &:nth-child(2) { transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms; } 
-    &:nth-child(3) { transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 800ms; }
-    &:nth-child(4) { transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1200ms; }
-    &:nth-child(5) { transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1600ms; }
-  }
-}
-
-.app-demo.mouse-fade-in {
-  .cursor {
-    opacity: 1;
-  }
-}
-
-.app-demo.mouse-move-tooltip {
-  .cursor {
-    top: 250px;
-    left: 10px;
-  }
-}
-
-.app-demo.face-active {
-  .dock > li:nth-child(2) {
-    transform: translate3d(65px,0,0);
-  }
-}
-
-.app-demo.tooltip-fade-in {
-  .tooltip {
-    opacity: 1;
-  }
-}
-
-.app-demo.mouse-hover-tooltip {
-  .cursor {
-    top: 270px;
-    left: 110px;
-  }
-}
-
-.app-demo.highlight-video-call  {
-  .tooltip .menu li:nth-child(2) a {
-    color: #fff;
-    background-color: #4A90E2;
-
-    i.icon {
-      &.icon-video-camera, 
-      &.icon-video-camera-enabled,
-      &.icon-video-camera-disabled { @include image-icon('tooltip-icon-video-camera-hover'); }
-      color: #fff;
-      -webkit-font-smoothing: antialiased;
+#app-demo {
+  &.bounce-in {
+    .dock > li {
+      @include transform(translate3d(55px,0,0));
+      @include transition-property(transition);
+      &:first-child { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275)); }
+      &:nth-child(2) { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms); } 
+      &:nth-child(3) { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 800ms); }
+      &:nth-child(4) { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1200ms); }
+      &:nth-child(5) { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 1600ms); }
     }
   }
-}
 
-.app-demo.tooltip-fade-out {
-  .tooltip {
-    opacity: 0;
+  &.mouse-fade-in {
+    .cursor {
+      opacity: 1;
+    }
   }
-}
 
-.app-demo.bounce-out {
-  .dock > li {
-    transform: translate3d(0,0,0) !important;
-    transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+  &.mouse-move-tooltip {
+    .cursor {
+      top: 250px;
+      left: 10px;
+    }
   }
-}
 
-.app-demo.video-fade-in {
-  .video-window {
-    opacity: 1;
+  &.face-active {
+    .dock > li:nth-child(2) {
+      transform: translate3d(65px,0,0);
+    }
   }
-}
 
-.app-demo.video-show-toolbar {
-  #video-toolbar {
-    opacity: 1;
-    top: 16px;
+  &.tooltip-fade-in {
+    .tooltip {
+      opacity: 1;
+    }
   }
-}
 
-.app-demo.mouse-hover-end-call {
-  .cursor {
-    top: 110px;
-    left: 350px;
+  &.mouse-hover-tooltip {
+    .cursor {
+      top: 270px;
+      left: 110px;
+    }
   }
-}
 
-.app-demo.mouse-click-end-call-on {
-  #video-toolbar li:nth-child(4) {
-    box-shadow: none;
-    @include scale(0.95);
-  }
-}
+  &.highlight-video-call  {
+    .tooltip .menu li:nth-child(2) a {
+      color: #fff;
+      background-color: #4A90E2;
 
-.app-demo.mouse-click-end-call-off {
-  #video-toolbar li:nth-child(4) {
-    box-shadow: 0 1px 1px rgba(0,0,0,0.3);
-    @include scale(1);
+      i.icon {
+        &.icon-video-camera, 
+        &.icon-video-camera-enabled,
+        &.icon-video-camera-disabled { @include image-icon('tooltip-icon-video-camera-hover'); }
+        color: #fff;
+        -webkit-font-smoothing: antialiased;
+      }
+    }
   }
-}
 
-.app-demo.video-fade-out {
-  .video-window {
-    opacity: 0;
+  &.tooltip-fade-out {
+    .tooltip {
+      opacity: 0;
+    }
   }
+
+  &.bounce-out {
+    .dock > li {
+      transform: translate3d(0,0,0) !important;
+      transition: transform 400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) !important;
+    }
+  }
+
+  &.video-fade-in {
+    .video-window {
+      opacity: 1;
+    }
+  }
+
+  &.video-show-toolbar {
+    #video-toolbar {
+      opacity: 1;
+      top: 16px;
+    }
+  }
+
+  &.mouse-hover-end-call {
+    .cursor {
+      top: 110px;
+      left: 350px;
+    }
+  }
+
+  &.mouse-click-end-call-on {
+    #video-toolbar li:nth-child(4) {
+      box-shadow: none;
+      @include scale(0.95);
+    }
+  }
+
+  &.mouse-click-end-call-off {
+    #video-toolbar li:nth-child(4) {
+      box-shadow: 0 1px 1px rgba(0,0,0,0.3);
+      @include scale(1);
+    }
+  }
+
+  &.video-fade-out {
+    .video-window {
+      opacity: 0;
+    }
+  }
+
 }

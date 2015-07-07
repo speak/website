@@ -5,7 +5,7 @@
   left: 50%;
   width: 100%;
   text-align: center;
-  transform: translate3d(-50%, -6%, 0);
+  @include transform(translate3d(-50%, -6%, 0));
   transition: all 600ms cubic-bezier(0.175, 0.885, 0.32, 1.275);
   opacity: 0;
   
@@ -84,7 +84,7 @@ only screen and (min-device-pixel-ratio: 1.5) {
 
 #video:hover {
   #toolbar {
-    transform: translate3d(-50%, 0, 0);
+    @include transform(translate3d(-50%, 0, 0));
     opacity: 1;
   }
 }
