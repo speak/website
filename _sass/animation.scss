@@ -1,26 +1,7 @@
-// Animation timings
-
-
-/*.animate {
-  .dock > li {
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    -webkit-animation-fill-mode: forwards;
-    -webkit-animation-name: bounce-in;
-    -webkit-animation-duration: .5s;
-    &:nth-child(2) { -webkit-animation-delay: .5s; }
-    &:nth-child(3) { -webkit-animation-delay: 1s; }
-    &:nth-child(4) { -webkit-animation-delay: 1.5s; }
-    &:nth-child(5) { -webkit-animation-delay: 2s; }
-  }
-}
-@-webkit-keyframes bounce-in {
-  100% { transform: translate3d(55px,0,0); }
-}*/
 #app-demo {
   &.bounce-in {
     .dock > li {
       @include transform(translate3d(55px,0,0));
-      @include transition-property(transition);
       &:first-child { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275)); }
       &:nth-child(2) { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 400ms); } 
       &:nth-child(3) { @include transition(400ms cubic-bezier(0.175, 0.885, 0.32, 1.275) 800ms); }
@@ -44,7 +25,7 @@
 
   &.face-active {
     .dock > li:nth-child(2) {
-      transform: translate3d(65px,0,0);
+      @include transform(translate3d(65px,0,0));
     }
   }
 
