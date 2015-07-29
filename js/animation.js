@@ -16,8 +16,10 @@ $(function(){
     "video-fade-in":{
       delay: 600,
       init: function() {
-        $big_video.play();
-        $small_video.play();
+        if($big_video) {
+          $big_video.play();
+          $small_video.play();
+        }
       }
     },
     "video-show-toolbar":           800,
@@ -40,7 +42,7 @@ $(function(){
       setupAnimation(name, playhead);
     }
   }
-  
+
   // Has to be split into a diff function for timeout to work
   function setupAnimation(name, delay) {
     setTimeout(function() { 
