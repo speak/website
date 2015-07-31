@@ -17,7 +17,7 @@
     <link rel="shortcut icon" href="/images/favicon.png">
     <link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,700,300,600,400|Cabin:400,700' rel='stylesheet' type='text/css'>
 
-  <title>{{ page.title }} | Speak</title>
+  <title>{% if page.window_title %}{{ page.window_title }}{% else %}{{ page.title }}{% endif %} | Speak</title>
 
   <link rel="stylesheet" type="text/css" href="/css/normalize.css">
   <link rel="stylesheet" type="text/css" href="/css/entypo.css">
