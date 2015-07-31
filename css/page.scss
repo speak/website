@@ -18,10 +18,28 @@
       font-weight: lighter;
     }
   }
+  
+  p {
+    font-size: 18px;
+    padding: 30px 0;
+    line-height: 1.7;
+  }
+  
+  p+p {
+    padding-top: 0;
+  }
+  
+  blockquote {
+    font-style: italic;
+    border-left: 5px solid #000;
+    padding: 15px 0 15px 20px;
+    margin: 0;
+  }
 
-  .intro {
+  .bar {
     background: #F5F7F9;
     font-size: 21px;
+    margin: 30px 0;
     
     p {
       font-size: 22px;
@@ -76,6 +94,8 @@
   }
 
   .page-content {
+    padding: 50px 0;
+    
     ul {
       padding: 0;
       list-style: none;
@@ -83,7 +103,8 @@
     }
 
     h2 {
-      margin: 0;
+      margin: 20px 0 0;
+      
       a {
         text-decoration: none;
       }
@@ -110,8 +131,6 @@
   }
   
   .tools {
-    margin-top: 40px;
-    
     img {
       width: 210px;
       height: 210px;
@@ -124,15 +143,15 @@
       float: left;
     }
     
-    p {
-      font-size: 16px;
-      padding: 20px 0 30px 0;
-    }
-    
     li {
       padding: 20px;
       margin-bottom: 40px;
       min-height: 250px;
+    }
+    
+    p {
+      font-size: 16px;
+      padding: 22px 0;
     }
   }
 }
@@ -186,7 +205,7 @@
   }
   
   .page-subheader {
-    min-height: 190px;
+    min-height: 220px;
     
     h1 {
       font-size: 38px;
@@ -210,6 +229,10 @@
       max-width: 516px;
     }
   }
+}
+
+.page-header + .bar {
+  margin-top: 0;
 }
 
 @media only screen and (max-width: 767px) {
