@@ -221,12 +221,19 @@
       font-size: 23px;
     }
     
-    img {
-      padding: 20px 0;
-      box-sizing: content-box;
-      width: 100%;
-      height: auto;
-      max-width: 516px;
+    .header-image {
+      height: 289px;
+      
+      img {
+        box-sizing: content-box;
+        width: 100%;
+        height: auto;
+        max-width: 516px;
+        
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+      }
     }
   }
 }
