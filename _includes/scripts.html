@@ -7,3 +7,13 @@
 {% if page.script %}
 <script src="/js/{{ page.script }}" type="text/javascript"></script>
 {% endif %}
+
+<script type="text/javascript">
+ var _chatlio=_chatlio||[];
+!function(){var t=document.getElementById("chatlio-widget-embed");if(t&&window.React&&_chatlio.init)return void _chatlio.init(t,React);for(var e=function(t){return function(){_chatlio.push([t].concat(arguments))}},i=["configure","identify","track","show","hide","isShown","isOnline"],a=0;a<i.length;a++)_chatlio[i[a]]||(_chatlio[i[a]]=e(i[a]));var n=document.createElement("script"),c=document.getElementsByTagName("script")[0];n.id="chatlio-widget-embed",n.src="https://w.chatlio.com/w.chatlio-widget.js",n.async=!0,n.setAttribute("data-embed-version","1.3");
+  
+  n.setAttribute("data-widget-id","6ac1bc46-9579-4d00-7348-ff5cc25d2681");
+  n.setAttribute("data-start-hidden", false);
+  c.parentNode.insertBefore(n,c);
+ }();
+</script>
