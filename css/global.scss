@@ -33,7 +33,7 @@ body {
 }
 
 h1, h2, h3 {
-  font-family: "Cabin";
+  
 }
 
 h1 {
@@ -60,14 +60,9 @@ p {
 }
 
 .logo {
-  position: absolute;
-  top: 70px;
-  left: 70px;
-  padding: 0 0 40px;
-
-  img {
-    opacity: .20;
-  }
+  display: inline-block;
+  float: left;
+  margin: 25px 0 0 80px;
 }
 
 .cta {

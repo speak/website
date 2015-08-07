@@ -3,97 +3,120 @@
 
 @import 'elements';
 
-.hero-wrapper {
-  background: #fff;
-  height: 100%;
-  display: flex;
-  display: -webkit-flex;
-  max-height: 810px;
-  position: relative;
+.hero {
+  background-image: url('../images/world.png');
+  background-size: 1097px 594px;
+  background-position: top center;
+  background-repeat: no-repeat;
+  background-color: #4A90E2;
+  text-align: center;
 
-  .tagline-container {
-    position: relative;
-    height: 100%;
-    width: 60%;
-    padding: 70px;
-
-    .tagline {
-      text-align: left;
-      position: relative;
-      top: 50%;
-      @include transform(translateY(-50%));
-      max-width: 600px;
-
-      h1 {
-        font-weight: normal;
-        font-size: 34px;
-        margin: 0;
-        padding: 0 0 30px 0;
-        letter-spacing: 0px;
-        clear: both;
-      }
-
-      p {
-        font-size: 24px;
-        font-weight: lighter;
-        color: #767676;
-        padding: 0 0 52px 0;
-      }
+  nav {
+    width: 100%;
+    height: 80px;
+    
+    ul {
+      list-style: none;
+      padding: 0;
+      margin: 0;
+      display: inline-block;
+      margin-right: 80px;
+      float: right;
       
-      .download-btn {
+      li {
         display: inline-block;
-        background: #2874B6;
-        color: #fff;
-        font-size: 16px;
-        border: none;
-        border-radius: 3px;
-        padding: 4px 42px;
-        height: auto;
-        min-height: 50px;
-        -webkit-appearance: none;
-        text-decoration: none;
-
-        &:hover {
-          background: darken(#2874B6, 5%);
+        font-size: 14px;
+        margin-left: 20px;
+        line-height: 5.6;
+        
+        a {
+          text-decoration: none;
           color: #fff;
-        }
-      }
-
-      form {
-        .field-wrapper {
-          position: relative;
-          display: flex;
           
-          .button-wrapper {
-              display: inline-block;
-              text-align: center;
-              
-              a {
-                  width: 100%;
-              }
-          
-              .download {
-                  display: block;
-                  font-size: 12px;
-                  width: 100%;
-                  text-align: center;
-                  color: #a3a3a3;
-                  margin-top: 14px;
-                  
-                  a {
-                      margin-left: 4px;
-                      color: #a3a3a3;
-                  }
-              }
-          }          
-
-          input[type=text],
-          input[type=password],
-          input[type=email] {
-            width: 292px;
+          &:hover {
+            text-decoration: underline;
           }
         }
       }
+    }
+  }
+  
+  h1, p {
+    color: #fff;
+  }
+  
+  h1 {
+    font-size: 42px;
+    margin: 75px 0 8px 0;
+  }
+
+  p {
+    color: #D4E8FF;
+    font-size: 30px;
+    -webkit-font-smoothing: antialiased;
+  }
+  
+  .download-btn {
+    display: inline-block;
+    background: #fff;
+    color: #316098;
+    font-size: 20px;
+    font-weight: 600;
+    border: none;
+    border-radius: 3px;
+    padding: 4px 42px;
+    line-height: 2.6;
+    height: auto;
+    min-height: 50px;
+    -webkit-appearance: none;
+    text-decoration: none;
+
+    &:hover {
+      background: darken(#fff, 3%);
+      color: #316098;
+    }
+    
+    &:active, &:focus {
+      background: darken(#fff, 6%);
+      color: #316098;
+    }
+  }
+
+  form {
+    width: 278px;
+    margin: 70px auto 140px auto;
+    
+    .button-wrapper {
+      width: 278px;
+      text-align: center;
+      
+      a {
+          width: 100%;
+      }
+  
+      .download {
+        display: block;
+        font-size: 11px;
+        width: 100%;
+        text-align: center;
+        color: #BADAFF;
+        margin-top: 10px;
+        
+        a {
+          margin-left: 4px;
+          color: #BADAFF;
+        }
+      }
+    }
+
+    input[type=text],
+    input[type=password],
+    input[type=email] {
+      width: 100%;
+      height: 60px;
+      margin: 0;
+      border: none;
+      margin-bottom: 20px;
     }
   }
 }
@@ -214,87 +237,26 @@
 }
 
 @media (max-width: 1230px) {
-  .hero-wrapper {
-    .tagline-container {
-      width: 50%;
-      
-      .tagline {
-        max-width: 400px;
-        
-        h1 {
-          font-size: 31px;
-        }
 
-        form {
-          .field-wrapper {
-            max-width: 400px;
-            display: block;
-
-            input[type="email"], .button-wrapper {
-              width: 100%;
-              margin-bottom: 15px;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 @media (max-width: 1118px) {
-   #app-demo {
-    .laptop {
-      @include transform-origin(bottom right);
-      @include transform(scale(.9));
-    }
-  }
+
 }
 
 @media (max-width: 1000px) {
-   #app-demo {
-    .laptop {
-      @include transform(scale(.8));
-    }
-  }
+
 }
 
 @media (max-width: 860px) {
-  .hero-wrapper #app-demo {
-    width: 100%;
-  }
-  
-  .hero-wrapper {
-    display: block;
-    height: auto;
-    max-height: none;
-
-    .tagline-container {
-      width: 100%;
-
-      .tagline {
-        text-align: center;
-        @include transform(none);
-        padding-top: 70px;
-        max-width: inherit;
-
-        form {
-          .field-wrapper {
-            max-width: 60%;
-            margin: 0px auto;
-          }
-        }
-      }
+  .hero {
+    .logo {
+      float: none;
+      margin-left: 0;
     }
-  }
-
-  .logo {
-    position: absolute;
-    left: 50%;
-    @include transform(translateX(-50%));
-    padding: 0 0 40px;
-
-    img {
-      opacity: .20;
+  
+    nav ul {
+      display: none;
     }
   }
 }
@@ -316,26 +278,5 @@
 }
 
 @media (max-width: 600px) {
-   #app-demo {
-    .laptop {
-      @include transform(scale(.65));
-    }
-  }
-  
-  .hero-wrapper {
-    .tagline-container {
-      padding: 70px 40px 40px 40px;
 
-      .tagline {
-        p {
-          font-size: 21px;
-        }
-        form {
-          .field-wrapper {
-            max-width: 100%;
-          }
-        }
-      }
-    }
-  }
 }

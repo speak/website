@@ -1,124 +1,49 @@
 ---
 title: Frictionless audio and video communication for your remote team
 description: Speak improves remote team communication by providing instant audio and presence, as well as video and screensharing. You have a dock for your apps, why not for your people?
-layout: default
+layout: home
 script: index.js
 ---
 
-<div class="hero-wrapper">
-  <section class="tagline-container">
-    <a href="/" class="logo"><img src="/images/logo-black.png" alt="Speak - Better Team Communication" width="80" height="26" /></a>
-    <div class="tagline">
-      <h1>
-        Instant Team Communication
-      </h1>
+<header class="hero">
+  <nav>
+    <a href="/" class="logo"><img src="/images/logo-white.png" alt="Speak - Better Team Communication" width="80" height="26" /></a>
+    
+    <ul>
+      <li><a href="...">Features</a></li>
+      <li><a href="...">Pricing</a></li>
+      <li><a href="...">Signup</a></li>      
+    </ul>
+  </nav>
+  
+  <h1>
+    Instant Team Communication
+  </h1>
 
-      <p>
-        Speak is blazing fast audio, video and screen sharing for your team.
-      </p>
-
-      <form class="mac">
-        <div class="field-wrapper">
-          <div class="button-wrapper">
-            <a href="{{ site.download_url_mac }}" class="button download-btn">Download Speak for Mac</a>
-            <span class="download">For OSX 10.8 or later. <a href="/?platform=win">Join Windows Beta</a></span>
-          </div>
-        </div>
-      </form>
-
-      <form class="win" action="https://docs.google.com/forms/d/1sKT_05uwDbWNU92sL0HLxOZDfMaPzO6DN_o_T8np9TA/formResponse" method="POST" id="ss-form" target="_self">
-        <div class="field-wrapper">
-          <input id="email" type="email" name="entry.981815137" placeholder="Enter your email" required>
-          <input type="hidden" name="draftResponse" value="[,,&quot;-1364399798404626896&quot;]">
-          <input type="hidden" name="pageHistory" value="0">
-          <input type="hidden" name="fbzx" value="-1364399798404626896">
-          <div class="button-wrapper">
-            <input type="submit" name="submit" value="Request Beta Access" id="ss-submit" class="button download-btn jfk-button jfk-button-action ">
-            <span class="download">Or<a href="/?platform=mac">Download Speak for Mac</a></span>
-          </div>
-        </div>
-      </form>
+  <p>
+    Speak is blazing fast audio, video and screen sharing for your team.
+  </p>
+  
+  <form class="mac">
+    <div class="button-wrapper">
+      <a href="{{ site.download_url_mac }}" class="button download-btn">Download for Mac</a>
+      <span class="download">For OSX 10.8 or later. <a href="/?platform=win">Join Windows Beta</a></span>
     </div>
-  </section>
+  </form>
 
-  <section id="app-demo">
-    <div class="laptop">
-      <div class="desktop">
-        <div class="cursor"></div>
-        
-        <ul class="dock">
-          <li>
-            <img src="/images/demo/avatar-1.jpg" />
-            <div class="tooltip">
-              <div class="triangle"></div>
-              <div class="header">
-                <span class="name">Eric Bieller</span>
-                <span class="status">Available</span>
-              </div>
-              <ul class="menu">
-                <li>
-                  <a>
-                    <i class="icon entypo icon-speak"></i> 
-                    <span>Instant Audio</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <i class="icon entypo icon-video-camera"></i> 
-                    <span>Video Call</span>
-                  </a>
-                </li>
-                <li>
-                  <a>
-                    <i class="icon entypo icon-screen"></i> 
-                    <span>Share Screen</span>
-                  </a>
-                </li>
-              </ul>
-            </div>
-          </li>
-          <li>
-            <img src="/images/demo/eric.png" />
-          </li>
-          <li>
-            <img src="/images/demo/avatar-2.jpg" />
-          </li>
-          <li>
-            <img src="/images/demo/avatar-3.jpg" />
-          </li>
-          <li>
-            <img src="/images/demo/avatar-4.jpg" />
-          </li>
-        </ul>
-        
-        <div class="video-window">
-          <div class="feed">
-            <img src="/images/demo/allison.jpg" />
-            <video id="big-video" width="450" height="300">
-              <source src="/videos/allison.mp4" type="video/mp4" />
-            </video>
-          </div>
-          <div id="video-toolbar">
-            <ul>
-              <li><a class="mute"></a></li>
-              <li><a class="video"></a></li>
-              <li><a class="screen"></a></li>
-              <li><a class="leave"></a></li>
-            </ul>
-          </div>
-          <ul class="participants">
-            <li>
-              <img src="/images/demo/eric.jpg" />
-              <video id="small-video" width="122" height="80">
-                <source src="/videos/eric.mp4" type="video/mp4" />
-              </video>
-            </li>
-          </ul>
-        </div>
-      </div>
+  <form class="win" action="https://docs.google.com/forms/d/1sKT_05uwDbWNU92sL0HLxOZDfMaPzO6DN_o_T8np9TA/formResponse" method="POST" id="ss-form" target="_self">
+    <div class="field-wrapper">
+      <input id="email" type="email" name="entry.981815137" placeholder="Enter your email" required>
+      <input type="hidden" name="draftResponse" value="[,,&quot;-1364399798404626896&quot;]">
+      <input type="hidden" name="pageHistory" value="0">
+      <input type="hidden" name="fbzx" value="-1364399798404626896">
     </div>
-  </section>
-</div>
+    <div class="button-wrapper">
+      <input type="submit" name="submit" value="Request Beta Access" id="ss-submit" class="button download-btn jfk-button jfk-button-action ">
+      <span class="download">Or<a href="/?platform=mac">Download Speak for Mac</a></span>
+    </div>
+  </form>
+</hero>
 
 <div class="testimonial-wrapper">
   <div class="container testimonials">
