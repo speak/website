@@ -19,16 +19,6 @@
     }
   }
   
-  p {
-    font-size: 18px;
-    padding: 30px 0;
-    line-height: 1.7;
-  }
-  
-  p+p {
-    padding-top: 0;
-  }
-  
   blockquote {
     font-style: italic;
     border-left: 5px solid #000;
@@ -109,12 +99,22 @@
         text-decoration: none;
       }
     }
+    
+    p {
+      font-size: 18px;
+      padding: 30px 0;
+      line-height: 1.7;
+    }
+  
+    p+p {
+      padding-top: 0;
+    }
   }
   
   .feature {
     text-align: left;
     float: left;
-    padding-top: 80px;
+    padding: 30px 0 70px 0;
     
     &:nth-child(3), &:nth-child(4) {
       padding-bottom: 120px;
@@ -159,50 +159,7 @@
 .page-header {
   width: 100%;
   text-align: center;
-  background: #2874B6;
-  
-  nav {
-    height: 100px;
-    font-size: 14px;
-    
-    .logo, ul {
-      position: absolute;
-      top: 50%;
-      left: 0;
-      transform: translateY(-50%);
-    }
-    
-    .logo {
-      padding: 0;
-      
-      img {
-        opacity: 1;
-      }
-    }
-  
-    ul {
-      list-style: none;
-      padding: 0;
-      margin: 0;
-      right: 0;
-      left: auto;
-      text-align: right;
-    
-      li {
-        margin: 0 0 0 40px;
-        display: inline-block;
-        
-        a {
-          text-decoration: none;
-          color: #fff;
-          
-          &:hover {
-            text-decoration: underline;
-          }
-        }
-      }
-    }
-  }
+  background-color: #4A90E2;
   
   .page-subheader {
     min-height: 220px;
@@ -210,7 +167,7 @@
     h1 {
       font-size: 38px;
       color: #fff;
-      margin: 35px 0 10px 0;
+      margin: 35px 0 6px 0;
     }
     
     p {
@@ -222,7 +179,7 @@
     }
     
     .header-image {
-      height: 289px;
+      height: 340px;
       
       img {
         box-sizing: content-box;

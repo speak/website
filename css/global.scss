@@ -32,10 +32,6 @@ body {
   height: 100%;
 }
 
-h1, h2, h3 {
-  
-}
-
 h1 {
   color: #474747;
 }
@@ -65,13 +61,48 @@ p {
   margin: 25px 0 0 80px;
 }
 
+nav {
+  width: 100%;
+  height: 80px;
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: inline-block;
+    margin-right: 80px;
+    float: right;
+    
+    li {
+      display: inline-block;
+      font-size: 14px;
+      margin-left: 20px;
+      line-height: 5.6;
+      
+      a {
+        text-decoration: none;
+        color: #fff;
+        
+        &:hover {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}
+
 .cta {
-  background: #2874B6;
-  padding: 60px 0;
+  background: #4A90E2;
+  padding: 70px 0 60px 0;
   text-align: center;
   
   h2 {
     color: #fff;
+  }
+  
+  p {
+    margin: 4px 0 26px 0;
+    color: #D4E8FF;
   }
   
   .button {
@@ -82,6 +113,30 @@ p {
     &:hover, &:focus {
       color: $blue;
       background: darken(#fff, 5%);
+    }
+  }
+}
+
+.cta-btn {
+  width: 278px;
+  text-align: center;
+  margin: 0px auto;
+  
+  a {
+      width: 100%;
+  }
+
+  .download {
+    display: block;
+    font-size: 11px;
+    width: 100%;
+    text-align: center;
+    color: rgba(255,255,255,.6);
+    margin-top: 10px;
+    
+    a {
+      margin-left: 4px;
+      color: rgba(255,255,255,.7);
     }
   }
 }

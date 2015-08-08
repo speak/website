@@ -6,15 +6,7 @@ script: index.js
 ---
 
 <header class="hero">
-  <nav>
-    <a href="/" class="logo"><img src="/images/logo-white.png" alt="Speak - Better Team Communication" width="80" height="26" /></a>
-    
-    <ul>
-      <li><a href="...">Features</a></li>
-      <li><a href="...">Pricing</a></li>
-      <li><a href="...">Signup</a></li>      
-    </ul>
-  </nav>
+  {% include nav.html %}
   
   <h1>
     Instant Team Communication
@@ -25,7 +17,7 @@ script: index.js
   </p>
   
   <form class="mac">
-    <div class="button-wrapper">
+    <div class="cta-btn">
       <a href="{{ site.download_url_mac }}" class="button download-btn">Download for Mac</a>
       <span class="download">For OSX 10.8 or later. <a href="/?platform=win">Join Windows Beta</a></span>
     </div>
@@ -38,12 +30,12 @@ script: index.js
       <input type="hidden" name="pageHistory" value="0">
       <input type="hidden" name="fbzx" value="-1364399798404626896">
     </div>
-    <div class="button-wrapper">
-      <input type="submit" name="submit" value="Request Beta Access" id="ss-submit" class="button download-btn jfk-button jfk-button-action ">
+    <div class="cta-btn">
+      <input type="submit" name="submit" value="Join Windows Beta" id="ss-submit" class="button download-btn jfk-button jfk-button-action ">
       <span class="download">Or<a href="/?platform=mac">Download Speak for Mac</a></span>
     </div>
   </form>
-</hero>
+</header>
 
 <div class="testimonial-wrapper">
   <div class="container testimonials">
@@ -88,25 +80,29 @@ script: index.js
 <div class="container features">
   <div class="row feature">
     <div class="eight push-by-eight offset-by-one columns">
-      <img src="../images/team.png" alt="Built for teams" width="500" height="408">
+      <img src="../images/app-screenshot.png" class="screenshot" alt="Built for teams" width="271" height="360">
+      <img src="../images/handwriting-presence.png" class="handwriting presence" width="316" height="77">
     </div>
     <div class="eight pull-by-eight columns copy">
-      <h2>Built for Teams</h2>
+      <h2>Light and Simple</h2>
       <p>
-        We've designed Speak to let your team work better together. Choose to make yourself instantly available without calling. You can even see other calls that are happening in real time. 
+        We've kept Speak's interface incredibly compact and easy to use. After all, you don't want to fight with your tools, they should just work and get out of the way. 
       </p>
-      <a href="/features/built-for-teams">Learn More</a>
+      <a href="/features/team-presence">Learn More</a>
     </div>
   </div>
   
+  
+  
   <div class="row feature">
-    <div class="eight columns">
-      <img src="../images/super.png" alt="Super fast and reliable" width="500" height="408">
+    <div class="eight columns dock">
+      <img src="../images/dock-screenshot.png" class="screenshot" alt="Super fast and reliable" width="144" height="379">
+      <img src="../images/handwriting-dock.png" class="handwriting dock" width="278" height="121">
     </div>
-    <div class="eight offset-by-one columns copy">
-      <h2>Super Fast &amp; Reliable</h2>
+    <div class="eight columns copy">
+      <h2>Just a Click Away</h2>
       <p>
-        You don’t want to fight with your tools, they should just work and get out of the way. With Speak, it’s as simple as clicking on a team mate to join a call that connects in under a second. 
+        Speak enables true "tap on the shoulder" communication. It's as simple as clicking on a team mate's face to join a call. Just be careful not to poke them in the eye.
       </p>
       <a href="/features/fast-and-reliable">Learn More</a>
     </div>
@@ -114,14 +110,29 @@ script: index.js
   
   <div class="row feature">
     <div class="eight push-by-eight offset-by-one columns">
-      <img src="../images/available.png" alt="Real team presence" width="500" height="408">
+      <img src="../images/calls-screenshot.png" class="screenshot" alt="Real team presence" width="336" height="241">
+      <img src="../images/handwriting-ongoing.png" class="handwriting calls" width="342" height="73">
     </div>
     <div class="eight pull-by-eight columns copy">
-      <h2>Know Who's Available</h2>
+      <h2>Built for Teams</h2>
       <p>
-        Speak's presence is automatic and incredibly accurate, so you always know whether your team mates are there or not. You can also add custom status messages to provide more context.
+        We've designed Speak to let your team work better together. Choose to make yourself instantly available without calling. You can even see other calls that are happening in real time. Nice!
       </p>
-      <a href="/features/team-presence">Learn More</a>
+      <a href="/features/built-for-teams">Learn More</a>
+    </div>
+  </div>
+  
+  <div class="row feature">
+    <div class="eight columns">
+      <img src="../images/video-screenshot.png" class="screenshot video" alt="Super fast and reliable" width="428" height="316">
+      <img src="../images/handwriting-video.png" class="handwriting video" width="417" height="76">
+    </div>
+    <div class="eight columns copy">
+      <h2>Everything You Need</h2>
+      <p>
+        Group video? We got that. Screensharing? Of course! The kitchen sink? No, we don't have that. But, then again, you probably have one of those already!
+      </p>
+      <a href="/features/video-and-screensharing">Learn More</a>
     </div>
   </div>
 </div>
