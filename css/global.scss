@@ -183,6 +183,17 @@ body .footer {
   }
 }
 
+@media (max-width: 766px) {
+  .logo {
+    float: none;
+    margin-left: 0;
+  }
+
+  nav ul {
+    display: none;
+  }
+}
+
 @media (max-width: 480px) {
   .footer div ul li {
     width: 100%;
