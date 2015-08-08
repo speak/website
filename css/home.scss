@@ -224,17 +224,6 @@ form {
 }
 
 @media (max-width: 960px) {
-  .hero {
-    .logo {
-      float: none;
-      margin-left: 0;
-    }
-  
-    nav ul {
-      display: none;
-    }
-  }
-  
   .features {
     .feature {
       .screenshot.video {
@@ -246,6 +235,17 @@ form {
 }
 
 @media (max-width: 766px) {
+  .hero {
+    .logo {
+      float: none;
+      margin-left: 0;
+    }
+  }
+  
+  nav ul {
+    display: none;
+  }
+  
   .hero h1 {
     line-height: 1.1;
     margin-bottom: 20px;
