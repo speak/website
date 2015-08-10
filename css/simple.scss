@@ -12,8 +12,10 @@ body {
   height: 100%;
   
   .logo {
+    float: none;
     position: static;
-    padding: 40px 0;
+    margin: 40px 0;
+    opacity: .30;
   }
   
   figure {
@@ -52,7 +54,7 @@ body {
     width: 400px;
     min-height: 450px;
     padding: 30px;
-    margin: 0px auto;
+    margin: 0 auto;
     background: #fff;
     -webkit-transform-style: preserve-3d;
     -webkit-transition: transform 1s;
