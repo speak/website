@@ -20,6 +20,7 @@ body {
   
   figure {
     display: block;
+    position: relative;
     width: 340px;
     min-height: 320px;
     margin: 0;
@@ -36,8 +37,6 @@ body {
   }
   
   .back {
-    position: absolute;
-    
     -webkit-transform: rotateY( 180deg ) translateZ(1px);
     -moz-transform: rotateY( 180deg ) translateZ(1px);
     transform: rotateY( 180deg ) translateZ(1px);
