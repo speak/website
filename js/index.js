@@ -18,6 +18,15 @@ $(function(){
     $('.mac').hide();
   }
   
+  if (document.referrer.match(/sqwiggle\.com/)) {
+    $(".sqwiggle-banner").show();
+  }
+  
+  $(".sqwiggle-banner .close").click(function(ev) {
+    ev.preventDefault();
+    $(".sqwiggle-banner").slideUp();
+  });
+  
   // Track pageview
   client = new Keen({
     projectId: keen_project_id,

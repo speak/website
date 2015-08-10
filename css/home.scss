@@ -7,6 +7,30 @@ form {
     display: inline-block;
 }
 
+.sqwiggle-banner {
+  display: none;
+  padding: 40px 0;
+  border-bottom: 2px solid #2D74C7;
+  background: #f7f7f7;
+  box-shadow: inset 0px 0px 18px rgba(0,0,0,0.3);
+  
+  h2 {
+    font-size: 30px;
+    margin: 0;
+  }
+  
+  p {
+    padding-top: 30px;
+  }
+  
+  .close {
+    text-decoration: none;
+    position: absolute;
+    top: 20px;
+    right: 40px;
+  }
+}
+
 .hero {
   background-image: url('../images/world.png');
   background-size: 1097px 594px;
