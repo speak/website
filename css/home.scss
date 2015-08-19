@@ -110,7 +110,9 @@ form {
     padding: 0;
     margin: 0;
     display: flex;
+    -webkit-display: flex;
     align-items: flex-end;
+    -webkit-align-items: flex-end;
     
     .testimonial {
       margin: 0px auto;
@@ -192,9 +194,7 @@ form {
     }
     
     .copy {
-      display: flex;
-      justify-content: center;
-      flex-direction: column;
+  
     }
     
     .screenshot {
@@ -218,7 +218,7 @@ form {
     }
     
     h2 {
-      margin-top: 0;
+      margin-top: 110px;
     }
     
     p {
@@ -281,6 +281,7 @@ form {
     
       h2 {
         font-size: 30px;
+        margin: 0;
       }
       
       .screenshot, &:nth-child(odd) .screenshot {
@@ -288,6 +289,7 @@ form {
         margin: 0px auto;
         float: none;
         transform: none;
+        -webkit-transform: none;
       }
       
       .handwriting {
