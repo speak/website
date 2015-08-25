@@ -10,12 +10,15 @@ $(function(){
   }
   
   // Detect platform
-  var platform = getParam('platform') || (navigator.platform.indexOf('Win') > -1 ? 'win' : navigator.platform.indexOf('Mac') > -1 ? 'mac' : 'other');
+  var platform = getParam('platform') || (navigator.platform.indexOf('Win') > -1 ? 'win' : navigator.platform.indexOf('Mac') > -1 ? 'mac' : navigator.platform.indexOf('Linux') > -1 ? 'linux' : 'other');
   
   // Toggle windows items
   if (platform == 'win') {
     $('.win').show();
-    $('.mac').hide();
+  } else if (platform == 'linux') {
+    $('.linux').show();
+  } else {
+    $('.mac').show();
   }
   
   if (document.referrer.match(/sqwiggle\.com/)) {

@@ -4,7 +4,9 @@
 @import 'elements';
 @import 'variables';
 
-.win {
+.win,
+.mac,
+.linux {
     display: none;
 }
 
