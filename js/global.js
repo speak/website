@@ -1,4 +1,16 @@
 $(function(){
+  // Detect platform
+  platform = getParam('platform') || (navigator.platform.indexOf('Win') > -1 ? 'win' : navigator.platform.indexOf('Mac') > -1 ? 'mac' : navigator.platform.indexOf('Linux') > -1 ? 'linux' : 'other');
+
+  // Toggle windows items
+  if (platform == 'win') {
+    $('.win').show();
+  } else if (platform == 'linux') {
+    $('.linux').show();
+  } else {
+    $('.mac').show();
+  }
+  
   // Track download
   $('.download-btn').click(function() {
     ga('send', 'event', 'click', 'download');
