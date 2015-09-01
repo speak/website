@@ -11,10 +11,10 @@ deployment:
   staging:
     branch: master
     commands:  
-      - jekyll build
+      - jekyll build --config _config.yml,_staging.yml
       - /bin/bash deploy.sh staging
   production:
     branch: production
     commands:
-      - jekyll build
-      - /bin/bash deploy.sh production
+      - jekyll build --config _config.yml,_production.yml
+      - /bin/bash deploy.sh production 
