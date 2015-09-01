@@ -8,7 +8,7 @@ script: password-reset.js
 <p>
   Almost there, please choose a nice secure password below, you beautiful forgetful thing!
 </p>
-<form id="password-reset" action="{% if site.GH_ENV == 'gh_pages' %}https://bulldog.speak.io{% else %}http://docker:9393{% endif %}/password">
+<form id="password-reset" action="{{ site.bulldog_url }}/password">
   <div class="banner error"></div>
   <div class="banner success"></div>
   <div class="field-wrapper">
