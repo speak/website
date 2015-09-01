@@ -1,0 +1,20 @@
+dependencies:
+  override:
+    - bundle install
+    - pip install awscli
+
+machine:
+  ruby:
+    version: 2.2.1
+
+deployment:
+  staging:
+    branch: master
+    commands:  
+      - jekyll build
+      - /bin/bash deploy.sh staging
+  production:
+    branch: production
+    commands:
+      - jekyll build
+      - /bin/bash deploy.sh production
