@@ -20,17 +20,19 @@
 
   <title>{% if page.window_title %}{{ page.window_title }}{% else %}{{ page.title }}{% endif %} | Speak</title>
 
-  <link rel="stylesheet" type="text/css" href="/css/normalize.css">
-  <link rel="stylesheet" type="text/css" href="/css/entypo.css">
-  <link rel="stylesheet" type="text/css" href="/css/skeleton.css"> 
-  <link rel="stylesheet" type="text/css" href="/css/buttons.css">
-  <link rel="stylesheet" type="text/css" href="/css/form.css">
-  <link rel="stylesheet" type="text/css" href="/css/banner.css">
-  <link rel="stylesheet" type="text/css" href="/css/global.css">
-  <link rel="stylesheet" type="text/css" href="/css/home.css">
-  <link rel="stylesheet" type="text/css" href="/css/page.css">
-  <link rel="stylesheet" type="text/css" href="/css/post.css">
-  <link rel="stylesheet" type="text/css" href="/css/demo.css">
+  {% css_asset_tag global %}
+  - /_sass/normalize.css
+  - /_sass/entypo.css
+  - /_sass/skeleton.css
+  - /_sass/buttons.scss
+  - /_sass/form.scss
+  - /_sass/banner.scss
+  - /_sass/global.scss
+  - /_sass/home.scss
+  - /_sass/page.scss
+  - /_sass/post.scss
+  - /_sass/demo.scss
+  {% endcss_asset_tag %}
   
   <!-- GA Tracking Code -->
   <script>
