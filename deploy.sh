@@ -7,4 +7,4 @@ DEFAULT="speak"
 BUCKET=speak-${ENVIRONMENT}-site
 echo "bucket is $BUCKET"
 DIR=_site/
-aws s3 sync $DIR s3://$BUCKET --acl=public-read --delete --exclude "vendor"
+aws s3 sync $DIR s3://$BUCKET --acl=public-read --delete --exclude "vendor*"
