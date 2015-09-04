@@ -9,9 +9,11 @@ $(function(){
     type: 'GET',
     url: invite + code
   }).done(function(data, status, xhr){
-  
-    $form.find('input.email').val(data.email);
-    
+    // account for org invites without an email attached
+    if (data.email) {
+      $form.find('input.email').val(data.email);
+    }
+
     // account for older invites without an org name attached
     if (data.organization_name) {
       $('.team-name').html('<strong>'+ data.organization_name +'</strong>');
