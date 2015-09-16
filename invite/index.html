@@ -6,12 +6,12 @@ script: invite.js
 
 <figure class="front">
   <h1>You're Invited</h1>
-  <p id="password-reset-instructions">
-    Just a couple of details and we'll have you in the <span class="team-name">right</span> team.
-  </p>
   <div class="banner error"></div>
   <div class="banner success"></div>
   <form id="invite-signup" action="{{ site.bulldog_url }}/users">
+    <p>
+      Just a couple of details and we'll have you in the <span class="team-name">right</span> team.
+    </p>
     <div class="field-wrapper">
       <input class="first-name" id="first_name" type="text" name="first_name" placeholder="First name" required>
       <input class="last-name" id="last_name" type="text" name="last_name" placeholder="Last name" required>
@@ -21,22 +21,34 @@ script: invite.js
     </div>
   </form>
   <form id="invite-signin" action="{{ site.bulldog_url }}/sessions">
+    <p>
+      Simply signin to accept the invite
+    </p>
     <div class="field-wrapper">
       <input class="email" id="email" type="text" name="email" placeholder="Email" required>
       <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
       <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
     </div>
   </form>
+  <a id="invite-signin-link">Sign In</a>
+  <a id="invite-signup-link">Sign Up</a>
 </figure>
 
 <figure class="back download">
   <div id="invite-accepted">
     <h1>Almost there&hellip;</h1>
-    <p>
-      You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
-    </p>
-    <p>
-      <a href="{{ site.download_url_mac }}" class="button button-primary">Download for Mac</a>
-    </p>
+    <div id="signup-invite-success-text">
+      <p>
+        You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
+      </p>
+      <p>
+        <a href="{{ site.download_url_mac }}" class="button button-primary">Download for Mac</a>
+      </p>
+    </div>
+    <div id="signin-invite-success-text">
+      <p>
+        Simply sign in to the app to join your new team!
+      </p>
+    </div>
   </div>
 </figure>

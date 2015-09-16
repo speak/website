@@ -95,4 +95,11 @@ body {
       float: right;
     }
   }
+
+  #invite-signup-link, 
+    #invite-signin,
+    #signup-invite-success-text,
+    #signin-invite-success-text { 
+    display:none;
+  }
 }
