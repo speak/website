@@ -1,0 +1,51 @@
+@import 'elements';
+
+.page .page-content {
+  ol.timeline {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    text-align: left;
+    border-left: 2px solid #ccc;
+    
+    > li {
+      margin-bottom: 10px;
+      
+      &:before {
+        content: '';
+        display: block;
+        width: 8px;
+        height: 8px;
+        background: #ccc;
+        border-radius: 10px;
+        position: relative;
+        top: 28px;
+        left: -9px;
+        border: 4px solid #fff;
+      }
+      
+      .content {
+        margin-left: 150px;
+        
+        ul {
+          margin-left: 20px;
+          list-style: initial;
+          line-height: 1.8;
+        }
+      }
+    
+      h2 {
+        margin: 0 0 10px 0;
+      }
+    
+      h3 {
+        font-size: 16px;
+        letter-spacing: -1px;
+        margin: 0 0 0 20px;
+        color: #ccc;
+        position: absolute;
+        text-align: left;
+      }
+    }
+  }
+}
