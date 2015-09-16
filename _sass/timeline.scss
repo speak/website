@@ -49,3 +49,15 @@
     }
   }
 }
+
+@media (max-width: 767px) {
+  .page .page-content ol.timeline > li {
+    .content {
+      margin-left: 20px;
+    }
+    
+    h3 {
+      display: none;
+    }
+  }
+}
