@@ -113,5 +113,27 @@
         }
       }
     }
+    
+    .features {
+      margin: 60px 0;
+      
+      .feature-list {
+        margin: 0;
+      
+        li {
+          height: 46px;
+          font-size: 20px;
+          font-weight: lighter;
+          color: #5E5E5E;
+          margin: 16px 0;
+        
+          span {
+            font-size: 14px;
+            color: #A1A1A1;
+            display: block;
+          }
+        }
+      }
+    }
   }
 }
