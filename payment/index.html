@@ -5,6 +5,13 @@ script: payment.js
 ---
 
 <p>Payment page</p>
+<form id="invite-signin" action="{{ site.bulldog_url }}/sessions">
+  <div class="field-wrapper">
+    <input class="email" id="email" type="text" name="email" placeholder="Email" required>
+    <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
+    <input type="submit" name="submit" value="Sign in" id="ss-submit" class="button button-primary ">
+  </div>
+</form>
 
 <script src="https://checkout.stripe.com/checkout.js"></script>
 <a id="customButton">Pay for it</a>
