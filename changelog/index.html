@@ -1,305 +1,368 @@
 ---
-layout: post
+layout: page
 title: Changelog
-description: What's new and fixed in the Speak app. Updated with every release
+header_description: false
+description: What's new and fixed in the Speak app, this page is updated with every new release.
 ---
 
 <div class="container changelog">
   <div class="sixteen columns">
-    <h1>Speak Changelog</h2>
-    <ol class="changelog">
+    <ol class="changelog timeline">
       <li>
         <a name="0.5.5"></a>
-        <h2>v0.5.5</h2>
-        <ul>
-          <li>We've been focused on fixing any and all bugs as well as multi-platform support this week. New features coming soon!</li>
-          <li>Fixed: Join a Slack team button as part of onboarding not clickable</li>
-          <li>Fixed: Issue where moving the mouse across multiple screens might cause the dock to pop out unexpectedly</li>
-          <li>Fixed: We now detect whether the machine has a 🎥 available or not and disable functionality appropriately </li>
-          <li>Fixed: When joining a call you will now be removed from manual offline if it's set</li>
-          <li>Fixed: Our Helpers are now Speak Helpers rather than Electron Helpers 🙌</li>
-          <li>Fixed: We'll no longer hassle to update the app if you're in the middle of a call, that's just good manners.</li>
-          <li>Fixed: Issue that would continually retry connecting, even after logging out</li>
-          <li>Fixed: Authenticated windows will now close automatically when signing out of the app, makes sense?!</li>
-          <li>Fixed: We're now passing the app version number back with error reports, this will make it easier
-          for us to debug future issues in the future. 😳🔫</li>
-          <li>Fixed: Various minor code errors that shouldn't have visually manifested themselves... 👻</li>
-        </ul>
+        <h3>Sept 14th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.5.5</h2>
+          <ul>
+            <li>We've been focused on fixing any and all bugs as well as multi-platform support this week. New features coming soon!</li>
+            <li>Fixed: Join a Slack team button as part of onboarding not clickable</li>
+            <li>Fixed: Issue where moving the mouse across multiple screens might cause the dock to pop out unexpectedly</li>
+            <li>Fixed: We now detect whether the machine has a 🎥 available or not and disable functionality appropriately </li>
+            <li>Fixed: When joining a call you will now be removed from manual offline if it's set</li>
+            <li>Fixed: Our Helpers are now Speak Helpers rather than Electron Helpers 🙌</li>
+            <li>Fixed: We'll no longer hassle to update the app if you're in the middle of a call, that's just good manners.</li>
+            <li>Fixed: Issue that would continually retry connecting, even after logging out</li>
+            <li>Fixed: Authenticated windows will now close automatically when signing out of the app, makes sense?!</li>
+            <li>Fixed: We're now passing the app version number back with error reports, this will make it easier
+            for us to debug future issues in the future. 😳🔫</li>
+            <li>Fixed: Various minor code errors that shouldn't have visually manifested themselves... 👻</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.5.4"></a>
-        <h2>v0.5.4</h2>
-        <ul>
-          <li>New: You can now share a single link to invite your whole team, no messing with emails</li>
-          <li>New: Onboarding to help you get started with the app</li>
-          <li>New: We've revamped the UI when screensharing and not on video to be more streamlined</li>
-          <li>New: Calls will now start on the same screen that the dock is on, instead of the primary screen</li>
-          <li>Fixed: Many preferences can now be accessed when signed out (previously this errored!)</li>
-          <li>Fixed: Some odd dock behaviour when dragging a file onto it</li>
-          <li>Fixed: Restored the option to choose which screen Speak is docked on</li>
-          <li>Fixed: Improved preferences for computers with no camera</li>
-          <li>Fixed: Issue that would cause the dock to get stuck in the center of the screen</li>
-          <li>Fixed: Improved recovery when the app crashes</li>
-          <li>Fixed: Profile pictures in the call window now change size to show who's speaking</li>
-        </ul>
+        <h3>Sept 3rd<br/>2015</h3>
+        <div class="content">
+          <h2>v0.5.4</h2>
+          <ul>
+            <li>New: You can now share a single link to invite your whole team, no messing with emails</li>
+            <li>New: Onboarding to help you get started with the app</li>
+            <li>New: We've revamped the UI when screensharing and not on video to be more streamlined</li>
+            <li>New: Calls will now start on the same screen that the dock is on, instead of the primary screen</li>
+            <li>Fixed: Many preferences can now be accessed when signed out (previously this errored!)</li>
+            <li>Fixed: Some odd dock behaviour when dragging a file onto it</li>
+            <li>Fixed: Restored the option to choose which screen Speak is docked on</li>
+            <li>Fixed: Improved preferences for computers with no camera</li>
+            <li>Fixed: Issue that would cause the dock to get stuck in the center of the screen</li>
+            <li>Fixed: Improved recovery when the app crashes</li>
+            <li>Fixed: Profile pictures in the call window now change size to show who's speaking</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.5.3"></a>
-        <h2>v0.5.3</h2>
-        <ul>
-          <li>New: You can now quit Speak from the status menu right below Sign Out</li>
-          <li>Fixed: A memory leak, causing the app to crash usually after waking from sleep</li>
-          <li>Fixed: Sometimes the video window would focus on noone or not correctly show a screenshare without being manually selected. We've gone and fixed this!</li>
-          <li>Fixed: Issue where a call would fail if two people click on each other at the same time</li>
-          <li>Fixed: Issue where a call would fail if you click on lots of team mates in quick succession</li>
-          <li>Fixed: Video window could not be minimized, now it can!</li>
-          <li>Fixed: Video window could not be unpinned, now it can!</li>
-          <li>Fixed: In instant audio you would sometimes here double sound notifications when a call starts</li>
-          <li>Fixed: The first error would not appear on signin/signup forms</li>
-          <li>Fixed: A couple of aesthetic spacing and positioning</li>
-          <li>Fixed: Deleted invites would not be reflected on the invited users client, now they are - in realtime :)</li>
-          <li>Fixed: Your own status now displays as Offline instead of Available when there is no internet connection</li>
-        </ul>
+        <h3>Aug 27th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.5.3</h2>
+          <ul>
+            <li>New: You can now quit Speak from the status menu right below Sign Out</li>
+            <li>Fixed: A memory leak, causing the app to crash usually after waking from sleep</li>
+            <li>Fixed: Sometimes the video window would focus on noone or not correctly show a screenshare without being manually selected. We've gone and fixed this!</li>
+            <li>Fixed: Issue where a call would fail if two people click on each other at the same time</li>
+            <li>Fixed: Issue where a call would fail if you click on lots of team mates in quick succession</li>
+            <li>Fixed: Video window could not be minimized, now it can!</li>
+            <li>Fixed: Video window could not be unpinned, now it can!</li>
+            <li>Fixed: In instant audio you would sometimes here double sound notifications when a call starts</li>
+            <li>Fixed: The first error would not appear on signin/signup forms</li>
+            <li>Fixed: A couple of aesthetic spacing and positioning</li>
+            <li>Fixed: Deleted invites would not be reflected on the invited users client, now they are - in realtime :)</li>
+            <li>Fixed: Your own status now displays as Offline instead of Available when there is no internet connection</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.5.2"></a>
-        <h2>v0.5.2</h2>
-        <ul>
-          <li>Okay, lots to talk about here! The main thing we've added in this release is the ability to have 
-          multiple teams within Speak, this was much requested. We also let you choose to show either one team or 
-          all your teams at once as well as search within teams - we can't wait to hear your thoughts 😃</li>
-          <li>Preferences have been totally revamped and are looking just gorgeous 💁</li>
-          <li>Added a (much requested <a href="https://github.com/speak/issues/issues/115">#115</a>) option to display the Speak icon in your menu bar instead of the dock</li>
-          <li>Really improved how responsive the UI is when answering an incoming call</li>
-          <li>We brought back the ability to remove teammates, simply right click on them to see the option <a href="https://github.com/speak/issues/issues/116">#116</a></li>
-          <li>We fixed up several situations where double clicking might cause a call to fail and are continuely tracking down and fixing all connection issues</li>
-          <li>Improved detection speed of when your internet connection is lost</li>
-          <li>Fixed a bug where your avatar would grow larger in preferences when speaking... that one was weird</li>
-          <li>Fixed Slack authentication window not closing after signing in</li>
-          <li>Fixed several rendering and positioning issues when using multiple screens</li>
-        </ul>
+        <h3>Aug 18th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.5.2</h2>
+          <ul>
+            <li>Okay, lots to talk about here! The main thing we've added in this release is the ability to have 
+            multiple teams within Speak, this was much requested. We also let you choose to show either one team or 
+            all your teams at once as well as search within teams - we can't wait to hear your thoughts 😃</li>
+            <li>Preferences have been totally revamped and are looking just gorgeous 💁</li>
+            <li>Added a (much requested <a href="https://github.com/speak/issues/issues/115">#115</a>) option to display the Speak icon in your menu bar instead of the dock</li>
+            <li>Really improved how responsive the UI is when answering an incoming call</li>
+            <li>We brought back the ability to remove teammates, simply right click on them to see the option <a href="https://github.com/speak/issues/issues/116">#116</a></li>
+            <li>We fixed up several situations where double clicking might cause a call to fail and are continuely tracking down and fixing all connection issues</li>
+            <li>Improved detection speed of when your internet connection is lost</li>
+            <li>Fixed a bug where your avatar would grow larger in preferences when speaking... that one was weird</li>
+            <li>Fixed Slack authentication window not closing after signing in</li>
+            <li>Fixed several rendering and positioning issues when using multiple screens</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.5.1"></a>
-        <h2>v0.5.1</h2>
-        <ul>
-          <li>Fixed: Possibility of infinite loop</li>
-        </ul>
+        <h3>Aug 6th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.5.1</h2>
+          <ul>
+            <li>Fixed: Possibility of infinite loop</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.5.0"></a>
-        <h2>v0.5.0</h2>
-        <ul>
-          <li>We've revamped the design this release and included a lot of new goodness in the process:</li>
-          <li>Improved CPU use. When not in a call we've managed to remove two processes from running</li>
-          <li>Added a new standard windowed view of your team</li>
-          <li>Added ability to search team</li>
-          <li>Improved the dock to be one click to call</li>
-          <li>The dock now has a dark and a light theme</li>
-          <li>We've removed the menu bar icon</li>
-        </ul>
+        <h3>Aug 6th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.5.0</h2>
+          <ul>
+            <li>We've revamped the design this release and included a lot of new goodness in the process:</li>
+            <li>Improved CPU use. When not in a call we've managed to remove two processes from running</li>
+            <li>Added a new standard windowed view of your team</li>
+            <li>Added ability to search team</li>
+            <li>Improved the dock to be one click to call</li>
+            <li>The dock now has a dark and a light theme</li>
+            <li>We've removed the menu bar icon</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.7"></a>
-        <h2>v0.4.7</h2>
-        <ul>
-          <li>We're really doubling down on reliability and speed this week. Speak should be feeling more solid than ever with these changes! 😃</li>
-          <li>Fixed: Issue that could cause a call not to connect in certain circumstances</li>
-          <li>Fixed: Issue that could cause a call to disconnect instead of degrade on poor connections</li>
-          <li>Fixed: Race condition that could cause video or screensharing not to connect in rare circumstances</li>
-          <li>Fixed: We no longer show a scary 👻 error when the user needs to reauthenticate</li>
-          <li>Fixed: We now automatically clear missed calls when accepting call from another team mate... because that's less confusing.</li>
-          <li>We've also got a possible fix for some folks not having their login details persisted</li>
-        </ul>
+        <h3>July 27th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.7</h2>
+          <ul>
+            <li>We're really doubling down on reliability and speed this week. Speak should be feeling more solid than ever with these changes! 😃</li>
+            <li>Fixed: Issue that could cause a call not to connect in certain circumstances</li>
+            <li>Fixed: Issue that could cause a call to disconnect instead of degrade on poor connections</li>
+            <li>Fixed: Race condition that could cause video or screensharing not to connect in rare circumstances</li>
+            <li>Fixed: We no longer show a scary 👻 error when the user needs to reauthenticate</li>
+            <li>Fixed: We now automatically clear missed calls when accepting call from another team mate... because that's less confusing.</li>
+            <li>We've also got a possible fix for some folks not having their login details persisted</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.6"></a>
-        <h2>v0.4.6</h2>
-        <ul>
-          <li>Fixed: Video window closing whilst in a call</li>
-          <li>Fixed: User menu appearing to be chopped off occassionally</li>
-          <li>Fixed: Several small memory leaks, other misc performance increases</li>
-          <li>Fixed: Several minor race conditions</li>
-        </ul>
+        <h3>July 21st<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.6</h2>
+          <ul>
+            <li>Fixed: Video window closing whilst in a call</li>
+            <li>Fixed: User menu appearing to be chopped off occassionally</li>
+            <li>Fixed: Several small memory leaks, other misc performance increases</li>
+            <li>Fixed: Several minor race conditions</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.5"></a>
-        <h2>v0.4.5</h2>
-        <ul>
-          <li>It's been a few weeks, but we hope it's worth it! Almost all of the work here is behind the 
-              scenes so not much to see but this release addresses stability, cpu usage and lays the 
-              foundation for multiple teams. 🚀</li>
-          <li>New: Cancelling a call now shows a missed call badge on the receiving side</li>
-          <li>Fixed: Improved CPU usage when idle, more to come!</li>
-          <li>Fixed: Occassional times when app would get stuck in connecting...</li>
-          <li>Fixed: New windows (preferences) open twice as fast</li>
-        </ul>
+        <h3>July 17th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.5</h2>
+          <ul>
+            <li>It's been a few weeks, but we hope it's worth it! Almost all of the work here is behind the 
+                scenes so not much to see but this release addresses stability, cpu usage and lays the 
+                foundation for multiple teams. 🚀</li>
+            <li>New: Cancelling a call now shows a missed call badge on the receiving side</li>
+            <li>Fixed: Improved CPU usage when idle, more to come!</li>
+            <li>Fixed: Occassional times when app would get stuck in connecting...</li>
+            <li>Fixed: New windows (preferences) open twice as fast</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.4"></a>
-        <h2>v0.4.4</h2>
-        <ul>
-          <li>Another stability release here, expect some bigger changes soon, we'll publish what we're working on 😃</li>
-          <li>New: Now possible to invite multiple email addresses at once</li>
-          <li>Fixed: Not reverting to instant audio after being idle</li>
-          <li>Fixed: Much improved reconnection speed after waking from sleep</li>
-          <li>Fixed: Invite from dock button not working and unable to launch preferences</li>
-        </ul>
+        <h3>June 29th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.4</h2>
+          <ul>
+            <li>Another stability release here, expect some bigger changes soon, we'll publish what we're working on 😃</li>
+            <li>New: Now possible to invite multiple email addresses at once</li>
+            <li>Fixed: Not reverting to instant audio after being idle</li>
+            <li>Fixed: Much improved reconnection speed after waking from sleep</li>
+            <li>Fixed: Invite from dock button not working and unable to launch preferences</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.3"></a>
-        <h2>v0.4.3</h2>
-        <ul>
-          <li>New: Video controls will now hide themselves smartly and include tooltips</li>
-          <li>New: Crash reporting so we can fix things up when they go wrong</li>
-          <li>New: It's now possible to remove people from your team 💁</li>
-          <li>Fixed: Transition from audio to video call much improved</li>
-          <li>Fixed: Alt-click on a call now lets you join it</li>
-          <li>Fixed: Issue where user profile would appear empty 👻 has been resolved</li>
-          <li>Fixed: Undeletable invites appearing in the team list!</li>
-          <li>Improved connection times when starting the app it should be speedier!</li>
-        </ul>
+        <h3>June 25th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.3</h2>
+          <ul>
+            <li>New: Video controls will now hide themselves smartly and include tooltips</li>
+            <li>New: Crash reporting so we can fix things up when they go wrong</li>
+            <li>New: It's now possible to remove people from your team 💁</li>
+            <li>Fixed: Transition from audio to video call much improved</li>
+            <li>Fixed: Alt-click on a call now lets you join it</li>
+            <li>Fixed: Issue where user profile would appear empty 👻 has been resolved</li>
+            <li>Fixed: Undeletable invites appearing in the team list!</li>
+            <li>Improved connection times when starting the app it should be speedier!</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.2"></a>
-        <h2>v0.4.2</h2>
-        <ul>
-          <li>New: Improved, more compact video layout</li>
-          <li>Fixed: 'Got it' button in onboarding now does something 👍</li>
-          <li>Fixed: UI displaying null when no last name</li>
-          <li>Fixed: Issue causing no camera to be detected when preferred camera is unavailable</li>
-          <li>Fixed: Race condition when joining a video call 🚗🚕🚙</li>
-          <li>Fixed: Small, slow memory leak</li>
-        </ul>
+        <h3>June 17th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.2</h2>
+          <ul>
+            <li>New: Improved, more compact video layout</li>
+            <li>Fixed: 'Got it' button in onboarding now does something 👍</li>
+            <li>Fixed: UI displaying null when no last name</li>
+            <li>Fixed: Issue causing no camera to be detected when preferred camera is unavailable</li>
+            <li>Fixed: Race condition when joining a video call 🚗🚕🚙</li>
+            <li>Fixed: Small, slow memory leak</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.1"></a>
-        <h2>v0.4.1</h2>
-        <ul>
-          <li>We rolled out more servers globally 🌎 this last weekend for improved call quality and latency</li>
-          <li>New: Ability to customize your own global shortcuts! Head over to preferences and set them up just how you like</li>
-          <li>New: Global shortcut for answering an incoming call</li>
-          <li>New: Desktop notification when you're kicked from a call so you can know who gave you the 👞</li>
-          <li>New: Added ability to choose your camera for video calls in preferences</li>
-          <li>New: You can now see other team mates local time for convenience!</li>
-          <li>Fixed: Speak now respects your preferences for starting up on boot</li>
-          <li>Fixed: Smoother avatar loading and caching</li>
-          <li>Fixed: Leaving a call whilst in fullscreen now closes window correctly</li>
-          <li>Fixed: Issue where profile information appears blank after reopening preferences</li>
-          <li>Fixed: Many more error handling and small 🐛's quashed!</li>
-        </ul>
+        <h3>June 15th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.1</h2>
+          <ul>
+            <li>We rolled out more servers globally 🌎 this last weekend for improved call quality and latency</li>
+            <li>New: Ability to customize your own global shortcuts! Head over to preferences and set them up just how you like</li>
+            <li>New: Global shortcut for answering an incoming call</li>
+            <li>New: Desktop notification when you're kicked from a call so you can know who gave you the 👞</li>
+            <li>New: Added ability to choose your camera for video calls in preferences</li>
+            <li>New: You can now see other team mates local time for convenience!</li>
+            <li>Fixed: Speak now respects your preferences for starting up on boot</li>
+            <li>Fixed: Smoother avatar loading and caching</li>
+            <li>Fixed: Leaving a call whilst in fullscreen now closes window correctly</li>
+            <li>Fixed: Issue where profile information appears blank after reopening preferences</li>
+            <li>Fixed: Many more error handling and small 🐛's quashed!</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.4.0"></a>
-        <h2>v0.4.0</h2>
-        <ul>
-          <li>We're excited to have a beta of both <strong>video and screen sharing</strong> in this release! 🎉 Of course this is just the first iteration and we'll be improving every day so please report any 🐛 you might find!</li>
-          <li>Fixed: Dock now displays ongoing call, even when normally hidden</li>
-          <li>Fixed: Issue where tooltip would not close automatically</li>
-          <li>Fixed: Improved handling and messaging when disconnected</li>
-          <li>Fixed: We polished up a lot of little areas in the UI, language, rounding, spacing and more. Think of it as a bit of a spring clean!</li>
-        </ul>
+        <h3>June 9th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.4.0</h2>
+          <ul>
+            <li>We're excited to have a beta of both <strong>video and screen sharing</strong> in this release! 🎉 Of course this is just the first iteration and we'll be improving every day so please report any 🐛 you might find!</li>
+            <li>Fixed: Dock now displays ongoing call, even when normally hidden</li>
+            <li>Fixed: Issue where tooltip would not close automatically</li>
+            <li>Fixed: Improved handling and messaging when disconnected</li>
+            <li>Fixed: We polished up a lot of little areas in the UI, language, rounding, spacing and more. Think of it as a bit of a spring clean!</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.3.4"></a>
-        <h2>v0.3.4</h2>
-        <ul>
-          <li>Fixed: Race condition causing the app to never sign in for a small percentage of users 😳</li>
-          <li>Fixed: Alt-click a user should mark missed calls as read (did you know you can alt-click to skip the menu?)</li>
-          <li>Fixed: Error handling in audio preferences improved</li>
-        </ul>
+        <h3>June 3rd<br/>2015</h3>
+        <div class="content">
+          <h2>v0.3.4</h2>
+          <ul>
+            <li>Fixed: Race condition causing the app to never sign in for a small percentage of users 😳</li>
+            <li>Fixed: Alt-click a user should mark missed calls as read (did you know you can alt-click to skip the menu?)</li>
+            <li>Fixed: Error handling in audio preferences improved</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.3.3"></a>
-        <h2>v0.3.3</h2>
-        <ul>
-          <li>New: The client is now capable of connecting to geo-distributed servers for improved quality and speed</li>
-          <li>New: You can now change the desktop that the dock is displayed on, finally!</li>
-          <li>New: Ability to ping offline users</li>
-          <li>New: Ability to kick folks out of calls</li>
-          <li>New: Idle team mates now show how long it's been since they were active</li>
-          <li>Fixed: Offline team mates are now ordered correctly</li>
-          <li>Fixed: Offline team mates sometimes displaying as idle</li>
-          <li>Fixed: Issue where calling continues when cancelled during a multi party call</li>
-          <li>Fixed: Issue where folks in a call appear not to be</li>
-          <li>Fixed: Issue where you can be manually offline and in a call</li>
-          <li>Fixed: Better handling of going offline during a call</li>
-          <li>Fixed: Client now reconnects faster after being offline</li>
-          <li>Fixed: Various small UI glitches</li>
-        </ul>
+        <h3>June 1st<br/>2015</h3>
+        <div class="content">
+          <h2>v0.3.3</h2>
+          <ul>
+            <li>New: The client is now capable of connecting to geo-distributed servers for improved quality and speed</li>
+            <li>New: You can now change the desktop that the dock is displayed on, finally!</li>
+            <li>New: Ability to ping offline users</li>
+            <li>New: Ability to kick folks out of calls</li>
+            <li>New: Idle team mates now show how long it's been since they were active</li>
+            <li>Fixed: Offline team mates are now ordered correctly</li>
+            <li>Fixed: Offline team mates sometimes displaying as idle</li>
+            <li>Fixed: Issue where calling continues when cancelled during a multi party call</li>
+            <li>Fixed: Issue where folks in a call appear not to be</li>
+            <li>Fixed: Issue where you can be manually offline and in a call</li>
+            <li>Fixed: Better handling of going offline during a call</li>
+            <li>Fixed: Client now reconnects faster after being offline</li>
+            <li>Fixed: Various small UI glitches</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.3.2"></a>
-        <h2>v0.3.2</h2>
-        <ul>
-          <li>New: Dock now grows from center of screen like app dock</li>
-          <li>New: Twitter link in app menu, we really need some followers ya'll!</li>
-          <li>Fixed: If media connection is lost during a call it will rejoin call upon reconnection</li>
-          <li>Fixed: Issue where dock would float in the screen instead of being against edge</li>
-          <li>Fixed: Issue where audio continues to be uploaded after call is ended</li>
-          <li>Fixed: Issue where you would stay idle after resuming laptop from sleep</li>
-          <li>Fixed: Calling sound continued after ignoring a call</li>
-          <li>Fixed: Music now resumes when a call finishes as expected</li>
-          <li>Fixed: Improved resource consumption when idle</li>
-          <li>Fixed: CMD+SHIFT+H miswritten in shortcuts preferences</li>
-          <li>Fixed: Updated language around call and accept mode</li>
-          <li>Fixed: Unclickable area on screen when signed out of Speak</li>
-          <li>Fixed: If muted when another user joins a call the UI appears to unmute</li>
-          <li>Fixed: A number of minor display issues and refinements #littlebigdetails</li>
-        </ul>
+        <h3>May 21st<br/>2015</h3>
+        <div class="content">
+          <h2>v0.3.2</h2>
+          <ul>
+            <li>New: Dock now grows from center of screen like app dock</li>
+            <li>New: Twitter link in app menu, we really need some followers ya'll!</li>
+            <li>Fixed: If media connection is lost during a call it will rejoin call upon reconnection</li>
+            <li>Fixed: Issue where dock would float in the screen instead of being against edge</li>
+            <li>Fixed: Issue where audio continues to be uploaded after call is ended</li>
+            <li>Fixed: Issue where you would stay idle after resuming laptop from sleep</li>
+            <li>Fixed: Calling sound continued after ignoring a call</li>
+            <li>Fixed: Music now resumes when a call finishes as expected</li>
+            <li>Fixed: Improved resource consumption when idle</li>
+            <li>Fixed: CMD+SHIFT+H miswritten in shortcuts preferences</li>
+            <li>Fixed: Updated language around call and accept mode</li>
+            <li>Fixed: Unclickable area on screen when signed out of Speak</li>
+            <li>Fixed: If muted when another user joins a call the UI appears to unmute</li>
+            <li>Fixed: A number of minor display issues and refinements #littlebigdetails</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.3.1"></a>
-        <h2>v0.3.1</h2>
-        <ul>
-          <li>New: Now downloads via dmg installer on Mac</li>
-          <li>New: Added CMD+SHIFT+H global shortcut to leave a call</li>
-          <li>Fixed: Unable to signup with Slack when profile doesn't include an avatar</li>
-          <li>Fixed: No longer sending speaking events whilst calling and unanswered</li>
-          <li>Fixed: Stops ability to drag images into Speak windows and have them load</li>
-          <li>Fixed: Much improved error reporting so we can track bugs down quickly!</li>
-        </ul>
+        <h3>May 21st<br/>2015</h3>
+        <div class="content">
+          <h2>v0.3.1</h2>
+          <ul>
+            <li>New: Now downloads via dmg installer on Mac</li>
+            <li>New: Added CMD+SHIFT+H global shortcut to leave a call</li>
+            <li>Fixed: Unable to signup with Slack when profile doesn't include an avatar</li>
+            <li>Fixed: No longer sending speaking events whilst calling and unanswered</li>
+            <li>Fixed: Stops ability to drag images into Speak windows and have them load</li>
+            <li>Fixed: Much improved error reporting so we can track bugs down quickly!</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.3.0"></a>
-        <h2>v0.3.0</h2>
-        <ul>
-          <li>New: Change dock to right hand side of screen!</li>
-          <li>New: Option to accept an invite and change team</li>
-          <li>New: Added direct link to email us under 'contact support'</li>
-          <li>Fixed: Undefined user after call</li>
-          <li>Fixed: Now better handling of errors during Slack authentication</li>
-          <li>Fixed: Numerous other small issues and bug fixes</li>
-        </ul>
+        <h3>May 14th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.3.0</h2>
+          <ul>
+            <li>New: Change dock to right hand side of screen!</li>
+            <li>New: Option to accept an invite and change team</li>
+            <li>New: Added direct link to email us under 'contact support'</li>
+            <li>Fixed: Undefined user after call</li>
+            <li>Fixed: Now better handling of errors during Slack authentication</li>
+            <li>Fixed: Numerous other small issues and bug fixes</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.2.9"></a>
-        <h2>v0.2.9</h2>
-        <ul>
-          <li>New: Link to this change log!</li>
-          <li>New: Call when idle preference is now enabled by default</li>
-          <li>Fixed: Instances where there would be no audio notification</li>
-          <li>Fixed: Possible to appear muted but not be after leaving a call in mute state</li>
-          <li>Fixed: Ability to clear missed call notifications in a call</li>
-          <li>Fixed: Invite tooltip animation #littlebigdetails</li>
-        </ul>
+        <h3>May 11th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.2.9</h2>
+          <ul>
+            <li>New: Link to this change log!</li>
+            <li>New: Call when idle preference is now enabled by default</li>
+            <li>Fixed: Instances where there would be no audio notification</li>
+            <li>Fixed: Possible to appear muted but not be after leaving a call in mute state</li>
+            <li>Fixed: Ability to clear missed call notifications in a call</li>
+            <li>Fixed: Invite tooltip animation #littlebigdetails</li>
+          </ul>
+        </div>
       </li>
       <li>
         <a name="0.2.8"></a>
-        <h2>v0.2.8</h2>
-        <ul>
-          <li>New: Upload your own avatar from the profile preferences</li>
-          <li>New: Option to disable instant audio when idle/away from the computer</li>
-          <li>New: Missing a call will now add a badge to the user so you know to call back</li>
-          <li>New: Clearer denotation when calling a user and not yet connected</li>
-          <li>New: Alt+click on a users picture to audio call them and skip the menu</li>
-          <li>Fixed: Several issues when loading after first signup</li>
-          <li>Fixed: CMD+SHIFT+N shortcut now working</li>
-          <li>Fixed: Improved animations for calls</li>
-          <li>Fixed: General call stability improvements in multiparty</li>
-          <li>Fixed: Slack authentication now has a bigger window size</li>
-          <li>Fixed: Signin link on forgot password screen</li>
-        </ul>
+        <h3>May 8th<br/>2015</h3>
+        <div class="content">
+          <h2>v0.2.8</h2>
+          <ul>
+            <li>New: Upload your own avatar from the profile preferences</li>
+            <li>New: Option to disable instant audio when idle/away from the computer</li>
+            <li>New: Missing a call will now add a badge to the user so you know to call back</li>
+            <li>New: Clearer denotation when calling a user and not yet connected</li>
+            <li>New: Alt+click on a users picture to audio call them and skip the menu</li>
+            <li>Fixed: Several issues when loading after first signup</li>
+            <li>Fixed: CMD+SHIFT+N shortcut now working</li>
+            <li>Fixed: Improved animations for calls</li>
+            <li>Fixed: General call stability improvements in multiparty</li>
+            <li>Fixed: Slack authentication now has a bigger window size</li>
+            <li>Fixed: Signin link on forgot password screen</li>
+          </ul>
+        </div>
       </li>
     </ol>
   </div>
