@@ -32,7 +32,7 @@
       font-size: 22px;
       font-weight: lighter;
       color: #595C62;
-      padding: 80px 0;
+      padding: 60px 0;
     }
   }
 
@@ -112,15 +112,12 @@
     }
   }
   
-  .feature {
+  .feature,
+  .q {
     text-align: left;
     float: left;
-    padding: 30px 0 70px 0;
-    
-    &:nth-child(3), &:nth-child(4) {
-      padding-bottom: 120px;
-    }
-    
+    padding: 30px 0 50px 0;
+  
     h2 {
       font-size: 20px;
     }
@@ -227,6 +224,16 @@
           text-align: center;
         }
       }
+    }
+  }
+  
+  .page-header .page-subheader {
+    h1 {
+      font-size: 30px;
+    }
+    
+    p {
+      font-size: 18px;
     }
   }
 }
