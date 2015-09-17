@@ -1,6 +1,10 @@
 @import 'elements';
 
 .pricing {
+  h3 {
+    margin: 100px 0 50px 0;
+  }
+  
   .page-content {
     padding: 0;
     
@@ -115,23 +119,80 @@
     }
     
     .features {
-      margin: 60px 0;
-      
-      .feature-list {
-        margin: 0;
-      
-        li {
-          height: 46px;
-          font-size: 20px;
-          font-weight: lighter;
-          color: #5E5E5E;
-          margin: 16px 0;
+      h4 {
+        text-align: center;
         
-          span {
+        span {
+          background: #fff;
+          padding: 0 18px;
+          position: relative;
+          z-index: 1;
+        }
+        
+        &:after {
+          content: "";
+          width: 100%;
+          height: 1px;
+          background: #D8D8D8;
+          position: absolute;
+          top: 12px;
+          left: 0;
+        }
+      }
+      
+      li {
+        height: 30px;
+        font-size: 20px;
+        font-weight: lighter;
+        color: #5E5E5E;
+        margin: 16px 0;
+      
+        span {
+          &:first-child {
+            position: relative;
+            
+            &:before {
+              content: "";
+              display: block;
+              background: url('/images/check.png');
+              background-size: 16px 17px;
+              width: 16px;
+              height: 17px;
+              position: absolute;
+              left: -30px;
+              top: 5px;
+            }
+          }
+          
+          &:nth-child(2) {
             font-size: 14px;
             color: #A1A1A1;
             display: block;
           }
+        }
+      }
+      
+      .coming-soon {
+        li {
+          color: #8F8F8F;
+          
+          span {
+            &:first-child {
+              &:before {
+                display: none;
+              }
+            }
+          }
+        }
+      } 
+    }
+    
+    .faq {
+      margin-bottom: 130px;
+      
+      .q {
+        h2 {
+          margin: 0;
         }
       }
     }
