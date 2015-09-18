@@ -8,15 +8,13 @@ defaults:
     values:
       layout: "page"
       header_description: true
-keep_files: [
-  _site/js
-]
 exclude: [
   grunt,
   vendor,
   circle.yml,
   package.json,
   Dockerfile,
+  src,
   Gruntfile.js,
   deploy.sh,
   Gemfile,

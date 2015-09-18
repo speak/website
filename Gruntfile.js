@@ -1,7 +1,32 @@
 module.exports = function(grunt) {
-  require('load-grunt-config')(grunt);
+  grunt.loadNpmTasks('grunt-contrib-watch');
+  grunt.loadNpmTasks('grunt-browserify');
   
-  grunt.registerMultiTask('build', 'Build the account', function(){
-    grunt.task.run(this.data.tasks);
+  grunt.initConfig({
+    browserify: {
+      all: {
+        options: {
+          browserifyOptions: {
+            extensions: ['.jsx', '.js'],
+            transform: ['babelify']
+          }
+        },
+        files: [{
+          expand: true,
+          cwd: 'src',
+          src: ['account.js'],
+          dest: '_assets/js'
+        }]
+      }
+    },
+    watch: {
+      js: {
+        files: ['src/**/*.jsx', 'src/**/*.js'],
+        tasks: ['browserify']
+      }
+    }
   });
+
+  // Default task(s).
+  grunt.registerTask('default', ['browserify']);
 };

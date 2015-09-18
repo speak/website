@@ -1,9 +1,10 @@
 ---
 layout: account
 title: Account
-script: account.js
 ---
 
-<div class="container account" id="account">
-  
-</div>
+<div id="account"></div>
+
+{% javascript_asset_tag account %}
+- /_assets/js/account.js
+{% endjavascript_asset_tag %}
