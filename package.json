@@ -1,0 +1,33 @@
+{
+  "name": "speak-website",
+  "version": "0.0.1",
+  "description": "Speak website and account area",
+  "scripts": {
+    "build": "grunt build",
+    "test": "jest"
+  },
+  "jest": {
+    "scriptPreprocessor": "<rootDir>/support/preprocessor.js",
+    "unmockedModulePathPatterns": [
+      "<rootDir>/node_modules/react",
+      "<rootDir>/src/renderer/stores/store",
+      "<rootDir>/node_modules/delorean"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules",
+      "<rootDir>/cache",
+      "<rootDir>/build"
+    ]
+  },
+  "devDependencies": {
+    "browserify": "^11.1.0",
+    "grunt": "^0.4.5",
+    "grunt-babel": "^5.0.2",
+    "grunt-browserify": "^4.0.1",
+    "grunt-cli": "^0.1.13",
+    "load-grunt-config": "^0.17.2"
+  },
+  "dependencies": {
+    "react": "^0.13.3"
+  }
+}
