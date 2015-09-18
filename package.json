@@ -25,9 +25,11 @@
     "grunt-babel": "^5.0.2",
     "grunt-browserify": "^4.0.1",
     "grunt-cli": "^0.1.13",
+    "grunt-contrib-watch": "^0.6.1",
     "load-grunt-config": "^0.17.2"
   },
   "dependencies": {
-    "react": "^0.13.3"
+    "react": "^0.13.3",
+    "react-router": "^1.0.0-rc1"
   }
 }

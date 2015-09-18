@@ -2,6 +2,7 @@ dependencies:
   override:
     - bundle install
     - pip install awscli
+    - npm install
 
 machine:
   ruby:
@@ -11,10 +12,12 @@ deployment:
   staging:
     branch: master
     commands:  
+      - grunt build
       - jekyll build --config _config.yml,_staging.yml
       - /bin/bash deploy.sh staging
   production:
     branch: production
     commands:
+      - grunt build
       - jekyll build --config _config.yml,_production.yml
       - /bin/bash deploy.sh production 
