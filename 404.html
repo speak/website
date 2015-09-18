@@ -1,1 +1,222 @@
-404 and shit
+<!doctype html>
+
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+
+  <title>Page not found | Speak</title>
+  <meta name="description" content="Page not found | Speak">
+  <meta name="author" content="Speak">
+  
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+  <script src="404.js"></script>
+
+  <style>
+    html {
+      width: 100%;
+      height: 100%;
+    }
+  
+    body {
+      width: 100%;
+      height: 100%;
+      margin: 0;
+      font-family: "Open Sans", "Helvetica", "Arial", "sans-serif";
+    }
+
+    body * {
+      position: absolute;
+      left: 50%;
+      top: 50%;
+    }
+    
+    .four-oh-four {
+      width: 294px;
+      height: 107px;
+      background: url('/images/404/404.png');
+      background-size: 294px 107px;
+      margin: -94px 0 0 -147px;
+    }
+    
+    .cloud-1 {
+      width: 188px;
+      height: 71px;
+      background: url('/images/404/cloud1.png');
+      background-size: 188px 71px;
+      margin: -25px 0 0 156px;
+      
+      animation-name: cloud;
+      animation-duration: 160s;
+      -webkit-animation-name: cloud;
+      -webkit-animation-duration: 160s;
+    }
+    
+    .cloud-2 {
+      width: 150px;
+      height: 78px;
+      background: url('/images/404/cloud2.png');
+      background-size: 150px 78px;
+      margin: -160px 0 0 -430px;
+      
+      animation-name: cloud;
+      animation-duration: 160s;
+      -webkit-animation-name: cloud;
+      -webkit-animation-duration: 160s;
+    }
+    
+    .cloud-3 {
+      width: 75px;
+      height: 47px;
+      background: url('/images/404/cloud3.png');
+      background-size: 75px 47px;
+      margin: -120px 0 0 -310px;
+      
+      animation-name: cloud;
+      animation-duration: 200s;
+      -webkit-animation-name: cloud;
+      -webkit-animation-duration: 200s;
+    }
+    
+    .cloud-4 {
+      width: 213px;
+      height: 89px;
+      background: url('/images/404/cloud4.png');
+      background-size: 213px 89px;
+      margin: -250px 0 0 240px;
+      
+      animation-name: cloud;
+      animation-duration: 175s;
+      -webkit-animation-name: cloud;
+      -webkit-animation-duration: 175s;
+    }
+    
+    .cloud-5 {
+      width: 150px;
+      height: 78px;
+      background: url('/images/404/cloud2.png');
+      background-size: 150px 78px;
+      margin: -160px 0 0 1000px;
+      
+      animation-name: cloud;
+      animation-duration: 160s;
+      -webkit-animation-name: cloud;
+      -webkit-animation-duration: 160s;
+      
+      -moz-transform: scaleX(-1);
+      -o-transform: scaleX(-1);
+      -webkit-transform: scaleX(-1);
+      transform: scaleX(-1);
+      filter: FlipH;
+      -ms-filter: "FlipH";
+    }
+    
+    .balloon {
+      width: 21px;
+      height: 77px;
+      background: url('/images/404/balloon.png');
+      background-size: 21px 77px;
+      margin: 160px 0 0 -250px;
+      z-index: 1;
+      
+      animation-name: balloon;
+      animation-duration: 100s;
+      -webkit-animation-name: balloon;      
+      -webkit-animation-duration: 100s;
+    }
+    
+    .balloon-2 {
+      width: 21px;
+      height: 77px;
+      background: url('/images/404/balloon2.png');
+      background-size: 21px 77px;
+      margin: 530px 0 0 275px;
+      z-index: 1;
+      
+      animation-name: balloon;
+      animation-duration: 100s;
+      -webkit-animation-name: balloon;      
+      -webkit-animation-duration: 100s;
+    }
+    
+    .city {
+      width: 338px;
+      height: 287px;
+      background: url('/images/404/city.png');
+      background-size: 338px 287px;
+      bottom: 0;
+      left: 0;
+      top: auto;
+    }
+    
+    .content {
+      width: 100%;
+      left: auto;
+      text-align: center;
+      margin-top: 42px;
+    }
+    
+    h1 {
+      position: static;
+      font-size: 22px;
+      font-weight: bold;
+      color: #414141;
+      width: 100%;
+    }
+    
+    p {
+      position: static;
+      color: #939393;
+      font-size: 18px;
+      width: 100%;
+    }
+    
+    a {
+      position: static;
+    }
+    
+    @keyframes cloud {
+        from { left: 50%; }
+        to { left: -20%; }
+    }
+    
+    @-webkit-keyframes cloud {
+        from { left: 50%; }
+        to { left: -20%; }
+    }
+    
+    @keyframes balloon {
+        from { top: 50%; }
+        to { top: -20%; }
+    }
+    
+    @-webkit-keyframes balloon {
+        from { top: 50%; }
+        to { top: -20%; }
+    }
+    
+    @media (max-width: 570px) {
+      .content p {
+        font-size: 14px;
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="four-oh-four"></div>
+  <div class="cloud-1"></div>
+  <div class="cloud-2"></div>
+  <div class="cloud-3"></div>
+  <div class="cloud-4"></div>
+  <div class="cloud-5"></div>
+  <div class="balloon"></div>
+  <div class="balloon-2"></div>
+  <div class="city"></div>
+  <div class="content">
+    <h1>Oh my, this is terribly embarassing</h1>
+    <p>
+      We seem to have misplaced this page. But don't worry, you <br />can always go <a href="/">home</a>.
+    </p>
+  </div>
+</body>
+</html>
