@@ -1,5 +1,5 @@
 $(function() {
-  var initialValue = 2;
+  var initialValue = 10;
   var freq = "yearly";
   var value;
   
