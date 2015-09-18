@@ -29,6 +29,9 @@
       position: absolute;
       left: 50%;
       top: 50%;
+      
+      -webkit-animation-timing-function: linear;
+      animation-timing-function: linear;
     }
     
     .four-oh-four {
@@ -86,9 +89,9 @@
       margin: -250px 0 0 240px;
       
       animation-name: cloud;
-      animation-duration: 175s;
+      animation-duration: 200s;
       -webkit-animation-name: cloud;
-      -webkit-animation-duration: 175s;
+      -webkit-animation-duration: 200s;
     }
     
     .cloud-5 {
@@ -102,13 +105,6 @@
       animation-duration: 160s;
       -webkit-animation-name: cloud;
       -webkit-animation-duration: 160s;
-      
-      -moz-transform: scaleX(-1);
-      -o-transform: scaleX(-1);
-      -webkit-transform: scaleX(-1);
-      transform: scaleX(-1);
-      filter: FlipH;
-      -ms-filter: "FlipH";
     }
     
     .balloon {
@@ -151,9 +147,9 @@
     
     .content {
       width: 100%;
-      left: auto;
+      max-width: 400px;
       text-align: center;
-      margin-top: 42px;
+      margin: 42px 0 0 -200px;
     }
     
     h1 {
@@ -176,23 +172,19 @@
     }
     
     @keyframes cloud {
-        from { left: 50%; }
-        to { left: -20%; }
+        100% { -webkit-transform: translate(-1500px, 0); }
     }
     
     @-webkit-keyframes cloud {
-        from { left: 50%; }
-        to { left: -20%; }
+        100% { -webkit-transform: translate(-1500px, 0); }
     }
     
     @keyframes balloon {
-        from { top: 50%; }
-        to { top: -20%; }
+        100% { -webkit-transform: translate(0, -1000px); }
     }
     
     @-webkit-keyframes balloon {
-        from { top: 50%; }
-        to { top: -20%; }
+        100% { -webkit-transform: translate(0, -1000px); }
     }
     
     @media (max-width: 570px) {
@@ -216,7 +208,7 @@
   <div class="content">
     <h1>Oh my, this is terribly embarassing</h1>
     <p>
-      We seem to have misplaced this page. But don't worry, you <br />can always go <a href="/">home</a>.
+      We seem to have misplaced this page. But don't worry, you can always go <a href="/">home</a>.
     </p>
   </div>
 </body>
