@@ -1,6 +1,7 @@
 gems: []
 download_url_mac: https://s3.amazonaws.com/speak-production-releases/darwin/install-speak.dmg
 bulldog_url: http://docker:9393
+manuel_url: http://docker:4444
 exclude: [
   vendor,
   circle.yml,

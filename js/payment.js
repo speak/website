@@ -1,8 +1,11 @@
+---
+---
 $(function(){
 
   var $inviteSigninForm = $('#invite-signin');
   var signinAction = $inviteSigninForm.attr('action');
   var stripeToken;
+  var authToken;
 
   $inviteSigninForm.on('submit', function(ev){
     ev.preventDefault();
@@ -19,7 +22,7 @@ $(function(){
       alert("SIGN IN FAILED")
     }).done(function(data, status, xhr){
       console.log(data)
-      token = data.token;
+      authToken = data.token;
     });
   });
 
@@ -35,12 +38,14 @@ $(function(){
         url: "{{site.manuel_url}}" + "/billing/subscribe",
         processData: false,
         contentType: 'application/json',
-        processData:false,
-        data: '{ "token": "' + token + '"}',
+        data: JSON.stringify({ 
+          "token":token.id,
+          "organization_id":"55f2e309383832000f030000"
+        }),
         beforeSend: function (xhr) {
           xhr.setRequestHeader(
             'Authorization',
-            'Basic ' + btoa(token + ':password'));
+            'Basic ' + btoa(authToken + ':x'));
         }
       }).done(function(data, status, xhr){
         console.log("success")
