@@ -6,12 +6,14 @@ var Link = ReactRouter.Link;
 
 var App = require('./components/app');
 var Billing = require('./components/billing');
+var Organization = require('./components/organization');
 
 // React Router does all the fancy stuff for us
 React.render((
   <Router>
     <Route path="/" component={App}>
-      <Route path="billing" component={Billing} />
+      <Route path="team/:id" component={Organization} />
+      <Route path="team/:id/billing" component={Billing} />
     </Route>
   </Router>
 ), document.getElementById('account'));

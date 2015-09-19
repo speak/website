@@ -1,14 +1,42 @@
 #account,
 #app {
   height: 100%;
+  text-align: left;
 }
 
 #account {
+  header {
+    color: #fff;
+    background: #4a90e2;
+    height: 60px;
+    
+    .logo {
+      margin: 0;
+      position: absolute;
+      top: 16px;
+      left: 40px;
+    }
+  }
+  
   nav.sidebar {
     float: left;
     width: 250px;
     height: 100%;
-    background: #333;
+    background: #3D4751;
+    
+    ul {
+      margin: 0;
+      padding: 30px 0;
+      
+      li {
+        a {
+          color: #fff;
+          text-decoration: none;
+          display: block;
+          padding: 6px 0 6px 40px;
+        }
+      }
+    }
   }
   
   section {

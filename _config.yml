@@ -13,6 +13,7 @@ exclude: [
   vendor,
   circle.yml,
   package.json,
+  node_modules,
   Dockerfile,
   src,
   Gruntfile.js,
