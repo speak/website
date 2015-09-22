@@ -1,7 +1,7 @@
     {% if page.header_pattern %}
     <div class="page-header" style="background-image: url('/images/{{ page.header_pattern }}.png'); background-color: #{{ page.color }};')">
     {% else %}
-    <div class="page-header">
+    <div class="page-header" style="background-color: #{{ page.color }}">
     {% endif %}
     
       {% include nav.html %}

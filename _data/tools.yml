@@ -1,0 +1,29 @@
+- name: Zapier
+  image: zapier
+  description: "Use Zapier to automate your web experience and save time throughout your day. Zapier allows you to hook up two apps together to perform task based operations. If one thing happens in App A: trigger something else to happen in App B. It's a fantastic time saver for avoiding repetitive tasks and optimizing your workflow!"
+  url: https://zapier.com
+  categories: [productivity]
+  
+- name: iDoneThis
+  image: idonethis
+  description: "iDoneThis is great tool for keeping up with what your team is working on. Use it to track team tacks and keep track of whatever your team mates have been working on. It’s very simple but incredibly powerful for passive, asynchronous communication."
+  url: https://idonethis.com
+  categories: [productivity, communication]
+  
+- name: Koding
+  image: koding
+  description: "Koding provides a cloud based IDE where you can collaborate on code with your team mates in real time. Gone are the days of running local VMs and coding in isolation within your local IDE."
+  url: https://koding.com
+  categories: [productivity, fun]
+  
+- name: Remotive
+  image: remotive
+  description: "Remotive is a weekly newsletter that shares interesting tips for remote working as well as job opportunities."
+  url: http://remotive.co
+  categories: [productivity]
+  
+- name: Workfrom
+  image: workfrom
+  description: "Workfrom is a community of people with the shared goal of finding and sharing great places to work remotely all over the world. With filters for things like power outlets, alcohol, and reliable wifi, it’s easy to find a great place to hunker down and get shit done."
+  url: http://workfrom.co
+  categories: [travel]

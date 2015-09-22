@@ -39,6 +39,36 @@
       padding: 60px 0;
     }
   }
+  
+  .subnav {
+    background: #F5F7F9;
+    margin-bottom: 40px;
+    width: 100%;
+    
+    ul {
+      margin: 0;
+      display: table;
+      table-layout: fixed;
+      width: 100%;
+    
+      li {
+        display: table-cell;
+    
+        a {
+          display: block;
+          text-decoration: none;
+          text-align: center;
+          color: #7C7C7C;
+          padding: 20px 0;
+          width: 100%;
+      
+          &:hover {
+            color: #4A90E2;
+          }
+        }
+      }
+    }
+  }
 
   .page-content {
     padding: 50px 0;
@@ -226,6 +256,9 @@
           text-align: center;
         }
       }
+    }
+    .subnav ul li {
+      display: block;
     }
   }
   
