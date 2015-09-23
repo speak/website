@@ -9,7 +9,7 @@
             <p>
               {{ tool.description }}
             </p>
-            <a href="{{ tool.url }}">Learn more</a>
+            <a href="{{ tool.url }}">Visit site</a>
           </li>
         {% endif %}
       {% endfor %}
