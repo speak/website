@@ -12,12 +12,12 @@ deployment:
   staging:
     branch: master
     commands:  
-      - grunt build
+      - grunt build --staging
       - jekyll build --config _config.yml,_staging.yml
       - /bin/bash deploy.sh staging
   production:
     branch: production
     commands:
-      - grunt build
+      - grunt build --production
       - jekyll build --config _config.yml,_production.yml
       - /bin/bash deploy.sh production 

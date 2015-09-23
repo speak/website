@@ -1,4 +1,8 @@
 module.exports = function(grunt) {
+  var target = "development";
+  if (grunt.option('staging')) target="staging";
+  if (grunt.option('production') || grunt.option('prod')) target="production";
+  
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-browserify');
   
@@ -8,7 +12,11 @@ module.exports = function(grunt) {
         options: {
           browserifyOptions: {
             extensions: ['.jsx', '.js'],
-            transform: ['babelify']
+            transform: ['babelify', ['aliasify', {
+              aliases: {
+                "config": "./src/config/"+target+".js"
+              }
+            }]]
           }
         },
         files: [{
