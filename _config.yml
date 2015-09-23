@@ -8,6 +8,13 @@ defaults:
     values:
       layout: "page"
       header_description: true
+  -
+    scope:
+      path: "tools-for-remote-workers-digital-nomads"
+    values:
+      header_description: false
+      class: tools
+      color: 4A90E2
 exclude: [
   vendor,
   circle.yml,
@@ -17,3 +24,4 @@ exclude: [
   Gemfile.lock,
   README.md
 ]
+category-list: [communication, productivity, fun, travel]
