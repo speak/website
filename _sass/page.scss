@@ -3,6 +3,10 @@
 .page {
   text-align: left;
   
+  h2 {
+    margin: 20px 0 0;
+  }
+  
   h3 {
     text-align: center;
     margin-bottom: 10px;
@@ -46,8 +50,6 @@
     }
 
     h2 {
-      margin: 20px 0 0;
-      
       a {
         text-decoration: none;
       }
