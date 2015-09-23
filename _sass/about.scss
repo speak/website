@@ -74,21 +74,26 @@
       margin-bottom: 40px;
       
       div {
-        width: 120px;
-        height: 120px;
+        width: 100%;
+        height: auto;
+        min-height: 140px;
         border: 2px solid #DADADA;
         margin: 0px auto;
+        position: relative;
         
         img {
           margin: 0px auto;
-          width: 50%;
-          height: 50%;
-          margin-top: 30px;
+          width: 80px;
+          height: 75px;
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          margin: -40px 0 0 -40px;
         }
       }
       
       a {
-        font-size: 13px;
+        font-size: 14px;
         color: #4A90E2;
         text-decoration: none;
         font-weight: 600;
