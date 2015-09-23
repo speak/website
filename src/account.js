@@ -11,10 +11,15 @@ var Organization = require('./components/organization');
 var AuthStore = require('./stores/auth-store');
 
 function requireAuth(nextState, replaceState) {
-  console.log(AuthStore.state);
-  
   if (!AuthStore.get('token')) {
     replaceState({ nextPathname: nextState.location.pathname }, '/login');
+  }
+}
+
+
+function requireUnauth(nextState, replaceState) {
+  if (AuthStore.get('token')) {
+    replaceState({ nextPathname: nextState.location.pathname }, '/');
   }
 }
 
@@ -22,7 +27,7 @@ function requireAuth(nextState, replaceState) {
 React.render((
   <Router>
     <Route path="/" component={App}>
-      <Route path="login" component={Login} />
+      <Route path="login" component={Login} onEnter={requireUnauth} />
       <Route path="team/:id" component={Organization} onEnter={requireAuth} />
       <Route path="team/:id/billing" component={Billing} onEnter={requireAuth} />
     </Route>

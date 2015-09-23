@@ -25,10 +25,10 @@ var Login = React.createClass({
   render: function() {
     return <DocumentTitle title='Login'>
       <form onSubmit={this.handleSubmit}>
-        <p>Login Form</p>
-        <input type="email" ref="email" />
-        <input type="password" ref="password" />
-        <input type="submit" value="Go" />
+        <p>Login already</p>
+        <input type="email" ref="email" placeholder="Email" />
+        <input type="password" ref="password" placeholder="Password" />
+        <input type="submit" value="Login" />
       </form>
     </DocumentTitle>;
   }
