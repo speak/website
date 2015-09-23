@@ -1,71 +1,71 @@
 - name: Zapier
   image: zapier
   description: "Use Zapier to automate your web experience and save time throughout your day. Zapier allows you to hook up two apps together to perform task based operations. If one thing happens in App A: trigger something else to happen in App B. It's a fantastic time saver for avoiding repetitive tasks and optimizing your workflow!"
-  url: https://zapier.com
+  url: zapier.com
   categories: [productivity]
   
 - name: iDoneThis
   image: idonethis
   description: "iDoneThis is great tool for keeping up with what your team is working on. Use it to track team tacks and keep track of whatever your team mates have been working on. It’s very simple but incredibly powerful for passive, asynchronous communication."
-  url: https://idonethis.com
+  url: idonethis.com
   categories: [productivity, communication]
   
 - name: Koding
   image: koding
   description: "Koding provides a cloud based IDE where you can collaborate on code with your team mates in real time. Gone are the days of running local VMs and coding in isolation within your local IDE."
-  url: https://koding.com
+  url: koding.com
   categories: [productivity, fun]
   
 - name: Remotive
   image: remotive
   description: "Remotive is a weekly newsletter that shares interesting tips for remote working as well as job opportunities."
-  url: http://remotive.co
+  url: remotive.io
   categories: [productivity]
   
 - name: Workfrom
   image: workfrom
   description: "Workfrom is a community of people with the shared goal of finding and sharing great places to work remotely all over the world. With filters for things like power outlets, alcohol, and reliable wifi, it’s easy to find a great place to hunker down and get shit done."
-  url: http://workfrom.co
+  url: workfrom.co
   categories: [travel]
   
 - name: Buffer
   image: buffer
   description: "Buffer allows you to better manage and schedule your social media posts. And with multi-user support, it plays very nicely with remote teams."
-  url: http://bufferapp.com
+  url: bufferapp.com
   categories: [productivity]
   
 - name: Travefy
   image: travefy
   description: "Travefy is the greatest way for groups to organize and book travel, especially when you're not all in the same location."
-  url: http://travefy.com
+  url: travefy.com
   categories: [travel]
   
 - name: World Clock
   image: world-clock
   description: "World Clock is the ultimate way to keep track of timezones when working on a distributed team. With it's slick interface and low price ($4.99), it's a must have for remote teams."
-  url: https://itunes.apple.com/nz/app/world-clock/id858446756?mt=12
+  url: itunes.apple.com/nz/app/world-clock/id858446756?mt=12
   categories: [travel, productivity]
   
 - name: Slack
   image: slack
   description: "Slack is the ultimate team chat tool. It's got everything from expansive search to multi-team support to a fun and lighthearted interface. It also plays very well with Speak!"
-  url: http://slack.com
+  url: slack.com
   categories: [productivity, fun]
   
 - name: Trello
   image: trello
   description: "Trello is an amazing tool for keeping your team organized. When you're remote, it can be easy for things to slip through the cracks. Fill the cracks with Trello and make sure everyone is on task and being productive."
-  url: http://trello.com
+  url: trello.com
   categories: [productivity, communication]
   
 - name: Skitch
   image: skitch
   description: "Skitch is great for those times when you just need an extra bit of clarity. Easy snap screenshots and add annotations to help get your point across."
-  url: https://evernote.com/skitch/
+  url: evernote.com/skitch/
   categories: [productivity, communication, fun]
   
 - name: Nomad List
   image: nomadlist
   description: "Nomad List is a database of places around the world, ranked by a slew of criteria to determine the most cost effective and nomad friendly places to live across the world."
-  url: https://nomadlist.com/
+  url: nomadlist.com
   categories: [travel]

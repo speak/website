@@ -4,4 +4,38 @@
   .page-content {
     padding-top: 0;
   }
+  
+  .tools-list {
+    li {
+      padding: 24px;
+      margin-bottom: 40px;
+      min-height: 250px;
+      
+      &:nth-child(odd) {
+        clear: both;
+      }
+      
+      h2 {
+        margin: 0;
+        font-size: 30px;
+        line-height: 1.6;
+      }
+      img {
+        width: 50px;
+        height: auto;
+        background: #fff;
+        box-sizing: border-box;
+        margin-right: 30px;
+        background-repeat: no-repeat;
+        background-position: center center;
+        background-size: contain;      
+        float: left;
+      }
+  
+      p {
+        font-size: 16px;
+        padding: 22px 0;
+      }
+    }
+  }
 }
