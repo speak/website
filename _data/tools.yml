@@ -65,7 +65,7 @@
   categories: [productivity, communication, fun]
   
 - name: Nomad List
-  image: nomas-list
+  image: nomadlist
   description: "Nomad List is a database of places around the world, ranked by a slew of criteria to determine the most cost effective and nomad friendly places to live across the world."
   url: https://nomadlist.com/
   categories: [travel]

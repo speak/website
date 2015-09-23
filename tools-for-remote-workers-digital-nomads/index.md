@@ -5,6 +5,4 @@ description: Here are some of the tools we use here at Speak, as well as some ot
 layout: page
 ---
 
-{% include tools-nav.md %}
-
 {% include tools-category.md cat="" %}
