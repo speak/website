@@ -195,11 +195,22 @@ body .footer {
 .win,
 .mac {
   .download-btn {
+    position: relative;
     padding: 4px 42px 4px 65px;
-    background-image: url('/images/icons/download.png');
-    background-size: 22px 20px;
-    background-position: 28px 20px;
-    background-repeat: no-repeat;
+    
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 20px;
+      background-image: url('/images/icons/download-black.png');
+      background-size: 22px 20px;
+      background-repeat: no-repeat;
+      left: 28px;
+      top: 20px;
+      opacity: .5;
+    }
   }
 }
 
