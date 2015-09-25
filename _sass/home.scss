@@ -68,6 +68,13 @@
         margin-bottom: 20px;
       }
     }
+    
+    .download-btn {
+      &:before {
+        background-image: url('/images/icons/download-blue.png');
+        opacity: 1;
+      }
+    }
   }
 
   .testimonial-wrapper {
