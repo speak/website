@@ -46,6 +46,15 @@ body {
   .download {
     padding-top: 80px;
   }
+  
+  .download-btn {
+    background-color: #316098;
+    color: #fff;
+    
+    &:before {
+      background-image: url('/images/icons/download-black.png');
+    }
+  }
 
   > section {
     width: 400px;

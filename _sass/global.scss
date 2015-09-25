@@ -90,54 +90,37 @@ nav {
   }
 }
 
-.page .cta {
+.cta {
   background: #4A90E2;
   padding: 70px 0 60px 0;
   text-align: center;
-  
-  h2 {
-    color: #fff;
-    margin-bottom: 20px;
-  }
   
   p {
     margin: 4px 0 26px 0;
     color: #D4E8FF;
   }
   
-  .button {
-    background: #fff;
-    color: $blue;
-    border: none;
-    
-    &:hover, &:focus {
-      color: $blue;
-      background: darken(#fff, 5%);
-    }
+  h2 {
+    color: #fff;
+    margin-bottom: 20px;
   }
 }
 
 .cta-btn {
-  width: 278px;
   text-align: center;
-  margin: 0px auto;
+}
+
+.download {
+  display: block;
+  font-size: 11px;
+  width: 100%;
+  text-align: center;
+  color: rgba(255,255,255,.6);
+  margin-top: 10px;
   
   a {
-      width: 100%;
-  }
-
-  .download {
-    display: block;
-    font-size: 11px;
-    width: 100%;
-    text-align: center;
-    color: rgba(255,255,255,.6);
-    margin-top: 10px;
-    
-    a {
-      margin-left: 4px;
-      color: rgba(255,255,255,.7);
-    }
+    margin-left: 4px;
+    color: rgba(255,255,255,.7);
   }
 }
 
@@ -179,6 +162,54 @@ body .footer {
           text-decoration: underline;
         }
       }
+    }
+  }
+}
+
+.download-btn {
+  display: inline-block;
+  background-color: #fff;
+  color: #316098;
+  font-size: 20px;
+  font-weight: 600;
+  border: none;
+  border-radius: 3px;
+  padding: 4px 42px;
+  line-height: 2.7;
+  height: auto;
+  min-height: 50px;
+  -webkit-appearance: none;
+  text-decoration: none;
+
+  &:hover {
+    background-color: darken(#fff, 3%);
+    color: #316098;
+  }
+
+  &:active, &:focus {
+    background-color: darken(#fff, 6%);
+    color: #316098;
+  }
+}
+
+.win,
+.mac {
+  .download-btn {
+    position: relative;
+    padding: 4px 42px 4px 65px;
+    
+    &:before {
+      content: "";
+      display: block;
+      position: absolute;
+      width: 22px;
+      height: 20px;
+      background-image: url('/images/icons/download-black.png');
+      background-size: 22px 20px;
+      background-repeat: no-repeat;
+      left: 28px;
+      top: 20px;
+      opacity: .5;
     }
   }
 }

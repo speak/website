@@ -1,5 +1,6 @@
 gems: []
-download_url_mac: https://s3.amazonaws.com/speak-production-releases/darwin/install-speak.dmg
+download_url_mac: https://releases.speak.io/darwin/install-speak.dmg
+download_url_win: https://releases.speak.io/win32/SpeakSetup.exe
 bulldog_url: http://docker:9393
 defaults:
   -
@@ -8,6 +9,7 @@ defaults:
     values:
       layout: "page"
       header_description: true
+      color: 4A90E2
   -
     scope:
       path: "tools-for-remote-workers-digital-nomads"
