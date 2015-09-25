@@ -17,6 +17,11 @@ $(function(){
     ev.preventDefault();
     $(".sqwiggle-banner").slideUp();
   });
+  
+  $("form.linux .download-btn").click(function(ev) {
+    ev.preventDefault();
+    $("form.linux").submit();
+  });
 
   // Track pageview
   client = new Keen({
