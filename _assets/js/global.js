@@ -11,13 +11,13 @@ $(function(){
     $('.mac').show();
   }
   
-  // Track download
+  // Track Windows download
   $('.win .download-btn').click(function() {
     ga('send', 'event', 'click', 'download', 'windows');
     client.addEvent("site.downloaded_app", details);
   });
   
-  // Track download
+  // Track Mac download
   $('.mac .download-btn').click(function() {
     ga('send', 'event', 'click', 'download', 'mac');
     client.addEvent("site.downloaded_app", details);
