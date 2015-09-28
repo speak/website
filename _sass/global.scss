@@ -191,23 +191,6 @@ body .download-btn {
     background-color: darken(#fff, 6%);
     color: #316098;
   }
-  
-  &.inverted {
-    background: #316098;
-    color: #fff;
-    
-    &:hover {
-      background-color: darken(#316098, 3%);
-    }
-    
-    &:active, &:focus {
-      background-color: darken(#316098, 6%);
-    }
-    
-    &:before {
-      background-image: url('/images/icons/download-white.png');
-    }
-  }
 }
 
 .win,
