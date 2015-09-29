@@ -166,7 +166,7 @@ body .footer {
   }
 }
 
-.download-btn {
+body .download-btn {
   display: inline-block;
   background-color: #fff;
   color: #316098;
@@ -194,7 +194,8 @@ body .footer {
 }
 
 .win,
-.mac {
+.mac,
+.downloads {
   .download-btn {
     position: relative;
     padding: 4px 42px 4px 65px;
