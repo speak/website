@@ -1,0 +1,53 @@
+@import 'elements';
+
+.downloads {
+  .page-content {
+    .platform {
+      text-align: center;
+      background: #f7f7f7;
+      padding: 30px 14px;
+      margin-bottom: 20px;
+      border-radius: 6px;
+      min-height: 305px;
+      
+      img {
+        margin: 0px auto;
+        margin-bottom: 10px;
+        display: block;
+      }
+      
+      span {
+        display: block;
+        font-size: 14px;
+        margin-top: 12px;
+      }
+      
+      .download-btn {
+        margin-top: 28px;
+        border: 2px solid #BBBBBB;
+        background: #fff;
+        color: #5e5e5e;
+        
+        &:hover {
+          background-color: darken(#fff, 3%);
+        }
+      }
+      
+      &.platform-linux {
+        img {
+          margin-top: 40px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 480px) {
+  .downloads .page-content .platform .download-btn {
+    font-size: 14px;
+    
+    &:before {
+      top: 12px;
+    }
+  }
+}
