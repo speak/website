@@ -2,7 +2,7 @@
   image: zapier
   description: "Use Zapier to automate your web experience and save time throughout your day. Zapier allows you to hook up two apps together to perform task based operations. If one thing happens in App A: trigger something else to happen in App B. It's a fantastic time saver for avoiding repetitive tasks and optimizing your workflow!"
   url: zapier.com
-  categories: [productivity]
+  categories: [productivity, communication]
   
 - name: iDoneThis
   image: idonethis
@@ -14,7 +14,7 @@
   image: koding
   description: "Koding provides a cloud based IDE where you can collaborate on code with your team mates in real time. Gone are the days of running local VMs and coding in isolation within your local IDE."
   url: koding.com
-  categories: [productivity, fun]
+  categories: [productivity, communication]
   
 - name: Remotive
   image: remotive
@@ -50,7 +50,7 @@
   image: slack
   description: "Slack is the ultimate team chat tool. It's got everything from expansive search to multi-team support to a fun and lighthearted interface. It also plays very well with Speak!"
   url: slack.com
-  categories: [productivity, fun]
+  categories: [productivity, communication]
   
 - name: Trello
   image: trello
@@ -87,3 +87,21 @@
   description: "When working on a remote team, timezones can pose a challenge to say the least. Sundial was created by the team at Teleport to make it easier to stay on top of your team's timezones."
   url: sundial.teleport.org
   categories: [travel]
+  
+- name: f.lux
+  image: flux
+  description: "f.lux will adjust your computer's color temperature to adapt to the time of day. This is great for nomadic workers who are changing location often. It also helps to reduce eye strain."
+  url: https://justgetflux.com/
+  categories: [productivity]
+  
+- name: Spotted by Locals
+  image: sbl
+  description: "Spotted by Locals is a series of blogs and city guides with up to date tips for travelers. It's a great way to find things to do when traveling in a new city."
+  url: http://www.spottedbylocals.com/
+  categories: [travel, fun]
+  
+- name: Hackpad
+  image: sbl
+  description: "Spotted by Locals is a series of blogs and city guides with up to date tips for travelers. It's a great way to find things to do when traveling in a new city."
+  url: http://www.spottedbylocals.com/
+  categories: [travel, fun]
