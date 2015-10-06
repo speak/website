@@ -1,6 +1,7 @@
 gems: []
 download_url_mac: https://releases.speak.io/darwin/install-speak.dmg
 download_url_win: https://releases.speak.io/win32/SpeakSetup.exe
+download_url_linux: http://help.speak.io/article/43-speak-for-linux
 bulldog_url: http://docker:9393
 defaults:
   -
