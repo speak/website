@@ -34,32 +34,32 @@ $(function() {
     
     switch (true) {
       case (value <= 3):
-        plan = "Startup";
+        plan = "Pico";
         price = 15;
         break;
         
       case (value <= 6):
-        plan = "Funded";
+        plan = "Nano";
         price = 30;
         break;
         
       case (value <= 10):
-        plan = "Business";
+        plan = "Milli";
         price = 50;
         break;
         
       case (value <= 20):
-        plan = "Getting Big";
+        plan = "Kilo";
         price = 100;
         break;
         
       case (value <= 50):
-        plan = "Enterprise";
+        plan = "Mega";
         price = 250;
         break;
         
       case (value <= 100):
-        plan = "Enterprise 2.0";
+        plan = "Giga";
         price = 500;
     }
     
