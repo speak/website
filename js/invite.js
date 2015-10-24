@@ -79,7 +79,7 @@ $(function(){
     }).done(function(data, status, xhr){
       $.ajax({
         type: "POST",
-        url: "{{site.manuel_url}}" + "/invite/accept",
+        url: $inviteSigninForm.data('accept-action'),
         processData: false,
         contentType: 'application/json',
         processData:false,

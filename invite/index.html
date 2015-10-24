@@ -21,7 +21,7 @@ script: invite.js
       <p class="secondary">Already have an account? <a id="invite-signin-link">Sign In</a></p>
     </div>
   </form>
-  <form id="invite-signin" action="{{ site.bulldog_url }}/sessions">
+  <form id="invite-signin" action="{{ site.bulldog_url }}/sessions" data-accept-action="{{site.manuel_url}}/invite/accept">
     <p>
       Sign in to your account to join the <span class="team-name">right</span> team.
     </p>
