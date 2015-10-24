@@ -12,23 +12,13 @@ script: invite.js
   <div class="banner error"></div>
   <div class="banner success"></div>
   
-  <form id="invite-signup" action="{{ site.bulldog_url }}/users">
+  <form id="invite-accept" action="{{ site.bulldog_url }}/users">
     <div class="field-wrapper">
       <input class="first-name" id="first_name" type="text" name="first_name" placeholder="First name" required>
       <input class="last-name" id="last_name" type="text" name="last_name" placeholder="Last name" required>
       <input class="email" id="email" type="text" name="email" placeholder="Work email" required>
       <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
       <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
-      <p class="secondary">Already have an account? <a id="invite-signin-link">Sign In</a></p>
-    </div>
-  </form>
-
-  <form id="invite-signin" action="{{ site.bulldog_url }}/sessions">
-    <div class="field-wrapper">
-      <input class="email" id="email" type="text" name="email" placeholder="Email" required>
-      <input class="password" id="password" type="password" name="password" placeholder="Password" required>
-      <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
-      <p class="secondary">No account yet? <a id="invite-signup-link">Sign Up</a></p>
     </div>
   </form>
 </figure>
