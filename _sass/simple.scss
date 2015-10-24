@@ -54,6 +54,10 @@ body {
     &:before {
       background-image: url('/images/icons/download-white.png');
     }
+    
+    &:hover {
+      background-color: darken(#316098, 10%);
+    }
   }
 
   > section {
