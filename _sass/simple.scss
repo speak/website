@@ -58,7 +58,7 @@ body {
 
   > section {
     width: 400px;
-    min-height: 470px;
+    min-height: 450px;
     padding: 30px;
     margin: 0 auto;
     background: #fff;
@@ -114,11 +114,5 @@ body {
     a {
       cursor: pointer;
     }
-  }
-
-  #invite-signin,
-  #signup-invite-success-text,
-  #signin-invite-success-text { 
-    display:none;
   }
 }
