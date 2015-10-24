@@ -6,31 +6,51 @@ script: invite.js
 
 <figure class="front">
   <h1>You're Invited</h1>
-  <p id="password-reset-instructions">
-    Just a couple of details and we'll have you in the <span class="team-name">right</span> team.
+  <p>
+    Just a couple of details and we'll have you in the <br/><span class="team-name">right</span> team.
   </p>
-  <form id="invite-accept" action="{{ site.bulldog_url }}/users">
-    <div class="banner error"></div>
-    <div class="banner success"></div>
+  <div class="banner error"></div>
+  <div class="banner success"></div>
+  
+  <form id="invite-signup" action="{{ site.bulldog_url }}/users">
     <div class="field-wrapper">
       <input class="first-name" id="first_name" type="text" name="first_name" placeholder="First name" required>
       <input class="last-name" id="last_name" type="text" name="last_name" placeholder="Last name" required>
       <input class="email" id="email" type="text" name="email" placeholder="Work email" required>
       <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
       <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
+      <p class="secondary">Already have an account? <a id="invite-signin-link">Sign In</a></p>
+    </div>
+  </form>
+  
+  <form id="invite-signin" action="{{ site.bulldog_url }}/sessions" data-accept-action="{{site.manuel_url}}/invite/accept">
+    <div class="field-wrapper">
+      <input class="email" id="email" type="text" name="email" placeholder="Email" required>
+      <input class="password" id="password" type="password" name="password" placeholder="Password" required>
+      <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
+      <p class="secondary">No account yet? <a id="invite-signup-link">Sign Up</a></p>
     </div>
   </form>
 </figure>
 
 <figure class="back download">
-  <h1>Almost there&hellip;</h1>
-  <p>
-    You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
-  </p>
-  <span class="mac">
-    <a href="{{ site.download_url_mac }}" class="download-btn">Download for Mac</a>
-  </span>
-  <span class="win">
-    <a href="{{ site.download_url_win }}" class="download-btn">Download for Windows</a>
-  </span>
+  <div id="invite-accepted">
+    <h1>Almost there&hellip;</h1>
+    <div id="signup-invite-success-text">
+      <p>
+        You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
+      </p>
+      <span class="mac">
+        <a href="{{ site.download_url_mac }}" class="download-btn">Download for Mac</a>
+      </span>
+      <span class="win">
+        <a href="{{ site.download_url_win }}" class="download-btn">Download for Windows</a>
+      </span>
+    </div>
+    <div id="signin-invite-success-text">
+      <p>
+        Great, you've joined the team! Simply sign in to the Speak desktop app to join your new team mates!
+      </p>
+    </div>
+  </div>
 </figure>

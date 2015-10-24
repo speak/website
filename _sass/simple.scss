@@ -58,7 +58,7 @@ body {
 
   > section {
     width: 400px;
-    min-height: 450px;
+    min-height: 470px;
     padding: 30px;
     margin: 0 auto;
     background: #fff;
@@ -92,7 +92,8 @@ body {
     transform: rotateY( 180deg );
   }
   
-  #invite-accept {
+  #invite-signup,
+  #invite-signin {
     .first-name,
     .last-name {
       width: 166px;
@@ -103,5 +104,21 @@ body {
     .last-name {
       float: right;
     }
+    
+    p.secondary {
+      margin-top: 20px;
+      font-size: 14px;
+      padding: 0;
+    }
+    
+    a {
+      cursor: pointer;
+    }
+  }
+
+  #invite-signin,
+  #signup-invite-success-text,
+  #signin-invite-success-text { 
+    display:none;
   }
 }
