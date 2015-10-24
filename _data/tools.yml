@@ -1,0 +1,107 @@
+- name: Zapier
+  image: zapier
+  description: "Use Zapier to automate your web experience and save time throughout your day. Zapier allows you to hook up two apps together to perform task based operations. If one thing happens in App A: trigger something else to happen in App B. It's a fantastic time saver for avoiding repetitive tasks and optimizing your workflow!"
+  url: zapier.com
+  categories: [productivity, communication]
+  
+- name: iDoneThis
+  image: idonethis
+  description: "iDoneThis is great tool for keeping up with what your team is working on. Use it to track team tacks and keep track of whatever your team mates have been working on. It’s very simple but incredibly powerful for passive, asynchronous communication."
+  url: idonethis.com
+  categories: [productivity, communication]
+  
+- name: Koding
+  image: koding
+  description: "Koding provides a cloud based IDE where you can collaborate on code with your team mates in real time. Gone are the days of running local VMs and coding in isolation within your local IDE."
+  url: koding.com
+  categories: [productivity, communication]
+  
+- name: Remotive
+  image: remotive
+  description: "Remotive is a weekly newsletter that shares interesting tips for remote working as well as job opportunities."
+  url: remotive.io
+  categories: [productivity]
+  
+- name: Workfrom
+  image: workfrom
+  description: "Workfrom is a community of people with the shared goal of finding and sharing great places to work remotely all over the world. With filters for things like power outlets, alcohol, and reliable wifi, it’s easy to find a great place to hunker down and get shit done."
+  url: workfrom.co
+  categories: [travel]
+  
+- name: Buffer
+  image: buffer
+  description: "Buffer allows you to better manage and schedule your social media posts. And with multi-user support, it plays very nicely with remote teams."
+  url: bufferapp.com
+  categories: [productivity]
+  
+- name: Travefy
+  image: travefy
+  description: "Travefy is the greatest way for groups to organize and book travel, especially when you're not all in the same location."
+  url: travefy.com
+  categories: [travel]
+  
+- name: World Clock
+  image: world-clock
+  description: "World Clock is the ultimate way to keep track of timezones when working on a distributed team. With it's slick interface and low price ($4.99), it's a must have for remote teams."
+  url: itunes.apple.com/nz/app/world-clock/id858446756?mt=12
+  categories: [travel, productivity]
+  
+- name: Slack
+  image: slack
+  description: "Slack is the ultimate team chat tool. It's got everything from expansive search to multi-team support to a fun and lighthearted interface. It also plays very well with Speak!"
+  url: slack.com
+  categories: [productivity, communication]
+  
+- name: Trello
+  image: trello
+  description: "Trello is an amazing tool for keeping your team organized. When you're remote, it can be easy for things to slip through the cracks. Fill the cracks with Trello and make sure everyone is on task and being productive."
+  url: trello.com
+  categories: [productivity, communication]
+  
+- name: Skitch
+  image: skitch
+  description: "Skitch is great for those times when you just need an extra bit of clarity. Easy snap screenshots and add annotations to help get your point across."
+  url: evernote.com/skitch/
+  categories: [productivity, communication, fun]
+  
+- name: Nomad List
+  image: nomadlist
+  description: "Nomad List is a database of places around the world, ranked by a slew of criteria to determine the most cost effective and nomad friendly places to live across the world."
+  url: nomadlist.com
+  categories: [travel]
+  
+- name: Pajamas.io
+  image: pajamas
+  description: "As the name might (or might not) suggest, Pajamas.io is a collection of interviews with people who work at companies with distributed teams. Definitely a must read for remote workers!"
+  url: pajamas.io
+  categories: [productivity]
+  
+- name: Teleport
+  image: teleport
+  description: "Teleport is a mobile app that helps you discover the best places to live, so that you can spend less money and live happier."
+  url: teleport.org
+  categories: [travel]
+  
+- name: Sundial
+  image: sundial
+  description: "When working on a remote team, timezones can pose a challenge to say the least. Sundial was created by the team at Teleport to make it easier to stay on top of your team's timezones."
+  url: sundial.teleport.org
+  categories: [travel]
+  
+- name: f.lux
+  image: flux
+  description: "f.lux will adjust your computer's color temperature to adapt to the time of day. This is great for nomadic workers who are changing location often. It also helps to reduce eye strain."
+  url: https://justgetflux.com/
+  categories: [productivity]
+  
+- name: Spotted by Locals
+  image: sbl
+  description: "Spotted by Locals is a series of blogs and city guides with up to date tips for travelers. It's a great way to find things to do when traveling in a new city."
+  url: http://www.spottedbylocals.com/
+  categories: [travel, fun]
+  
+- name: Hackpad
+  image: sbl
+  description: "Spotted by Locals is a series of blogs and city guides with up to date tips for travelers. It's a great way to find things to do when traveling in a new city."
+  url: http://www.spottedbylocals.com/
+  categories: [travel, fun]

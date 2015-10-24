@@ -1,7 +1,25 @@
 gems: []
-download_url_mac: https://s3.amazonaws.com/speak-production-releases/darwin/install-speak.dmg
+download_url_mac: https://releases.speak.io/darwin/install-speak.dmg
+download_url_win: https://releases.speak.io/win32/SpeakSetup.exe
+download_url_linux: http://help.speak.io/article/43-speak-for-linux
 bulldog_url: http://docker:9393
 manuel_url: http://docker:4444
+defaults:
+  -
+    scope:
+      path: "" # an empty string here means all files in the project
+    values:
+      layout: "page"
+      header_description: true
+      color: 4A90E2
+  -
+    scope:
+      path: "tools-for-remote-workers-digital-nomads"
+    values:
+      header_description: false
+      class: tools
+      color: 4A90E2
+      script: tools.js
 exclude: [
   vendor,
   circle.yml,
@@ -11,3 +29,4 @@ exclude: [
   Gemfile.lock,
   README.md
 ]
+category-list: [communication, productivity, fun, travel]

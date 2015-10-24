@@ -17,7 +17,7 @@ $(function(){
     ev.preventDefault();
     $(".sqwiggle-banner").slideUp();
   });
-
+  
   // Track pageview
   client = new Keen({
     projectId: keen_project_id,

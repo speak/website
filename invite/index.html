@@ -18,20 +18,20 @@ script: invite.js
       <input class="email" id="email" type="text" name="email" placeholder="Work email" required>
       <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
       <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
+      <p class="secondary">Already have an account? <a id="invite-signin-link">Sign In</a></p>
     </div>
   </form>
   <form id="invite-signin" action="{{ site.bulldog_url }}/sessions">
     <p>
-      Simply signin to accept the invite
+      Signin to your account to join the <span class="team-name">right</span> team.
     </p>
     <div class="field-wrapper">
       <input class="email" id="email" type="text" name="email" placeholder="Email" required>
-      <input class="password" id="password" type="password" name="password" placeholder="Choose a password" required>
+      <input class="password" id="password" type="password" name="password" placeholder="Password" required>
       <input type="submit" name="submit" value="Join Team" id="ss-submit" class="button button-primary ">
+      <p class="secondary">No account? <a id="invite-signup-link">Sign Up</a></p>
     </div>
   </form>
-  <a id="invite-signin-link">Sign In</a>
-  <a id="invite-signup-link">Sign Up</a>
 </figure>
 
 <figure class="back download">
@@ -41,13 +41,16 @@ script: invite.js
       <p>
         You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
       </p>
-      <p>
-        <a href="{{ site.download_url_mac }}" class="button button-primary">Download for Mac</a>
-      </p>
+      <span class="mac">
+        <a href="{{ site.download_url_mac }}" class="download-btn">Download for Mac</a>
+      </span>
+      <span class="win">
+        <a href="{{ site.download_url_win }}" class="download-btn">Download for Windows</a>
+      </span>
     </div>
     <div id="signin-invite-success-text">
       <p>
-        Simply sign in to the app to join your new team!
+        Great, you've joined the team! Simply sign in to the Speak desktop app to join your new team mates!
       </p>
     </div>
   </div>

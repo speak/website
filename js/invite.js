@@ -1,5 +1,3 @@
----
----
 $(function(){
   var $inviteSignupForm = $('#invite-signup');
   var $inviteSigninForm = $('#invite-signin');
@@ -30,8 +28,6 @@ $(function(){
     ev.preventDefault();
     $('#invite-signin').hide();
     $('#invite-signup').show();
-    $('#invite-signin-link').show();
-    $('#invite-signup-link').hide();
     $('#signup-invite-success-text').show();
     $('#signin-invite-success-text').hide();
   });
@@ -40,8 +36,6 @@ $(function(){
     ev.preventDefault();
     $('#invite-signin').show();
     $('#invite-signup').hide();
-    $('#invite-signin-link').hide();
-    $('#invite-signup-link').show();
     $('#signup-invite-success-text').hide();
     $('#signin-invite-success-text').show();
   });

@@ -1,4 +1,9 @@
+    {% if page.header_pattern %}
     <div class="page-header" style="background-image: url('/images/{{ page.header_pattern }}.png'); background-color: #{{ page.color }};')">
+    {% else %}
+    <div class="page-header" style="background-color: #{{ page.color }}">
+    {% endif %}
+    
       {% include nav.html %}
       <div class="page-subheader">
           <div class="container">
@@ -19,7 +24,7 @@
       </div>
     </div>
     
-    {% if page.description %}
+    {% if page.header_description && page.description %}
     <div class="bar">
       <div class="container">
         <div class="fifteen offset-by-one columns">
