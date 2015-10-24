@@ -13,6 +13,7 @@ $(function(){
     url: invite + code
   }).done(function(data, status, xhr){
     id = data.id
+    console.log('id is: ' + id)
     // account for org invites without an email attached
     if (data.email) {
       $inviteSignupForm.find('input.email').val(data.email);
@@ -22,22 +23,6 @@ $(function(){
     if (data.organization_name) {
       $('.team-name').html('<strong>'+ data.organization_name +'</strong>');
     }
-  });
-
-  $('#invite-signup-link').click(function(ev){
-    ev.preventDefault();
-    $('#invite-signin').hide();
-    $('#invite-signup').show();
-    $('#signup-invite-success-text').show();
-    $('#signin-invite-success-text').hide();
-  });
-
-  $('#invite-signin-link').click(function(ev){
-    ev.preventDefault();
-    $('#invite-signin').show();
-    $('#invite-signup').hide();
-    $('#signup-invite-success-text').hide();
-    $('#signin-invite-success-text').show();
   });
 
   $inviteSignupForm.on('submit', function(ev){
@@ -77,6 +62,9 @@ $(function(){
       $(".banner").hide();
       $(".banner.error").text(xhr.responseJSON.params.message).show();
     }).done(function(data, status, xhr){
+      // $(".banner").hide();
+      // $('section').addClass('flipped');
+      console.log(data)
       $.ajax({
         type: "POST",
         url: $inviteSigninForm.data('accept-action'),
@@ -90,11 +78,11 @@ $(function(){
             'Basic ' + btoa(data.token + ':password'));
         }
       }).done(function(data, status, xhr){
-        $(".banner").hide();
-        $('section').addClass('flipped');
+        console.log('invite accepted'); 
       }).fail(function(xhr, status, error){
-        $(".banner").hide();
-        $(".banner.error").text(xhr.responseJSON.message).show();
+        console.log("error")
+        console.log(error)
+        console.log(xhr)
       });
     });
   });
