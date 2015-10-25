@@ -9,9 +9,10 @@ script: invite.js
   <p id="password-reset-instructions">
     Just a couple of details and we'll have you in the <span class="team-name">right</span> team.
   </p>
+  <div class="banner error"></div>
+  <div class="banner success"></div>
+  
   <form id="invite-accept" action="{{ site.bulldog_url }}/users">
-    <div class="banner error"></div>
-    <div class="banner success"></div>
     <div class="field-wrapper">
       <input class="first-name" id="first_name" type="text" name="first_name" placeholder="First name" required>
       <input class="last-name" id="last_name" type="text" name="last_name" placeholder="Last name" required>
@@ -23,14 +24,16 @@ script: invite.js
 </figure>
 
 <figure class="back download">
-  <h1>Almost there&hellip;</h1>
-  <p>
-    You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
-  </p>
-  <span class="mac">
-    <a href="{{ site.download_url_mac }}" class="download-btn">Download for Mac</a>
-  </span>
-  <span class="win">
-    <a href="{{ site.download_url_win }}" class="download-btn">Download for Windows</a>
-  </span>
+  <div id="invite-accepted">
+    <h1>Almost there&hellip;</h1>
+    <p>
+      You'll need to download the desktop app to connect with the rest of <span class="team-name">your team</span>, it'll only take a moment!
+    </p>
+    <span class="mac">
+      <a href="{{ site.download_url_mac }}" class="download-btn">Download for Mac</a>
+    </span>
+    <span class="win">
+      <a href="{{ site.download_url_win }}" class="download-btn">Download for Windows</a>
+    </span>
+  </div>
 </figure>

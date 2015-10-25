@@ -54,6 +54,11 @@ body {
     &:before {
       background-image: url('/images/icons/download-white.png');
     }
+    
+    &:hover {
+      color: #fff;
+      background-color: darken(#316098, 10%);
+    }
   }
 
   > section {
@@ -102,6 +107,16 @@ body {
     
     .last-name {
       float: right;
+    }
+    
+    p.secondary {
+      margin-top: 20px;
+      font-size: 14px;
+      padding: 0;
+    }
+    
+    a {
+      cursor: pointer;
     }
   }
 }
