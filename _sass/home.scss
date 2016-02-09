@@ -32,7 +32,7 @@
     background-repeat: no-repeat;
     background-color: #4A90E2;
     text-align: center;
-    height: 594px;
+    height: 500px;
     
     .cta-btn {
       margin: 70px auto 140px auto;
@@ -52,6 +52,12 @@
       color: #D4E8FF;
       font-size: 30px;
       -webkit-font-smoothing: antialiased;
+      max-width: 850px;
+      margin: 0 auto;
+      
+      a {
+        color: #fff;
+      }
     }
 
     form {
